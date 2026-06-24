@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>樱桃听书</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- 樱桃听书 LOGO（主题可变色，颜色由 CSS 变量 --logo-c1/c3/c5 控制） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cherry-logo" viewBox="0 0 1254 1254">
+    <polygon style="fill:#fff" points="363.51 550.59 346.84 581.7 331.76 599.16 325.02 604.32 354.78 668.6 386.52 714.23 412.31 736.45 442.86 734.46 493.3 720.46 532.93 694.79 540.87 557.9 485.71 467.56 408.08 422.99 346.18 416.55 371.57 495.21 363.51 550.59"/>
+    <polygon style="fill:#fff" points="120.58 746.73 137.51 744.95 224.24 736.45 432.94 797.68 533.72 857.43 627 961.69 738.59 841.73 916.35 770.31 1083.79 727.72 1116.49 744.95 1133.42 746.73 1159.18 811.18 1149.66 935.31 810.81 1031.78 682.12 1082.57 639.88 1103.2 565.6 1084.95 289.04 961.55 120.58 935.31 89.86 845.07 120.58 746.73"/>
+    <path style="fill:var(--logo-c1,#8770e2)" d="M895.85,357.43c5.65,1.23,15.55,2.47,26.06,1.25,12.76-1.49,25.66-11.11,58.99-9.26,0,0-10.85-23.01-56.87-41.53,43.91-42.32,44.7-126.31,38.62-148-14.02,27.51-55.02,50.26-64.81,55.55s-41.13,15.47-51.53,43.24v.02c21.74,28.66,38.55,61.84,49.53,98.72,0,0,0,0,.01,0Z"/>
+    <path style="fill:var(--logo-c3,#353460)" d="M973.72,619.98c-78.87-80.38-55.19-164.24-68.04-220.85-.46-2.05-.92-4.1-1.3-6.16-28.05-151.16-147.46-251.1-306.15-251.1s-238.99,78.56-271.26,117.18c-32.27,38.62-77.77,123.27-99.99,147.6-22.22,24.34-35.64,29.16-35.64,29.16,20.3,3.55,49.13-3.16,84.58-34.5-16.53,99.99,14.68,134.64,43.51,146.81,0,0-15.08-23.28-13.75-58.46,19.31,52.11,64.28,69.04,88.08,71.95-21.69-24.6-20.5-100.65-6.22-131.07,18.25,54.76,62.69,87.29,85.7,92.32,0,0-19.05-15.08-24.6-33.86,0,0,28.83,30.95,51.05,40.21,7.14,77.24,2.84,110.24-12.23,135.76,0,0,7.47.07,27.91-24.34,1.98,38.29-10.78,66.73-10.78,66.73l-39.84,22.81s-1.42,11.75-23.77,34.11c26.97,11.97,52.49,27.2,75.97,44.48,17.1-11.52,35.37-34.81,43.95-48.44,13.76-21.82,21.69-33.06,34.12-71.29,0,0-2.38,54.09-26.45,89.54-14.82,21.82-28.72,34.61-37.23,41.22,39.63,31.71,72.6,68.97,95.66,105.31,108.78-171.94,317.49-214.79,344.47-219.29-33.59-21.69-59.52-74.07-62.43-106.6,15.61,23.81,38.36,32.01,53.7,49.2,15.34,17.19,27.51,34.52,29.1,54.62,8.2-2.38,16.4-1.85,16.4-1.85,0,0,7.61-38.27-34.52-81.21Z"/>
+    <path style="fill:var(--logo-c3,#353460)" d="M421.05,740.48c-4.22,0-7.92-.51-10.9-1.67-24.41-9.48-78.9-95.27-89.63-134.73l-.71-2.62,2.22-1.57c33.11-23.4,35.77-53.68,35.8-53.98l7.75.56c-.09,1.35-2.68,32.77-36.82,58.14,12.24,40.24,64.38,119.26,84.21,126.96,17.18,6.67,72.78-15.77,92.76-24.97l3.25,7.06c-6.68,3.08-59.13,26.82-87.92,26.82Z"/>
+    <path style="fill:var(--logo-c3,#353460)" d="M438.36,559.52c-5.26,0-13.59.69-24.2-7.74-.85,3.21-.66,6.69.59,9.91-1.67,2.84-4.84,7.09-9.97,9.8,7.06.55,11.78-1.8,14.28-3.58,3.62,3.28,9.1,5.49,16.62,5.49,17.56,0,29.06-11.9,35.71-22.81-4.17,2.78-27.77,8.93-33.03,8.93Z"/>
+    <path style="fill:var(--logo-c1,#8770e2)" d="M590.26,129.94s68.05,3.77,103.36,13.29c15.47,34.72,25.92,75.65,27.11,221.93h-73.4s2.91-164.53-57.07-235.22Z"/>
+    <circle style="fill:#fff" cx="682.12" cy="544.75" r="97.19"/>
+    <path style="fill:var(--logo-c1,#8770e2)" d="M682.12,412.64c-72.96,0-132.11,59.15-132.11,132.11s59.15,132.11,132.11,132.11,132.11-59.15,132.11-132.11-59.15-132.11-132.11-132.11ZM682.12,641.94c-53.68,0-97.19-43.51-97.19-97.19s43.51-97.19,97.19-97.19,97.19,43.51,97.19,97.19-43.51,97.19-97.19,97.19Z"/>
+    <path style="fill:#fff" d="M652.96,365.16v50.75c9.39-2.12,19.14-3.27,29.16-3.27,11.02,0,21.71,1.37,31.94,3.91v-51.39h-61.1Z"/>
+    <polygon style="fill:var(--logo-c1,#8770e2)" points="901.9 801.49 989.79 776.49 989.79 913.64 945.85 884.55 901.9 913.64 901.9 801.49"/>
+    <path style="fill:var(--logo-c5,#ece6f7)" d="M1105.19,709.04c-356.84,13.23-478.19,239.92-478.19,239.92,0,0-121.35-226.69-478.19-239.92-8.73,0-11.31,12.7-11.31,23.41v12.5s412.72,30.75,489.49,260.88c76.78-230.13,489.49-260.88,489.49-260.88v-12.5c0-10.71-2.58-23.41-11.31-23.41Z"/>
+    <path style="fill:var(--logo-c1,#8770e2)" d="M1177.07,971.04v-192.57c0-36.24-25.13-31.74-25.13-31.74h-18.52s-.6,81.93-.6,121.08,2.38,47.02-35.18,49.66c-282.51,21.69-396.19,120.98-419.33,142.91-20.24,19.18-51.32,16.73-51.32,16.73,0,0-31.08,2.45-51.32-16.73-23.14-21.93-136.82-121.22-419.33-142.91-37.56-2.65-35.18-10.51-35.18-49.66s-.6-121.08-.6-121.08h-18.52s-25.13-4.5-25.13,31.74v192.57s-5.29,42.46,55.02,45.63c47.87,2.52,241.58,30.85,343.68,57.6,29.23,7.66,54.57,13.59,75.85,36.5,6.63,7.14,18.98,12.04,28.17,12.7,18.38,1.32,47.35,0,47.35,0,0,0,28.96,1.32,47.35,0,9.19-.66,21.54-5.56,28.17-12.7,21.28-22.91,46.62-28.84,75.85-36.5,102.09-26.75,295.81-55.08,343.68-57.6,60.31-3.17,55.02-45.63,55.02-45.63Z"/>
+  </symbol>
+</svg>
+
+<!-- 登录页 -->
+<div id="auth-view" class="view auth-view">
+  <div class="auth-card">
+    <div class="auth-logo"><svg class="app-logo lg"><use href="#cherry-logo"></use></svg></div>
+    <h1>樱桃听书</h1>
+    <p class="sub">让喜欢的声音，读你想读的书</p>
+    <div class="field"><i class="fas fa-user"></i><input id="username" placeholder="用户名" autocomplete="username"></div>
+    <div class="field"><i class="fas fa-lock"></i><input id="password" type="password" placeholder="密码" autocomplete="current-password"></div>
+    <div class="auth-btns">
+      <button class="btn primary" id="btn-login"><i class="fas fa-right-to-bracket"></i> 登录</button>
+      <button class="btn" id="btn-register"><i class="fas fa-user-plus"></i> 注册</button>
+    </div>
+    <div id="auth-msg" class="msg"></div>
+  </div>
+</div>
+
+<!-- 主应用 -->
+<div id="app-view" class="view hidden">
+  <header class="topbar">
+    <div class="brand"><svg class="app-logo"><use href="#cherry-logo"></use></svg> 樱桃听书</div>
+    <nav class="nav">
+      <button class="nav-btn active" data-page="shelf"><i class="fas fa-book"></i> 书架</button>
+      <button class="nav-btn" data-page="train"><i class="fas fa-dumbbell"></i> 训练</button>
+      <button class="nav-btn" data-page="settings"><i class="fas fa-gear"></i> 设置</button>
+      <button class="nav-btn hidden" id="nav-admin" data-page="admin"><i class="fas fa-user-shield"></i> 账号管理</button>
+    </nav>
+    <div class="topbar-right">
+      <span id="api-badge" class="badge off" title="语音引擎状态"><i class="fas fa-circle"></i> 引擎</span>
+      <button class="icon-btn" id="btn-theme" title="切换明暗"><i class="fas fa-moon"></i></button>
+      <span class="user clickable" id="me-area" title="我的资料"><img id="me-avatar" class="avatar-sm" alt="" hidden><i id="me-avatar-ph" class="fas fa-circle-user"></i> <span id="me-name"></span></span>
+      <button class="icon-btn" id="btn-logout" title="退出登录"><i class="fas fa-right-from-bracket"></i></button>
+    </div>
+  </header>
+
+  <!-- 书架 -->
+  <section id="page-shelf" class="page">
+    <div class="page-head">
+      <h2>我的书架</h2>
+      <div class="head-actions">
+        <button class="btn" id="btn-refresh"><i class="fas fa-rotate"></i> 刷新</button>
+        <label class="btn primary"><i class="fas fa-upload"></i> 导入书籍
+          <input type="file" id="upload-input" accept=".txt,.epub,.pdf" hidden multiple></label>
+      </div>
+    </div>
+    <div id="shelf-grid" class="shelf-grid"></div>
+  </section>
+
+  <!-- 阅读器 -->
+  <section id="page-reader" class="page hidden">
+    <div class="reader-toolbar">
+      <button class="btn ghost" id="btn-back-shelf"><i class="fas fa-arrow-left"></i> 返回</button>
+      <span class="reader-title" id="reader-title"></span>
+      <div class="reader-tools">
+        <button class="btn ghost" id="btn-toc"><i class="fas fa-list-ul"></i> 目录</button>
+        <select id="voice-select" class="select" title="朗读声线"></select>
+        <select id="speed-select" class="select" title="语速">
+          <option value="0.8">0.8×</option><option value="0.9">0.9×</option>
+          <option value="1.0" selected>1.0×</option><option value="1.1">1.1×</option>
+          <option value="1.25">1.25×</option><option value="1.5">1.5×</option>
+        </select>
+        <button class="btn ghost" id="btn-pregen"><i class="fas fa-bolt"></i> 预生成</button>
+        <button class="btn primary" id="btn-play"><i class="fas fa-play"></i> 播放</button>
+        <button class="btn ghost" id="btn-reader-cfg"><i class="fas fa-font"></i> 个性化</button>
+      </div>
+    </div>
+
+    <div class="reader-body">
+      <!-- 目录抽屉 -->
+      <aside id="toc-drawer" class="drawer left">
+        <div class="drawer-head"><span><i class="fas fa-list-ul"></i> 章节目录</span>
+          <button class="icon-btn" id="btn-toc-close"><i class="fas fa-xmark"></i></button></div>
+        <div class="drawer-legend"><span class="dot ok"></span>已预生成 &nbsp; <span class="dot no"></span>未生成</div>
+        <div id="toc-list" class="toc-list"></div>
+      </aside>
+
+      <div class="book-stage">
+        <button class="page-flip left" id="btn-prev-page" title="上一页"><i class="fas fa-chevron-left"></i></button>
+        <div class="book" id="book">
+          <div class="book-page" id="page-left"><div class="pg-inner"></div><div class="pg-num" id="num-left"></div></div>
+          <div class="book-spine"></div>
+          <div class="book-page" id="page-right"><div class="pg-inner"></div><div class="pg-num" id="num-right"></div></div>
+        </div>
+        <button class="page-flip right" id="btn-next-page" title="下一页"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <!-- 个性化抽屉 -->
+      <aside id="cfg-drawer" class="drawer right">
+        <div class="drawer-head"><span><i class="fas fa-font"></i> 阅读个性化</span>
+          <button class="icon-btn" id="btn-cfg-close"><i class="fas fa-xmark"></i></button></div>
+        <div class="cfg-group"><label>字体</label>
+          <select id="rc-font" class="select grow">
+            <option value="var(--serif)">宋体 / 衬线</option>
+            <option value="'Microsoft YaHei',sans-serif">微软雅黑</option>
+            <option value="'KaiTi','STKaiti',serif">楷体</option>
+            <option value="'FangSong','STFangSong',serif">仿宋</option>
+            <option value="Georgia,serif">Georgia</option>
+          </select></div>
+        <div class="cfg-group"><label>字号 <span id="rc-size-val">19</span>px</label>
+          <input type="range" id="rc-size" min="14" max="28" value="19"></div>
+        <div class="cfg-group"><label>行距 <span id="rc-line-val">2.05</span></label>
+          <input type="range" id="rc-line" min="1.5" max="2.8" step="0.05" value="2.05"></div>
+        <div class="cfg-group"><label>句间停顿 <span id="rc-pause-val">0.3</span> 秒</label>
+          <input type="range" id="rc-pause" min="0" max="3" step="0.1" value="0.3"></div>
+        <div class="cfg-group"><label>纸张颜色</label>
+          <div class="swatches" id="rc-paper"></div></div>
+        <div class="cfg-group"><label>文字颜色</label>
+          <div class="swatches" id="rc-text"></div>
+          <input type="color" id="rc-text-custom" title="自定义文字颜色"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 训练（顶级tab） -->
+  <section id="page-train" class="page hidden">
+    <div class="train-wrap">
+      <nav class="train-side">
+        <div class="train-side-title"><i class="fas fa-dumbbell"></i> 训练工作台</div>
+        <button class="tside-btn active" data-tview="slice"><i class="fas fa-scissors"></i> 音频切分</button>
+        <button class="tside-btn" data-tview="asr"><i class="fas fa-closed-captioning"></i> 语音打标</button>
+        <button class="tside-btn" data-tview="format"><i class="fas fa-database"></i> 数据格式化</button>
+        <button class="tside-btn" data-tview="sovits"><i class="fas fa-wave-square"></i> 训练 SoVITS</button>
+        <button class="tside-btn" data-tview="gpt"><i class="fas fa-brain"></i> 训练 GPT</button>
+        <button class="tside-btn log" data-tview="log"><i class="fas fa-terminal"></i> 实时日志</button>
+        <div class="train-gpu">
+          <label><i class="fas fa-microchip"></i> 训练显卡</label>
+          <select id="t-gpu" class="select grow"></select>
+        </div>
+      </nav>
+
+      <div class="train-main">
+        <!-- 切分 -->
+        <div class="tview" data-view="slice">
+          <h3><i class="fas fa-scissors"></i> 音频切分</h3>
+          <p class="hint">把长音频切成训练用短句片段。</p>
+          <div class="form-row"><label>输入音频目录</label><input id="t-slice-in" placeholder="如 model/原始素材"></div>
+          <div class="form-row"><label>输出目录</label><input id="t-slice-out" value="output/sliced"></div>
+          <div class="form-row"><label>静音阈值(dB)</label><input id="t-slice-th" value="-34"></div>
+          <div class="form-row"><label>最小片段(ms)</label><input id="t-slice-min" value="4000"></div>
+          <div class="form-row"><label>最小静音间隔(ms)</label><input id="t-slice-int" value="300"></div>
+          <button class="btn primary" data-train="slice"><i class="fas fa-play"></i> 执行切分</button>
+        </div>
+        <!-- 打标 -->
+        <div class="tview hidden" data-view="asr">
+          <h3><i class="fas fa-closed-captioning"></i> 语音识别打标</h3>
+          <p class="hint">自动识别切分后的音频文字，生成 .list 标注文件（中文用 FunASR）。</p>
+          <div class="form-row"><label>输入目录</label><input id="t-asr-in" value="output/sliced"></div>
+          <div class="form-row"><label>输出目录</label><input id="t-asr-out" value="output/asr"></div>
+          <button class="btn primary" data-train="asr"><i class="fas fa-play"></i> 执行打标</button>
+        </div>
+        <!-- 格式化 -->
+        <div class="tview hidden" data-view="format">
+          <h3><i class="fas fa-database"></i> 数据格式化（一键三连）</h3>
+          <p class="hint">文本→HuBERT→语义 特征提取，训练前的必要步骤。</p>
+          <div class="form-row"><label>实验名(角色名)</label><input id="t-exp" placeholder="如 kaituozhe"></div>
+          <div class="form-row"><label>.list 标注文件</label><input id="t-list" placeholder="如 output/asr/sliced.list"></div>
+          <div class="form-row"><label>音频目录</label><input id="t-wav" value="output/sliced"></div>
+          <button class="btn primary" data-train="format"><i class="fas fa-play"></i> 执行格式化</button>
+        </div>
+        <!-- 训练 SoVITS -->
+        <div class="tview hidden" data-view="sovits">
+          <h3><i class="fas fa-wave-square"></i> 训练 SoVITS (s2)</h3>
+          <div class="form-row"><label>实验名</label><input id="s2-exp" placeholder="同上实验名"></div>
+          <div class="form-grid">
+            <div class="form-row"><label>批大小 batch_size</label><input id="s2-bs" type="number" value="4"></div>
+            <div class="form-row"><label>总轮数 total_epoch</label><input id="s2-ep" type="number" value="8"></div>
+            <div class="form-row"><label>保存间隔 save_every</label><input id="s2-save" type="number" value="4"></div>
+            <div class="form-row"><label>文本低学习率比</label><input id="s2-lr" type="number" step="0.05" value="0.4"></div>
+          </div>
+          <label class="ck"><input type="checkbox" id="s2-latest" checked> 仅保存最新</label>
+          <label class="ck"><input type="checkbox" id="s2-every" checked> 每次保存权重</label>
+          <button class="btn primary" data-train="train_sovits"><i class="fas fa-play"></i> 开始训练 SoVITS</button>
+        </div>
+        <!-- 训练 GPT -->
+        <div class="tview hidden" data-view="gpt">
+          <h3><i class="fas fa-brain"></i> 训练 GPT (s1)</h3>
+          <div class="form-row"><label>实验名</label><input id="s1-exp" placeholder="同上实验名"></div>
+          <div class="form-grid">
+            <div class="form-row"><label>批大小 batch_size</label><input id="s1-bs" type="number" value="4"></div>
+            <div class="form-row"><label>总轮数 total_epoch</label><input id="s1-ep" type="number" value="15"></div>
+            <div class="form-row"><label>保存间隔 save_every</label><input id="s1-save" type="number" value="5"></div>
+          </div>
+          <label class="ck"><input type="checkbox" id="s1-dpo"> 开启 DPO 训练</label>
+          <label class="ck"><input type="checkbox" id="s1-latest" checked> 仅保存最新</label>
+          <label class="ck"><input type="checkbox" id="s1-every" checked> 每次保存权重</label>
+          <button class="btn primary" data-train="train_gpt"><i class="fas fa-play"></i> 开始训练 GPT</button>
+        </div>
+        <!-- 日志 -->
+        <div class="tview hidden" data-view="log">
+          <h3><i class="fas fa-terminal"></i> 实时日志</h3>
+          <pre id="train-log" class="task-log big">等待执行…</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 设置 -->
+  <section id="page-settings" class="page hidden">
+    <div class="page-head"><h2>设置</h2></div>
+    <div class="settings-grid">
+      <div class="card">
+        <h3><i class="fas fa-server"></i> 语音引擎</h3>
+        <p class="hint">支持 GPT-SoVITS 与 IndexTTS 共存。可填本机端口或云端服务器地址（如甲骨文 ARM 服务器），多端共用。</p>
+        <div id="engine-list"></div>
+      </div>
+
+      <div class="card">
+        <h3><i class="fas fa-masks-theater"></i> 角色模型</h3>
+        <div class="row-inline">
+          <select id="model-select" class="select grow"></select>
+          <button class="btn primary" id="btn-model-use"><i class="fas fa-circle-check"></i> 选用</button>
+        </div>
+        <p class="hint" id="model-status"></p>
+        <div class="row-inline">
+          <input class="input grow" id="voice-search" placeholder="搜索角色模型 / 引擎…">
+        </div>
+        <div id="configured-voices" style="margin-top:8px"></div>
+        <div id="voice-pager" class="pager"></div>
+        <div class="row-inline">
+          <button class="btn ghost" id="btn-discover"><i class="fas fa-magnifying-glass"></i> 扫描 model 目录（GPT-SoVITS）</button>
+          <button class="btn ghost" id="btn-add-indextts"><i class="fas fa-wand-magic-sparkles"></i> 添加 IndexTTS 声线</button>
+        </div>
+        <div id="admin-discovered"></div>
+      </div>
+
+      <div class="card">
+        <h3><i class="fas fa-palette"></i> 主题色</h3>
+        <p class="hint">选择网页主色调，明暗模式都会适配。</p>
+        <div class="swatches" id="accent-swatches"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 个人资料 -->
+  <section id="page-profile" class="page hidden">
+    <div class="page-head"><h2><i class="fas fa-id-card"></i> 个人资料</h2></div>
+    <div class="card" style="max-width:520px">
+      <div class="profile-row">
+        <div class="avatar-wrap">
+          <img id="profile-avatar" class="avatar-lg" alt="" hidden>
+          <div id="profile-avatar-ph" class="avatar-lg ph"></div>
+        </div>
+        <div class="profile-info">
+          <div class="profile-name" id="profile-name"></div>
+          <div class="hint">UID：<span id="profile-uid"></span></div>
+          <div class="hint" id="profile-group"></div>
+          <label class="btn ghost" style="margin-top:10px"><i class="fas fa-camera"></i> 更换头像
+            <input type="file" id="avatar-input" accept="image/*" hidden></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 账号管理（仅管理员，顶级页面） -->
+  <section id="page-admin" class="page hidden">
+    <div class="page-head">
+      <h2><i class="fas fa-user-shield"></i> 账号数据库管理</h2>
+      <div class="field flat" style="margin:0;width:280px">
+        <i class="fas fa-magnifying-glass"></i>
+        <input id="user-search" placeholder="搜索昵称或 UID…">
+      </div>
+    </div>
+    <div id="user-grid" class="user-grid"></div>
+    <div id="user-pager" class="pager"></div>
+
+    <div class="page-head" style="margin-top:34px"><h2><i class="fas fa-compact-disc"></i> 本地预训练音频管理</h2></div>
+    <div class="card">
+      <p class="hint">管理已预生成的章节语音缓存，可删除释放空间，或整体导出/导入。</p>
+      <div class="row-inline">
+        <button class="btn" id="btn-pregen-export"><i class="fas fa-file-export"></i> 导出为压缩包</button>
+        <label class="btn"><i class="fas fa-file-import"></i> 导入压缩包
+          <input type="file" id="pregen-import-input" accept=".zip" hidden></label>
+      </div>
+      <div class="row-inline" style="margin-top:12px">
+        <input class="input grow" id="pregen-search" placeholder="搜索书名 / 章节名 / 声线…">
+      </div>
+      <div id="pregen-admin" style="margin-top:12px"></div>
+      <div id="pregen-pager" class="pager"></div>
+    </div>
+  </section>
+</div>
+
+<audio id="player"></audio>
+<script src="/js/app.js"></script>
+<script src="/js/reader.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

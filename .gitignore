@@ -1,0 +1,36 @@
+# ===== 樱桃听书 .gitignore =====
+# 语音引擎本体（太大，不随项目分发；用户自行下载后在网页里配置路径）
+GPT-SoVITS*/
+index-tts/
+IndexTTS*/
+
+# 模型权重 / 参考音频（大文件、可能有版权，仅本机自用）
+model/
+output/
+
+# 用户数据：账号库、头像、封面、预生成音频缓存、导出包
+data/
+
+# 用户书籍
+ebook/
+
+# 个人配置（含本机绝对路径与私人声线）—— 用 config.example.json 作模板
+config.json
+
+# 测试/临时产物
+_*.wav
+*.zip
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 编辑器/系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

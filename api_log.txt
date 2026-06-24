@@ -1,0 +1,1333 @@
+---------------------------------------------TTS Config---------------------------------------------
+device              : cuda
+is_half             : True
+version             : v2
+t2s_weights_path    : GPT_SoVITS/pretrained_models/gsv-v2final-pretrained/s1bert25hz-5kh-longer-epoch=12-step=369668.ckpt
+vits_weights_path   : GPT_SoVITS/pretrained_models/gsv-v2final-pretrained/s2G2333k.pth
+bert_base_path      : GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large
+cnhuhbert_base_path : GPT_SoVITS/pretrained_models/chinese-hubert-base
+----------------------------------------------------------------------------------------------------
+
+Loading Text2Semantic weights from GPT_SoVITS/pretrained_models/gsv-v2final-pretrained/s1bert25hz-5kh-longer-epoch=12-step=369668.ckpt
+Loading VITS weights from GPT_SoVITS/pretrained_models/gsv-v2final-pretrained/s2G2333k.pth. <All keys matched successfully>
+Loading BERT weights from GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large
+Loading CNHuBERT weights from GPT_SoVITS/pretrained_models/chinese-hubert-base
+INFO:     Started server process [29224]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9880 (Press CTRL+C to quit)
+INFO:     127.0.0.1:1406 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:13986 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:13987 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:13989 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1622 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1623 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1624 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:5964 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1945 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:6156 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9678 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9679 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2713 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2714 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2726 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2727 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2728 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4093 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4094 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4096 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4101 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:14558 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:14559 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3426 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3433 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4569 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4571 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4573 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8731 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8742 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4444 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4445 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4446 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:14100 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:12737 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:10516 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:6788 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7423 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7424 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:12732 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:12734 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:6150 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:6151 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1829 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1840 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8624 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8626 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8627 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8628 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3137 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3138 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3140 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3141 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:11016 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1781 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1782 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7798 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7801 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7812 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7813 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:5050 - "GET / HTTP/1.1" 404 Not Found
+Loading Text2Semantic weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)-e10.ckpt
+INFO:     127.0.0.1:5051 - "GET /set_gpt_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29-e10.ckpt HTTP/1.1" 200 OK
+Loading VITS weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)_e15_s1230.pth. _IncompatibleKeys(missing_keys=['enc_q.pre.weight', 'enc_q.pre.bias', 'enc_q.enc.in_layers.0.bias', 'enc_q.enc.in_layers.0.weight_g', 'enc_q.enc.in_layers.0.weight_v', 'enc_q.enc.in_layers.1.bias', 'enc_q.enc.in_layers.1.weight_g', 'enc_q.enc.in_layers.1.weight_v', 'enc_q.enc.in_layers.2.bias', 'enc_q.enc.in_layers.2.weight_g', 'enc_q.enc.in_layers.2.weight_v', 'enc_q.enc.in_layers.3.bias', 'enc_q.enc.in_layers.3.weight_g', 'enc_q.enc.in_layers.3.weight_v', 'enc_q.enc.in_layers.4.bias', 'enc_q.enc.in_layers.4.weight_g', 'enc_q.enc.in_layers.4.weight_v', 'enc_q.enc.in_layers.5.bias', 'enc_q.enc.in_layers.5.weight_g', 'enc_q.enc.in_layers.5.weight_v', 'enc_q.enc.in_layers.6.bias', 'enc_q.enc.in_layers.6.weight_g', 'enc_q.enc.in_layers.6.weight_v', 'enc_q.enc.in_layers.7.bias', 'enc_q.enc.in_layers.7.weight_g', 'enc_q.enc.in_layers.7.weight_v', 'enc_q.enc.in_layers.8.bias', 'enc_q.enc.in_layers.8.weight_g', 'enc_q.enc.in_layers.8.weight_v', 'enc_q.enc.in_layers.9.bias', 'enc_q.enc.in_layers.9.weight_g', 'enc_q.enc.in_layers.9.weight_v', 'enc_q.enc.in_layers.10.bias', 'enc_q.enc.in_layers.10.weight_g', 'enc_q.enc.in_layers.10.weight_v', 'enc_q.enc.in_layers.11.bias', 'enc_q.enc.in_layers.11.weight_g', 'enc_q.enc.in_layers.11.weight_v', 'enc_q.enc.in_layers.12.bias', 'enc_q.enc.in_layers.12.weight_g', 'enc_q.enc.in_layers.12.weight_v', 'enc_q.enc.in_layers.13.bias', 'enc_q.enc.in_layers.13.weight_g', 'enc_q.enc.in_layers.13.weight_v', 'enc_q.enc.in_layers.14.bias', 'enc_q.enc.in_layers.14.weight_g', 'enc_q.enc.in_layers.14.weight_v', 'enc_q.enc.in_layers.15.bias', 'enc_q.enc.in_layers.15.weight_g', 'enc_q.enc.in_layers.15.weight_v', 'enc_q.enc.res_skip_layers.0.bias', 'enc_q.enc.res_skip_layers.0.weight_g', 'enc_q.enc.res_skip_layers.0.weight_v', 'enc_q.enc.res_skip_layers.1.bias', 'enc_q.enc.res_skip_layers.1.weight_g', 'enc_q.enc.res_skip_layers.1.weight_v', 'enc_q.enc.res_skip_layers.2.bias', 'enc_q.enc.res_skip_layers.2.weight_g', 'enc_q.enc.res_skip_layers.2.weight_v', 'enc_q.enc.res_skip_layers.3.bias', 'enc_q.enc.res_skip_layers.3.weight_g', 'enc_q.enc.res_skip_layers.3.weight_v', 'enc_q.enc.res_skip_layers.4.bias', 'enc_q.enc.res_skip_layers.4.weight_g', 'enc_q.enc.res_skip_layers.4.weight_v', 'enc_q.enc.res_skip_layers.5.bias', 'enc_q.enc.res_skip_layers.5.weight_g', 'enc_q.enc.res_skip_layers.5.weight_v', 'enc_q.enc.res_skip_layers.6.bias', 'enc_q.enc.res_skip_layers.6.weight_g', 'enc_q.enc.res_skip_layers.6.weight_v', 'enc_q.enc.res_skip_layers.7.bias', 'enc_q.enc.res_skip_layers.7.weight_g', 'enc_q.enc.res_skip_layers.7.weight_v', 'enc_q.enc.res_skip_layers.8.bias', 'enc_q.enc.res_skip_layers.8.weight_g', 'enc_q.enc.res_skip_layers.8.weight_v', 'enc_q.enc.res_skip_layers.9.bias', 'enc_q.enc.res_skip_layers.9.weight_g', 'enc_q.enc.res_skip_layers.9.weight_v', 'enc_q.enc.res_skip_layers.10.bias', 'enc_q.enc.res_skip_layers.10.weight_g', 'enc_q.enc.res_skip_layers.10.weight_v', 'enc_q.enc.res_skip_layers.11.bias', 'enc_q.enc.res_skip_layers.11.weight_g', 'enc_q.enc.res_skip_layers.11.weight_v', 'enc_q.enc.res_skip_layers.12.bias', 'enc_q.enc.res_skip_layers.12.weight_g', 'enc_q.enc.res_skip_layers.12.weight_v', 'enc_q.enc.res_skip_layers.13.bias', 'enc_q.enc.res_skip_layers.13.weight_g', 'enc_q.enc.res_skip_layers.13.weight_v', 'enc_q.enc.res_skip_layers.14.bias', 'enc_q.enc.res_skip_layers.14.weight_g', 'enc_q.enc.res_skip_layers.14.weight_v', 'enc_q.enc.res_skip_layers.15.bias', 'enc_q.enc.res_skip_layers.15.weight_g', 'enc_q.enc.res_skip_layers.15.weight_v', 'enc_q.enc.cond_layer.bias', 'enc_q.enc.cond_layer.weight_g', 'enc_q.enc.cond_layer.weight_v', 'enc_q.proj.weight', 'enc_q.proj.bias'], unexpected_keys=[])
+INFO:     127.0.0.1:5053 - "GET /set_sovits_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29_e15_s1230.pth HTTP/1.1" 200 OK
+False False False
+Set seed to 1452804238
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+第一章 测试
+你好，开拓者。这是你的本地听书工具的第一次发声测试，如果你能听到这段话，说明一切正常。
+实际输入的目标文本(切句后):
+['第一章 测试。', '你好，开拓者。', '这是你的本地听书工具的第一次发声测试，', '如果你能听到这段话，', '说明一切正常。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/5 [00:00<?, ?it/s] 40%|████      | 2/5 [00:00<00:00, 12.04it/s]100%|██████████| 5/5 [00:00<00:00, 22.58it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['第一章测试.', '你好,开拓者.', '说明一切正常.', '如果你能听到这段话,']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 1/1500 [00:00<02:58,  8.39it/s]  0%|          | 7/1500 [00:00<00:42, 34.76it/s]  1%|          | 16/1500 [00:00<00:26, 56.17it/s]  2%|▏         | 25/1500 [00:00<00:22, 64.46it/s]  2%|▏         | 33/1500 [00:00<00:21, 68.77it/s]  3%|▎         | 41/1500 [00:00<00:23, 61.32it/s]
+T2S Decoding EOS [187 -> 229]
+############ 合成音频 ############
+并行合成中...
+前端处理后的文本(每句): ['这是你的本地听书工具的第一次发声测试,']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:44, 33.34it/s]  1%|          | 8/1500 [00:00<00:46, 32.38it/s]  1%|          | 12/1500 [00:00<00:45, 32.40it/s]  1%|          | 16/1500 [00:00<00:45, 32.74it/s]  1%|▏         | 20/1500 [00:00<00:45, 32.58it/s]  2%|▏         | 24/1500 [00:00<00:45, 32.76it/s]  2%|▏         | 28/1500 [00:00<00:47, 31.10it/s]  2%|▏         | 32/1500 [00:01<00:48, 30.24it/s]  2%|▏         | 36/1500 [00:01<00:50, 28.79it/s]  3%|▎         | 40/1500 [00:01<00:49, 29.67it/s]  3%|▎         | 44/1500 [00:01<00:47, 30.45it/s]  3%|▎         | 48/1500 [00:01<00:48, 29.96it/s]  3%|▎         | 52/1500 [00:01<00:46, 31.23it/s]  4%|▎         | 56/1500 [00:01<00:43, 33.06it/s]  4%|▍         | 60/1500 [00:01<00:44, 32.00it/s]  4%|▍         | 64/1500 [00:02<00:44, 32.40it/s]  5%|▍         | 68/1500 [00:02<00:44, 32.26it/s]  5%|▍         | 71/1500 [00:02<00:46, 31.00it/s]
+T2S Decoding EOS [187 -> 259]
+############ 合成音频 ############
+并行合成中...
+6.083	0.225	3.001	1.947
+INFO:     127.0.0.1:5054 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4959 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2850 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3944 - "GET / HTTP/1.1" 404 Not Found
+Loading Text2Semantic weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)-e10.ckpt
+INFO:     127.0.0.1:13692 - "GET /set_gpt_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29-e10.ckpt HTTP/1.1" 200 OK
+Loading VITS weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)_e15_s1230.pth. _IncompatibleKeys(missing_keys=['enc_q.pre.weight', 'enc_q.pre.bias', 'enc_q.enc.in_layers.0.bias', 'enc_q.enc.in_layers.0.weight_g', 'enc_q.enc.in_layers.0.weight_v', 'enc_q.enc.in_layers.1.bias', 'enc_q.enc.in_layers.1.weight_g', 'enc_q.enc.in_layers.1.weight_v', 'enc_q.enc.in_layers.2.bias', 'enc_q.enc.in_layers.2.weight_g', 'enc_q.enc.in_layers.2.weight_v', 'enc_q.enc.in_layers.3.bias', 'enc_q.enc.in_layers.3.weight_g', 'enc_q.enc.in_layers.3.weight_v', 'enc_q.enc.in_layers.4.bias', 'enc_q.enc.in_layers.4.weight_g', 'enc_q.enc.in_layers.4.weight_v', 'enc_q.enc.in_layers.5.bias', 'enc_q.enc.in_layers.5.weight_g', 'enc_q.enc.in_layers.5.weight_v', 'enc_q.enc.in_layers.6.bias', 'enc_q.enc.in_layers.6.weight_g', 'enc_q.enc.in_layers.6.weight_v', 'enc_q.enc.in_layers.7.bias', 'enc_q.enc.in_layers.7.weight_g', 'enc_q.enc.in_layers.7.weight_v', 'enc_q.enc.in_layers.8.bias', 'enc_q.enc.in_layers.8.weight_g', 'enc_q.enc.in_layers.8.weight_v', 'enc_q.enc.in_layers.9.bias', 'enc_q.enc.in_layers.9.weight_g', 'enc_q.enc.in_layers.9.weight_v', 'enc_q.enc.in_layers.10.bias', 'enc_q.enc.in_layers.10.weight_g', 'enc_q.enc.in_layers.10.weight_v', 'enc_q.enc.in_layers.11.bias', 'enc_q.enc.in_layers.11.weight_g', 'enc_q.enc.in_layers.11.weight_v', 'enc_q.enc.in_layers.12.bias', 'enc_q.enc.in_layers.12.weight_g', 'enc_q.enc.in_layers.12.weight_v', 'enc_q.enc.in_layers.13.bias', 'enc_q.enc.in_layers.13.weight_g', 'enc_q.enc.in_layers.13.weight_v', 'enc_q.enc.in_layers.14.bias', 'enc_q.enc.in_layers.14.weight_g', 'enc_q.enc.in_layers.14.weight_v', 'enc_q.enc.in_layers.15.bias', 'enc_q.enc.in_layers.15.weight_g', 'enc_q.enc.in_layers.15.weight_v', 'enc_q.enc.res_skip_layers.0.bias', 'enc_q.enc.res_skip_layers.0.weight_g', 'enc_q.enc.res_skip_layers.0.weight_v', 'enc_q.enc.res_skip_layers.1.bias', 'enc_q.enc.res_skip_layers.1.weight_g', 'enc_q.enc.res_skip_layers.1.weight_v', 'enc_q.enc.res_skip_layers.2.bias', 'enc_q.enc.res_skip_layers.2.weight_g', 'enc_q.enc.res_skip_layers.2.weight_v', 'enc_q.enc.res_skip_layers.3.bias', 'enc_q.enc.res_skip_layers.3.weight_g', 'enc_q.enc.res_skip_layers.3.weight_v', 'enc_q.enc.res_skip_layers.4.bias', 'enc_q.enc.res_skip_layers.4.weight_g', 'enc_q.enc.res_skip_layers.4.weight_v', 'enc_q.enc.res_skip_layers.5.bias', 'enc_q.enc.res_skip_layers.5.weight_g', 'enc_q.enc.res_skip_layers.5.weight_v', 'enc_q.enc.res_skip_layers.6.bias', 'enc_q.enc.res_skip_layers.6.weight_g', 'enc_q.enc.res_skip_layers.6.weight_v', 'enc_q.enc.res_skip_layers.7.bias', 'enc_q.enc.res_skip_layers.7.weight_g', 'enc_q.enc.res_skip_layers.7.weight_v', 'enc_q.enc.res_skip_layers.8.bias', 'enc_q.enc.res_skip_layers.8.weight_g', 'enc_q.enc.res_skip_layers.8.weight_v', 'enc_q.enc.res_skip_layers.9.bias', 'enc_q.enc.res_skip_layers.9.weight_g', 'enc_q.enc.res_skip_layers.9.weight_v', 'enc_q.enc.res_skip_layers.10.bias', 'enc_q.enc.res_skip_layers.10.weight_g', 'enc_q.enc.res_skip_layers.10.weight_v', 'enc_q.enc.res_skip_layers.11.bias', 'enc_q.enc.res_skip_layers.11.weight_g', 'enc_q.enc.res_skip_layers.11.weight_v', 'enc_q.enc.res_skip_layers.12.bias', 'enc_q.enc.res_skip_layers.12.weight_g', 'enc_q.enc.res_skip_layers.12.weight_v', 'enc_q.enc.res_skip_layers.13.bias', 'enc_q.enc.res_skip_layers.13.weight_g', 'enc_q.enc.res_skip_layers.13.weight_v', 'enc_q.enc.res_skip_layers.14.bias', 'enc_q.enc.res_skip_layers.14.weight_g', 'enc_q.enc.res_skip_layers.14.weight_v', 'enc_q.enc.res_skip_layers.15.bias', 'enc_q.enc.res_skip_layers.15.weight_g', 'enc_q.enc.res_skip_layers.15.weight_v', 'enc_q.enc.cond_layer.bias', 'enc_q.enc.cond_layer.weight_g', 'enc_q.enc.cond_layer.weight_v', 'enc_q.proj.weight', 'enc_q.proj.bias'], unexpected_keys=[])
+INFO:     127.0.0.1:10604 - "GET /set_sovits_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29_e15_s1230.pth HTTP/1.1" 200 OK
+False False False
+Set seed to 341519459
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+你好开拓者，这是网页版听书测试。
+实际输入的目标文本(切句后):
+['你好开拓者，这是网页版听书测试。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.61s/it]100%|██████████| 1/1 [00:01<00:00,  1.61s/it]
+############ 推理 ############
+前端处理后的文本(每句): ['你好开拓者,这是网页版听书测试.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<01:01, 24.48it/s]  0%|          | 7/1500 [00:00<00:49, 30.40it/s]  1%|          | 11/1500 [00:00<00:44, 33.36it/s]  1%|          | 15/1500 [00:00<00:42, 35.02it/s]  1%|▏         | 19/1500 [00:00<00:41, 35.32it/s]  2%|▏         | 23/1500 [00:00<00:41, 35.72it/s]  2%|▏         | 27/1500 [00:00<00:41, 35.47it/s]  2%|▏         | 31/1500 [00:00<00:44, 33.25it/s]  2%|▏         | 35/1500 [00:01<00:43, 33.40it/s]  3%|▎         | 39/1500 [00:01<00:41, 34.90it/s]  3%|▎         | 43/1500 [00:01<00:41, 35.18it/s]  3%|▎         | 47/1500 [00:01<00:41, 35.36it/s]  3%|▎         | 51/1500 [00:01<00:40, 35.42it/s]  4%|▎         | 55/1500 [00:01<00:40, 35.47it/s]  4%|▍         | 59/1500 [00:01<00:40, 35.71it/s]  4%|▍         | 63/1500 [00:01<00:39, 35.98it/s]  4%|▍         | 67/1500 [00:01<00:39, 36.48it/s]  5%|▍         | 71/1500 [00:02<00:40, 35.71it/s]  5%|▍         | 72/1500 [00:02<00:41, 34.40it/s]
+T2S Decoding EOS [187 -> 260]
+############ 合成音频 ############
+并行合成中...
+0.000	1.616	2.108	0.460
+INFO:     127.0.0.1:10605 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4441 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8448 - "GET / HTTP/1.1" 404 Not Found
+Loading Text2Semantic weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)-e10.ckpt
+INFO:     127.0.0.1:13841 - "GET /set_gpt_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29-e10.ckpt HTTP/1.1" 200 OK
+Loading VITS weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)_e15_s1230.pth. _IncompatibleKeys(missing_keys=['enc_q.pre.weight', 'enc_q.pre.bias', 'enc_q.enc.in_layers.0.bias', 'enc_q.enc.in_layers.0.weight_g', 'enc_q.enc.in_layers.0.weight_v', 'enc_q.enc.in_layers.1.bias', 'enc_q.enc.in_layers.1.weight_g', 'enc_q.enc.in_layers.1.weight_v', 'enc_q.enc.in_layers.2.bias', 'enc_q.enc.in_layers.2.weight_g', 'enc_q.enc.in_layers.2.weight_v', 'enc_q.enc.in_layers.3.bias', 'enc_q.enc.in_layers.3.weight_g', 'enc_q.enc.in_layers.3.weight_v', 'enc_q.enc.in_layers.4.bias', 'enc_q.enc.in_layers.4.weight_g', 'enc_q.enc.in_layers.4.weight_v', 'enc_q.enc.in_layers.5.bias', 'enc_q.enc.in_layers.5.weight_g', 'enc_q.enc.in_layers.5.weight_v', 'enc_q.enc.in_layers.6.bias', 'enc_q.enc.in_layers.6.weight_g', 'enc_q.enc.in_layers.6.weight_v', 'enc_q.enc.in_layers.7.bias', 'enc_q.enc.in_layers.7.weight_g', 'enc_q.enc.in_layers.7.weight_v', 'enc_q.enc.in_layers.8.bias', 'enc_q.enc.in_layers.8.weight_g', 'enc_q.enc.in_layers.8.weight_v', 'enc_q.enc.in_layers.9.bias', 'enc_q.enc.in_layers.9.weight_g', 'enc_q.enc.in_layers.9.weight_v', 'enc_q.enc.in_layers.10.bias', 'enc_q.enc.in_layers.10.weight_g', 'enc_q.enc.in_layers.10.weight_v', 'enc_q.enc.in_layers.11.bias', 'enc_q.enc.in_layers.11.weight_g', 'enc_q.enc.in_layers.11.weight_v', 'enc_q.enc.in_layers.12.bias', 'enc_q.enc.in_layers.12.weight_g', 'enc_q.enc.in_layers.12.weight_v', 'enc_q.enc.in_layers.13.bias', 'enc_q.enc.in_layers.13.weight_g', 'enc_q.enc.in_layers.13.weight_v', 'enc_q.enc.in_layers.14.bias', 'enc_q.enc.in_layers.14.weight_g', 'enc_q.enc.in_layers.14.weight_v', 'enc_q.enc.in_layers.15.bias', 'enc_q.enc.in_layers.15.weight_g', 'enc_q.enc.in_layers.15.weight_v', 'enc_q.enc.res_skip_layers.0.bias', 'enc_q.enc.res_skip_layers.0.weight_g', 'enc_q.enc.res_skip_layers.0.weight_v', 'enc_q.enc.res_skip_layers.1.bias', 'enc_q.enc.res_skip_layers.1.weight_g', 'enc_q.enc.res_skip_layers.1.weight_v', 'enc_q.enc.res_skip_layers.2.bias', 'enc_q.enc.res_skip_layers.2.weight_g', 'enc_q.enc.res_skip_layers.2.weight_v', 'enc_q.enc.res_skip_layers.3.bias', 'enc_q.enc.res_skip_layers.3.weight_g', 'enc_q.enc.res_skip_layers.3.weight_v', 'enc_q.enc.res_skip_layers.4.bias', 'enc_q.enc.res_skip_layers.4.weight_g', 'enc_q.enc.res_skip_layers.4.weight_v', 'enc_q.enc.res_skip_layers.5.bias', 'enc_q.enc.res_skip_layers.5.weight_g', 'enc_q.enc.res_skip_layers.5.weight_v', 'enc_q.enc.res_skip_layers.6.bias', 'enc_q.enc.res_skip_layers.6.weight_g', 'enc_q.enc.res_skip_layers.6.weight_v', 'enc_q.enc.res_skip_layers.7.bias', 'enc_q.enc.res_skip_layers.7.weight_g', 'enc_q.enc.res_skip_layers.7.weight_v', 'enc_q.enc.res_skip_layers.8.bias', 'enc_q.enc.res_skip_layers.8.weight_g', 'enc_q.enc.res_skip_layers.8.weight_v', 'enc_q.enc.res_skip_layers.9.bias', 'enc_q.enc.res_skip_layers.9.weight_g', 'enc_q.enc.res_skip_layers.9.weight_v', 'enc_q.enc.res_skip_layers.10.bias', 'enc_q.enc.res_skip_layers.10.weight_g', 'enc_q.enc.res_skip_layers.10.weight_v', 'enc_q.enc.res_skip_layers.11.bias', 'enc_q.enc.res_skip_layers.11.weight_g', 'enc_q.enc.res_skip_layers.11.weight_v', 'enc_q.enc.res_skip_layers.12.bias', 'enc_q.enc.res_skip_layers.12.weight_g', 'enc_q.enc.res_skip_layers.12.weight_v', 'enc_q.enc.res_skip_layers.13.bias', 'enc_q.enc.res_skip_layers.13.weight_g', 'enc_q.enc.res_skip_layers.13.weight_v', 'enc_q.enc.res_skip_layers.14.bias', 'enc_q.enc.res_skip_layers.14.weight_g', 'enc_q.enc.res_skip_layers.14.weight_v', 'enc_q.enc.res_skip_layers.15.bias', 'enc_q.enc.res_skip_layers.15.weight_g', 'enc_q.enc.res_skip_layers.15.weight_v', 'enc_q.enc.cond_layer.bias', 'enc_q.enc.cond_layer.weight_g', 'enc_q.enc.cond_layer.weight_v', 'enc_q.proj.weight', 'enc_q.proj.bias'], unexpected_keys=[])
+INFO:     127.0.0.1:13842 - "GET /set_sovits_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29_e15_s1230.pth HTTP/1.1" 200 OK
+Loading Text2Semantic weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)-e10.ckpt
+INFO:     127.0.0.1:1470 - "GET /set_gpt_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29-e10.ckpt HTTP/1.1" 200 OK
+INFO:     127.0.0.1:5042 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9158 - "GET / HTTP/1.1" 404 Not Found
+Loading VITS weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)_e15_s1230.pth. _IncompatibleKeys(missing_keys=['enc_q.pre.weight', 'enc_q.pre.bias', 'enc_q.enc.in_layers.0.bias', 'enc_q.enc.in_layers.0.weight_g', 'enc_q.enc.in_layers.0.weight_v', 'enc_q.enc.in_layers.1.bias', 'enc_q.enc.in_layers.1.weight_g', 'enc_q.enc.in_layers.1.weight_v', 'enc_q.enc.in_layers.2.bias', 'enc_q.enc.in_layers.2.weight_g', 'enc_q.enc.in_layers.2.weight_v', 'enc_q.enc.in_layers.3.bias', 'enc_q.enc.in_layers.3.weight_g', 'enc_q.enc.in_layers.3.weight_v', 'enc_q.enc.in_layers.4.bias', 'enc_q.enc.in_layers.4.weight_g', 'enc_q.enc.in_layers.4.weight_v', 'enc_q.enc.in_layers.5.bias', 'enc_q.enc.in_layers.5.weight_g', 'enc_q.enc.in_layers.5.weight_v', 'enc_q.enc.in_layers.6.bias', 'enc_q.enc.in_layers.6.weight_g', 'enc_q.enc.in_layers.6.weight_v', 'enc_q.enc.in_layers.7.bias', 'enc_q.enc.in_layers.7.weight_g', 'enc_q.enc.in_layers.7.weight_v', 'enc_q.enc.in_layers.8.bias', 'enc_q.enc.in_layers.8.weight_g', 'enc_q.enc.in_layers.8.weight_v', 'enc_q.enc.in_layers.9.bias', 'enc_q.enc.in_layers.9.weight_g', 'enc_q.enc.in_layers.9.weight_v', 'enc_q.enc.in_layers.10.bias', 'enc_q.enc.in_layers.10.weight_g', 'enc_q.enc.in_layers.10.weight_v', 'enc_q.enc.in_layers.11.bias', 'enc_q.enc.in_layers.11.weight_g', 'enc_q.enc.in_layers.11.weight_v', 'enc_q.enc.in_layers.12.bias', 'enc_q.enc.in_layers.12.weight_g', 'enc_q.enc.in_layers.12.weight_v', 'enc_q.enc.in_layers.13.bias', 'enc_q.enc.in_layers.13.weight_g', 'enc_q.enc.in_layers.13.weight_v', 'enc_q.enc.in_layers.14.bias', 'enc_q.enc.in_layers.14.weight_g', 'enc_q.enc.in_layers.14.weight_v', 'enc_q.enc.in_layers.15.bias', 'enc_q.enc.in_layers.15.weight_g', 'enc_q.enc.in_layers.15.weight_v', 'enc_q.enc.res_skip_layers.0.bias', 'enc_q.enc.res_skip_layers.0.weight_g', 'enc_q.enc.res_skip_layers.0.weight_v', 'enc_q.enc.res_skip_layers.1.bias', 'enc_q.enc.res_skip_layers.1.weight_g', 'enc_q.enc.res_skip_layers.1.weight_v', 'enc_q.enc.res_skip_layers.2.bias', 'enc_q.enc.res_skip_layers.2.weight_g', 'enc_q.enc.res_skip_layers.2.weight_v', 'enc_q.enc.res_skip_layers.3.bias', 'enc_q.enc.res_skip_layers.3.weight_g', 'enc_q.enc.res_skip_layers.3.weight_v', 'enc_q.enc.res_skip_layers.4.bias', 'enc_q.enc.res_skip_layers.4.weight_g', 'enc_q.enc.res_skip_layers.4.weight_v', 'enc_q.enc.res_skip_layers.5.bias', 'enc_q.enc.res_skip_layers.5.weight_g', 'enc_q.enc.res_skip_layers.5.weight_v', 'enc_q.enc.res_skip_layers.6.bias', 'enc_q.enc.res_skip_layers.6.weight_g', 'enc_q.enc.res_skip_layers.6.weight_v', 'enc_q.enc.res_skip_layers.7.bias', 'enc_q.enc.res_skip_layers.7.weight_g', 'enc_q.enc.res_skip_layers.7.weight_v', 'enc_q.enc.res_skip_layers.8.bias', 'enc_q.enc.res_skip_layers.8.weight_g', 'enc_q.enc.res_skip_layers.8.weight_v', 'enc_q.enc.res_skip_layers.9.bias', 'enc_q.enc.res_skip_layers.9.weight_g', 'enc_q.enc.res_skip_layers.9.weight_v', 'enc_q.enc.res_skip_layers.10.bias', 'enc_q.enc.res_skip_layers.10.weight_g', 'enc_q.enc.res_skip_layers.10.weight_v', 'enc_q.enc.res_skip_layers.11.bias', 'enc_q.enc.res_skip_layers.11.weight_g', 'enc_q.enc.res_skip_layers.11.weight_v', 'enc_q.enc.res_skip_layers.12.bias', 'enc_q.enc.res_skip_layers.12.weight_g', 'enc_q.enc.res_skip_layers.12.weight_v', 'enc_q.enc.res_skip_layers.13.bias', 'enc_q.enc.res_skip_layers.13.weight_g', 'enc_q.enc.res_skip_layers.13.weight_v', 'enc_q.enc.res_skip_layers.14.bias', 'enc_q.enc.res_skip_layers.14.weight_g', 'enc_q.enc.res_skip_layers.14.weight_v', 'enc_q.enc.res_skip_layers.15.bias', 'enc_q.enc.res_skip_layers.15.weight_g', 'enc_q.enc.res_skip_layers.15.weight_v', 'enc_q.enc.cond_layer.bias', 'enc_q.enc.cond_layer.weight_g', 'enc_q.enc.cond_layer.weight_v', 'enc_q.proj.weight', 'enc_q.proj.bias'], unexpected_keys=[])
+INFO:     127.0.0.1:9157 - "GET /set_sovits_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29_e15_s1230.pth HTTP/1.1" 200 OK
+INFO:     127.0.0.1:9159 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9160 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9161 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2563 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 78520898
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+《堂吉诃德》节选（第一部·第一章）
+实际输入的目标文本(切句后):
+['《堂吉诃德》节选（第一部·第一章）。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  9.23it/s]100%|██████████| 1/1 [00:00<00:00,  9.15it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['堂吉诃德节选第一部,第一章.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<01:02, 24.08it/s]  0%|          | 7/1500 [00:00<00:49, 30.39it/s]  1%|          | 11/1500 [00:00<00:44, 33.33it/s]  1%|          | 15/1500 [00:00<00:43, 34.50it/s]  1%|▏         | 19/1500 [00:00<00:41, 35.53it/s]  2%|▏         | 23/1500 [00:00<00:41, 35.92it/s]  2%|▏         | 27/1500 [00:00<00:39, 36.94it/s]  2%|▏         | 31/1500 [00:00<00:40, 36.44it/s]  2%|▏         | 35/1500 [00:00<00:40, 36.62it/s]  3%|▎         | 39/1500 [00:01<00:40, 36.45it/s]  3%|▎         | 43/1500 [00:01<00:40, 35.68it/s]  3%|▎         | 47/1500 [00:01<00:40, 35.55it/s]  3%|▎         | 51/1500 [00:01<00:40, 35.55it/s]  4%|▎         | 55/1500 [00:01<00:40, 35.45it/s]  4%|▍         | 59/1500 [00:01<00:39, 36.18it/s]  4%|▍         | 63/1500 [00:01<00:40, 35.30it/s]  4%|▍         | 66/1500 [00:01<00:41, 34.70it/s]
+T2S Decoding EOS [187 -> 254]
+############ 合成音频 ############
+并行合成中...
+0.000	0.111	1.915	0.466
+INFO:     127.0.0.1:2564 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10778 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 2634260820
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+在拉曼查的一个地方，有一个绅士，姓名不甚重要。
+实际输入的目标文本(切句后):
+['在拉曼查的一个地方，有一个绅士，姓名不甚重要。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 11.28it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['在拉曼查的一个地方,有一个绅士,姓名不甚重要.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:42, 35.14it/s]  1%|          | 8/1500 [00:00<00:42, 34.93it/s]  1%|          | 12/1500 [00:00<00:41, 35.45it/s]  1%|          | 16/1500 [00:00<00:42, 35.11it/s]  1%|▏         | 21/1500 [00:00<00:39, 37.49it/s]  2%|▏         | 25/1500 [00:00<00:39, 37.50it/s]  2%|▏         | 29/1500 [00:00<00:39, 37.61it/s]  2%|▏         | 33/1500 [00:00<00:38, 37.72it/s]  2%|▏         | 37/1500 [00:01<00:39, 37.23it/s]  3%|▎         | 41/1500 [00:01<00:40, 36.24it/s]  3%|▎         | 45/1500 [00:01<00:40, 35.74it/s]  3%|▎         | 49/1500 [00:01<00:39, 36.53it/s]  4%|▎         | 53/1500 [00:01<00:39, 36.98it/s]  4%|▍         | 57/1500 [00:01<00:38, 37.07it/s]  4%|▍         | 61/1500 [00:01<00:38, 37.64it/s]  4%|▍         | 65/1500 [00:01<00:38, 36.91it/s]  5%|▍         | 69/1500 [00:01<00:39, 36.62it/s]  5%|▍         | 73/1500 [00:01<00:38, 37.27it/s]  5%|▌         | 77/1500 [00:02<00:38, 36.66it/s]  5%|▌         | 81/1500 [00:02<00:39, 35.62it/s]  6%|▌         | 85/1500 [00:02<00:39, 36.14it/s]  6%|▌         | 89/1500 [00:02<00:38, 36.36it/s]  6%|▌         | 93/1500 [00:02<00:38, 36.37it/s]  6%|▋         | 97/1500 [00:02<00:39, 35.45it/s]  7%|▋         | 101/1500 [00:02<00:38, 35.97it/s]  7%|▋         | 105/1500 [00:02<00:39, 35.31it/s]  7%|▋         | 109/1500 [00:02<00:39, 35.31it/s]  8%|▊         | 113/1500 [00:03<00:38, 35.98it/s]  8%|▊         | 117/1500 [00:03<00:39, 35.14it/s]  8%|▊         | 118/1500 [00:03<00:38, 35.98it/s]
+T2S Decoding EOS [187 -> 306]
+############ 合成音频 ############
+并行合成中...
+0.000	0.091	3.282	0.459
+INFO:     127.0.0.1:10779 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3018 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 2599582891
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+在拉曼查的一个地方，有一个绅士，姓名不甚重要。
+实际输入的目标文本(切句后):
+['在拉曼查的一个地方，有一个绅士，姓名不甚重要。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 25.73it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['在拉曼查的一个地方,有一个绅士,姓名不甚重要.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:45, 33.03it/s]  1%|          | 8/1500 [00:00<00:42, 35.49it/s]  1%|          | 12/1500 [00:00<00:40, 36.88it/s]  1%|          | 16/1500 [00:00<00:39, 37.33it/s]  1%|▏         | 20/1500 [00:00<00:39, 37.16it/s]  2%|▏         | 24/1500 [00:00<00:39, 37.51it/s]  2%|▏         | 28/1500 [00:00<00:38, 37.75it/s]  2%|▏         | 32/1500 [00:00<00:38, 37.81it/s]  2%|▏         | 36/1500 [00:00<00:40, 36.56it/s]  3%|▎         | 40/1500 [00:01<00:39, 36.77it/s]  3%|▎         | 44/1500 [00:01<00:40, 36.28it/s]  3%|▎         | 48/1500 [00:01<00:39, 36.41it/s]  3%|▎         | 52/1500 [00:01<00:39, 36.23it/s]  4%|▎         | 56/1500 [00:01<00:40, 35.92it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.17it/s]  4%|▍         | 64/1500 [00:01<00:40, 35.64it/s]  5%|▍         | 68/1500 [00:01<00:39, 35.91it/s]  5%|▍         | 72/1500 [00:01<00:39, 36.15it/s]  5%|▌         | 76/1500 [00:02<00:39, 36.26it/s]  5%|▌         | 81/1500 [00:02<00:37, 37.52it/s]  6%|▌         | 85/1500 [00:02<00:37, 37.59it/s]  6%|▌         | 89/1500 [00:02<00:37, 37.44it/s]  6%|▋         | 94/1500 [00:02<00:36, 38.33it/s]  7%|▋         | 98/1500 [00:02<00:36, 38.03it/s]  7%|▋         | 102/1500 [00:02<00:37, 37.78it/s]  7%|▋         | 106/1500 [00:02<00:36, 37.80it/s]  7%|▋         | 110/1500 [00:02<00:37, 37.39it/s]  8%|▊         | 113/1500 [00:03<00:37, 36.66it/s]
+T2S Decoding EOS [187 -> 301]
+############ 合成音频 ############
+并行合成中...
+0.000	0.039	3.084	0.431
+INFO:     127.0.0.1:10407 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10408 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:10410 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 3609396454
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+有人说他叫吉哈达，也有人说叫基萨达。
+实际输入的目标文本(切句后):
+['有人说他叫吉哈达，也有人说叫基萨达。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 12.11it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['有人说他叫吉哈达,也有人说叫基萨达.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:43, 34.44it/s]  1%|          | 8/1500 [00:00<00:40, 37.02it/s]  1%|          | 12/1500 [00:00<00:41, 36.03it/s]  1%|          | 16/1500 [00:00<00:40, 36.30it/s]  1%|▏         | 21/1500 [00:00<00:37, 38.95it/s]  2%|▏         | 25/1500 [00:00<00:39, 37.69it/s]  2%|▏         | 29/1500 [00:00<00:40, 36.54it/s]  2%|▏         | 33/1500 [00:00<00:40, 36.02it/s]  2%|▏         | 37/1500 [00:01<00:40, 35.69it/s]  3%|▎         | 41/1500 [00:01<00:40, 35.93it/s]  3%|▎         | 45/1500 [00:01<00:39, 37.05it/s]  3%|▎         | 49/1500 [00:01<00:40, 35.67it/s]  4%|▎         | 53/1500 [00:01<00:40, 35.62it/s]  4%|▍         | 57/1500 [00:01<00:41, 34.61it/s]  4%|▍         | 61/1500 [00:01<00:40, 35.15it/s]  4%|▍         | 65/1500 [00:01<00:40, 35.28it/s]  5%|▍         | 69/1500 [00:01<00:39, 36.15it/s]  5%|▍         | 73/1500 [00:02<00:39, 36.35it/s]  5%|▌         | 77/1500 [00:02<00:39, 36.05it/s]  5%|▌         | 81/1500 [00:02<00:39, 36.30it/s]  5%|▌         | 81/1500 [00:02<00:39, 35.70it/s]
+T2S Decoding EOS [187 -> 269]
+############ 合成音频 ############
+并行合成中...
+0.000	0.084	2.272	0.473
+INFO:     127.0.0.1:10409 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 1731949613
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+有人说他叫吉哈达，也有人说叫基萨达。
+实际输入的目标文本(切句后):
+['有人说他叫吉哈达，也有人说叫基萨达。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 19.51it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['有人说他叫吉哈达,也有人说叫基萨达.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:39, 38.31it/s]  1%|          | 8/1500 [00:00<00:41, 35.72it/s]  1%|          | 12/1500 [00:00<00:40, 36.76it/s]  1%|          | 16/1500 [00:00<00:40, 36.79it/s]  1%|▏         | 20/1500 [00:00<00:39, 37.32it/s]  2%|▏         | 24/1500 [00:00<00:39, 37.12it/s]  2%|▏         | 28/1500 [00:00<00:39, 37.37it/s]  2%|▏         | 32/1500 [00:00<00:39, 37.63it/s]  2%|▏         | 36/1500 [00:00<00:38, 37.93it/s]  3%|▎         | 40/1500 [00:01<00:38, 38.17it/s]  3%|▎         | 44/1500 [00:01<00:39, 37.21it/s]  3%|▎         | 48/1500 [00:01<00:39, 36.31it/s]  3%|▎         | 52/1500 [00:01<00:40, 35.61it/s]  4%|▎         | 56/1500 [00:01<00:40, 35.61it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.21it/s]  4%|▍         | 64/1500 [00:01<00:40, 35.59it/s]  5%|▍         | 68/1500 [00:01<00:39, 36.35it/s]  5%|▍         | 72/1500 [00:01<00:39, 35.73it/s]  5%|▌         | 76/1500 [00:02<00:39, 36.31it/s]  5%|▌         | 81/1500 [00:02<00:36, 39.00it/s]  6%|▌         | 84/1500 [00:02<00:37, 37.41it/s]
+T2S Decoding EOS [187 -> 272]
+############ 合成音频 ############
+并行合成中...
+0.000	0.051	2.249	0.244
+INFO:     127.0.0.1:10411 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4880 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:10274 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2035 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:12724 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:12726 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4098 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:12603 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:10188 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1747 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7501 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:12126 - "GET / HTTP/1.1" 404 Not Found
+ERROR:root:Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "asyncio\events.py", line 80, in _run
+  File "asyncio\proactor_events.py", line 162, in _call_connection_lost
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+INFO:     127.0.0.1:2532 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2706 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4115 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9120 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7168 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3587 - "GET / HTTP/1.1" 404 Not Found
+Loading Text2Semantic weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)-e10.ckpt
+INFO:     127.0.0.1:3588 - "GET /set_gpt_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29-e10.ckpt HTTP/1.1" 200 OK
+Loading VITS weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)_e15_s1230.pth. _IncompatibleKeys(missing_keys=['enc_q.pre.weight', 'enc_q.pre.bias', 'enc_q.enc.in_layers.0.bias', 'enc_q.enc.in_layers.0.weight_g', 'enc_q.enc.in_layers.0.weight_v', 'enc_q.enc.in_layers.1.bias', 'enc_q.enc.in_layers.1.weight_g', 'enc_q.enc.in_layers.1.weight_v', 'enc_q.enc.in_layers.2.bias', 'enc_q.enc.in_layers.2.weight_g', 'enc_q.enc.in_layers.2.weight_v', 'enc_q.enc.in_layers.3.bias', 'enc_q.enc.in_layers.3.weight_g', 'enc_q.enc.in_layers.3.weight_v', 'enc_q.enc.in_layers.4.bias', 'enc_q.enc.in_layers.4.weight_g', 'enc_q.enc.in_layers.4.weight_v', 'enc_q.enc.in_layers.5.bias', 'enc_q.enc.in_layers.5.weight_g', 'enc_q.enc.in_layers.5.weight_v', 'enc_q.enc.in_layers.6.bias', 'enc_q.enc.in_layers.6.weight_g', 'enc_q.enc.in_layers.6.weight_v', 'enc_q.enc.in_layers.7.bias', 'enc_q.enc.in_layers.7.weight_g', 'enc_q.enc.in_layers.7.weight_v', 'enc_q.enc.in_layers.8.bias', 'enc_q.enc.in_layers.8.weight_g', 'enc_q.enc.in_layers.8.weight_v', 'enc_q.enc.in_layers.9.bias', 'enc_q.enc.in_layers.9.weight_g', 'enc_q.enc.in_layers.9.weight_v', 'enc_q.enc.in_layers.10.bias', 'enc_q.enc.in_layers.10.weight_g', 'enc_q.enc.in_layers.10.weight_v', 'enc_q.enc.in_layers.11.bias', 'enc_q.enc.in_layers.11.weight_g', 'enc_q.enc.in_layers.11.weight_v', 'enc_q.enc.in_layers.12.bias', 'enc_q.enc.in_layers.12.weight_g', 'enc_q.enc.in_layers.12.weight_v', 'enc_q.enc.in_layers.13.bias', 'enc_q.enc.in_layers.13.weight_g', 'enc_q.enc.in_layers.13.weight_v', 'enc_q.enc.in_layers.14.bias', 'enc_q.enc.in_layers.14.weight_g', 'enc_q.enc.in_layers.14.weight_v', 'enc_q.enc.in_layers.15.bias', 'enc_q.enc.in_layers.15.weight_g', 'enc_q.enc.in_layers.15.weight_v', 'enc_q.enc.res_skip_layers.0.bias', 'enc_q.enc.res_skip_layers.0.weight_g', 'enc_q.enc.res_skip_layers.0.weight_v', 'enc_q.enc.res_skip_layers.1.bias', 'enc_q.enc.res_skip_layers.1.weight_g', 'enc_q.enc.res_skip_layers.1.weight_v', 'enc_q.enc.res_skip_layers.2.bias', 'enc_q.enc.res_skip_layers.2.weight_g', 'enc_q.enc.res_skip_layers.2.weight_v', 'enc_q.enc.res_skip_layers.3.bias', 'enc_q.enc.res_skip_layers.3.weight_g', 'enc_q.enc.res_skip_layers.3.weight_v', 'enc_q.enc.res_skip_layers.4.bias', 'enc_q.enc.res_skip_layers.4.weight_g', 'enc_q.enc.res_skip_layers.4.weight_v', 'enc_q.enc.res_skip_layers.5.bias', 'enc_q.enc.res_skip_layers.5.weight_g', 'enc_q.enc.res_skip_layers.5.weight_v', 'enc_q.enc.res_skip_layers.6.bias', 'enc_q.enc.res_skip_layers.6.weight_g', 'enc_q.enc.res_skip_layers.6.weight_v', 'enc_q.enc.res_skip_layers.7.bias', 'enc_q.enc.res_skip_layers.7.weight_g', 'enc_q.enc.res_skip_layers.7.weight_v', 'enc_q.enc.res_skip_layers.8.bias', 'enc_q.enc.res_skip_layers.8.weight_g', 'enc_q.enc.res_skip_layers.8.weight_v', 'enc_q.enc.res_skip_layers.9.bias', 'enc_q.enc.res_skip_layers.9.weight_g', 'enc_q.enc.res_skip_layers.9.weight_v', 'enc_q.enc.res_skip_layers.10.bias', 'enc_q.enc.res_skip_layers.10.weight_g', 'enc_q.enc.res_skip_layers.10.weight_v', 'enc_q.enc.res_skip_layers.11.bias', 'enc_q.enc.res_skip_layers.11.weight_g', 'enc_q.enc.res_skip_layers.11.weight_v', 'enc_q.enc.res_skip_layers.12.bias', 'enc_q.enc.res_skip_layers.12.weight_g', 'enc_q.enc.res_skip_layers.12.weight_v', 'enc_q.enc.res_skip_layers.13.bias', 'enc_q.enc.res_skip_layers.13.weight_g', 'enc_q.enc.res_skip_layers.13.weight_v', 'enc_q.enc.res_skip_layers.14.bias', 'enc_q.enc.res_skip_layers.14.weight_g', 'enc_q.enc.res_skip_layers.14.weight_v', 'enc_q.enc.res_skip_layers.15.bias', 'enc_q.enc.res_skip_layers.15.weight_g', 'enc_q.enc.res_skip_layers.15.weight_v', 'enc_q.enc.cond_layer.bias', 'enc_q.enc.cond_layer.weight_g', 'enc_q.enc.cond_layer.weight_v', 'enc_q.proj.weight', 'enc_q.proj.bias'], unexpected_keys=[])
+INFO:     127.0.0.1:8696 - "GET /set_sovits_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29_e15_s1230.pth HTTP/1.1" 200 OK
+False False False
+Set seed to 2985878045
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+《堂吉诃德》节选（第一部·第一章）
+实际输入的目标文本(切句后):
+['《堂吉诃德》节选（第一部·第一章）。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 10.17it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['堂吉诃德节选第一部,第一章.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:47, 31.45it/s]  1%|          | 9/1500 [00:00<00:39, 37.49it/s]  1%|          | 13/1500 [00:00<00:39, 37.91it/s]  1%|          | 17/1500 [00:00<00:38, 38.53it/s]  1%|▏         | 21/1500 [00:00<00:38, 38.76it/s]  2%|▏         | 26/1500 [00:00<00:37, 39.32it/s]  2%|▏         | 30/1500 [00:00<00:37, 39.43it/s]  2%|▏         | 34/1500 [00:00<00:37, 38.72it/s]  3%|▎         | 38/1500 [00:01<00:38, 37.49it/s]  3%|▎         | 42/1500 [00:01<00:39, 36.74it/s]  3%|▎         | 47/1500 [00:01<00:38, 37.53it/s]  3%|▎         | 51/1500 [00:01<00:38, 37.52it/s]  4%|▎         | 55/1500 [00:01<00:38, 37.89it/s]  4%|▍         | 59/1500 [00:01<00:38, 37.52it/s]  4%|▍         | 63/1500 [00:01<00:37, 37.91it/s]  4%|▍         | 67/1500 [00:01<00:37, 38.21it/s]  5%|▍         | 71/1500 [00:01<00:37, 38.47it/s]  5%|▍         | 71/1500 [00:01<00:38, 37.32it/s]
+T2S Decoding EOS [187 -> 259]
+############ 合成音频 ############
+并行合成中...
+0.000	0.107	1.917	0.191
+INFO:     127.0.0.1:8697 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6397 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 1361255739
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+在拉曼查的一个地方，有一个绅士，姓名不甚重要。
+实际输入的目标文本(切句后):
+['在拉曼查的一个地方，有一个绅士，姓名不甚重要。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  8.18it/s]100%|██████████| 1/1 [00:00<00:00,  8.18it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['在拉曼查的一个地方,有一个绅士,姓名不甚重要.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:44, 33.61it/s]  1%|          | 8/1500 [00:00<00:42, 34.84it/s]  1%|          | 12/1500 [00:00<00:41, 36.25it/s]  1%|          | 16/1500 [00:00<00:39, 37.15it/s]  1%|▏         | 20/1500 [00:00<00:39, 37.89it/s]  2%|▏         | 24/1500 [00:00<00:38, 38.18it/s]  2%|▏         | 28/1500 [00:00<00:38, 38.00it/s]  2%|▏         | 32/1500 [00:00<00:39, 37.10it/s]  2%|▏         | 36/1500 [00:00<00:39, 36.88it/s]  3%|▎         | 40/1500 [00:01<00:39, 37.36it/s]  3%|▎         | 44/1500 [00:01<00:39, 37.27it/s]  3%|▎         | 48/1500 [00:01<00:39, 36.43it/s]  3%|▎         | 52/1500 [00:01<00:39, 36.42it/s]  4%|▎         | 56/1500 [00:01<00:38, 37.39it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.64it/s]  4%|▍         | 64/1500 [00:01<00:40, 35.86it/s]  5%|▍         | 68/1500 [00:01<00:39, 36.00it/s]  5%|▍         | 72/1500 [00:01<00:42, 33.65it/s]  5%|▌         | 76/1500 [00:02<00:41, 34.47it/s]  5%|▌         | 80/1500 [00:02<00:40, 35.36it/s]  6%|▌         | 85/1500 [00:02<00:38, 36.89it/s]  6%|▌         | 89/1500 [00:02<00:37, 37.18it/s]  6%|▌         | 93/1500 [00:02<00:37, 37.36it/s]  6%|▋         | 97/1500 [00:02<00:37, 37.32it/s]  7%|▋         | 101/1500 [00:02<00:38, 36.19it/s]  7%|▋         | 106/1500 [00:02<00:37, 37.55it/s]  7%|▋         | 110/1500 [00:03<00:37, 36.91it/s]  8%|▊         | 114/1500 [00:03<00:37, 36.76it/s]  8%|▊         | 119/1500 [00:03<00:36, 37.89it/s]  8%|▊         | 120/1500 [00:03<00:37, 36.49it/s]
+T2S Decoding EOS [187 -> 308]
+############ 合成音频 ############
+并行合成中...
+0.000	0.124	3.291	0.485
+INFO:     127.0.0.1:6398 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6642 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 1595878857
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+在拉曼查的一个地方，有一个绅士，姓名不甚重要。
+实际输入的目标文本(切句后):
+['在拉曼查的一个地方，有一个绅士，姓名不甚重要。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 20.06it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['在拉曼查的一个地方,有一个绅士,姓名不甚重要.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:44, 33.99it/s]  1%|          | 8/1500 [00:00<00:48, 30.48it/s]  1%|          | 12/1500 [00:00<00:44, 33.40it/s]  1%|          | 16/1500 [00:00<00:43, 33.73it/s]  1%|▏         | 20/1500 [00:00<00:42, 34.75it/s]  2%|▏         | 24/1500 [00:00<00:46, 31.41it/s]  2%|▏         | 28/1500 [00:00<00:50, 29.05it/s]  2%|▏         | 31/1500 [00:01<00:51, 28.58it/s]  2%|▏         | 34/1500 [00:01<00:52, 27.99it/s]  3%|▎         | 38/1500 [00:01<00:50, 29.23it/s]  3%|▎         | 41/1500 [00:01<00:50, 28.95it/s]  3%|▎         | 45/1500 [00:01<00:49, 29.69it/s]  3%|▎         | 49/1500 [00:01<00:46, 31.40it/s]  4%|▎         | 54/1500 [00:01<00:40, 35.45it/s]  4%|▍         | 58/1500 [00:01<00:41, 35.07it/s]  4%|▍         | 62/1500 [00:01<00:44, 32.50it/s]  4%|▍         | 66/1500 [00:02<00:43, 33.02it/s]  5%|▍         | 70/1500 [00:02<00:43, 32.61it/s]  5%|▌         | 75/1500 [00:02<00:40, 35.16it/s]  5%|▌         | 79/1500 [00:02<00:40, 35.33it/s]  6%|▌         | 83/1500 [00:02<00:41, 34.36it/s]  6%|▌         | 87/1500 [00:02<00:44, 31.72it/s]  6%|▌         | 91/1500 [00:02<00:45, 31.11it/s]  6%|▋         | 97/1500 [00:02<00:38, 36.45it/s]  7%|▋         | 101/1500 [00:03<00:39, 35.55it/s]  7%|▋         | 106/1500 [00:03<00:36, 37.87it/s]  7%|▋         | 110/1500 [00:03<00:41, 33.76it/s]  8%|▊         | 114/1500 [00:03<00:44, 31.26it/s]  8%|▊         | 117/1500 [00:03<00:42, 32.24it/s]
+T2S Decoding EOS [187 -> 305]
+############ 合成音频 ############
+并行合成中...
+0.000	0.051	3.637	0.476
+INFO:     127.0.0.1:4382 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:13267 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:13865 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3919 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3926 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3194 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:10575 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2352 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9681 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:13769 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:14015 - "GET / HTTP/1.1" 404 Not Found
+Loading Text2Semantic weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)-e10.ckpt
+INFO:     127.0.0.1:14017 - "GET /set_gpt_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29-e10.ckpt HTTP/1.1" 200 OK
+Loading VITS weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)_e15_s1230.pth. _IncompatibleKeys(missing_keys=['enc_q.pre.weight', 'enc_q.pre.bias', 'enc_q.enc.in_layers.0.bias', 'enc_q.enc.in_layers.0.weight_g', 'enc_q.enc.in_layers.0.weight_v', 'enc_q.enc.in_layers.1.bias', 'enc_q.enc.in_layers.1.weight_g', 'enc_q.enc.in_layers.1.weight_v', 'enc_q.enc.in_layers.2.bias', 'enc_q.enc.in_layers.2.weight_g', 'enc_q.enc.in_layers.2.weight_v', 'enc_q.enc.in_layers.3.bias', 'enc_q.enc.in_layers.3.weight_g', 'enc_q.enc.in_layers.3.weight_v', 'enc_q.enc.in_layers.4.bias', 'enc_q.enc.in_layers.4.weight_g', 'enc_q.enc.in_layers.4.weight_v', 'enc_q.enc.in_layers.5.bias', 'enc_q.enc.in_layers.5.weight_g', 'enc_q.enc.in_layers.5.weight_v', 'enc_q.enc.in_layers.6.bias', 'enc_q.enc.in_layers.6.weight_g', 'enc_q.enc.in_layers.6.weight_v', 'enc_q.enc.in_layers.7.bias', 'enc_q.enc.in_layers.7.weight_g', 'enc_q.enc.in_layers.7.weight_v', 'enc_q.enc.in_layers.8.bias', 'enc_q.enc.in_layers.8.weight_g', 'enc_q.enc.in_layers.8.weight_v', 'enc_q.enc.in_layers.9.bias', 'enc_q.enc.in_layers.9.weight_g', 'enc_q.enc.in_layers.9.weight_v', 'enc_q.enc.in_layers.10.bias', 'enc_q.enc.in_layers.10.weight_g', 'enc_q.enc.in_layers.10.weight_v', 'enc_q.enc.in_layers.11.bias', 'enc_q.enc.in_layers.11.weight_g', 'enc_q.enc.in_layers.11.weight_v', 'enc_q.enc.in_layers.12.bias', 'enc_q.enc.in_layers.12.weight_g', 'enc_q.enc.in_layers.12.weight_v', 'enc_q.enc.in_layers.13.bias', 'enc_q.enc.in_layers.13.weight_g', 'enc_q.enc.in_layers.13.weight_v', 'enc_q.enc.in_layers.14.bias', 'enc_q.enc.in_layers.14.weight_g', 'enc_q.enc.in_layers.14.weight_v', 'enc_q.enc.in_layers.15.bias', 'enc_q.enc.in_layers.15.weight_g', 'enc_q.enc.in_layers.15.weight_v', 'enc_q.enc.res_skip_layers.0.bias', 'enc_q.enc.res_skip_layers.0.weight_g', 'enc_q.enc.res_skip_layers.0.weight_v', 'enc_q.enc.res_skip_layers.1.bias', 'enc_q.enc.res_skip_layers.1.weight_g', 'enc_q.enc.res_skip_layers.1.weight_v', 'enc_q.enc.res_skip_layers.2.bias', 'enc_q.enc.res_skip_layers.2.weight_g', 'enc_q.enc.res_skip_layers.2.weight_v', 'enc_q.enc.res_skip_layers.3.bias', 'enc_q.enc.res_skip_layers.3.weight_g', 'enc_q.enc.res_skip_layers.3.weight_v', 'enc_q.enc.res_skip_layers.4.bias', 'enc_q.enc.res_skip_layers.4.weight_g', 'enc_q.enc.res_skip_layers.4.weight_v', 'enc_q.enc.res_skip_layers.5.bias', 'enc_q.enc.res_skip_layers.5.weight_g', 'enc_q.enc.res_skip_layers.5.weight_v', 'enc_q.enc.res_skip_layers.6.bias', 'enc_q.enc.res_skip_layers.6.weight_g', 'enc_q.enc.res_skip_layers.6.weight_v', 'enc_q.enc.res_skip_layers.7.bias', 'enc_q.enc.res_skip_layers.7.weight_g', 'enc_q.enc.res_skip_layers.7.weight_v', 'enc_q.enc.res_skip_layers.8.bias', 'enc_q.enc.res_skip_layers.8.weight_g', 'enc_q.enc.res_skip_layers.8.weight_v', 'enc_q.enc.res_skip_layers.9.bias', 'enc_q.enc.res_skip_layers.9.weight_g', 'enc_q.enc.res_skip_layers.9.weight_v', 'enc_q.enc.res_skip_layers.10.bias', 'enc_q.enc.res_skip_layers.10.weight_g', 'enc_q.enc.res_skip_layers.10.weight_v', 'enc_q.enc.res_skip_layers.11.bias', 'enc_q.enc.res_skip_layers.11.weight_g', 'enc_q.enc.res_skip_layers.11.weight_v', 'enc_q.enc.res_skip_layers.12.bias', 'enc_q.enc.res_skip_layers.12.weight_g', 'enc_q.enc.res_skip_layers.12.weight_v', 'enc_q.enc.res_skip_layers.13.bias', 'enc_q.enc.res_skip_layers.13.weight_g', 'enc_q.enc.res_skip_layers.13.weight_v', 'enc_q.enc.res_skip_layers.14.bias', 'enc_q.enc.res_skip_layers.14.weight_g', 'enc_q.enc.res_skip_layers.14.weight_v', 'enc_q.enc.res_skip_layers.15.bias', 'enc_q.enc.res_skip_layers.15.weight_g', 'enc_q.enc.res_skip_layers.15.weight_v', 'enc_q.enc.cond_layer.bias', 'enc_q.enc.cond_layer.weight_g', 'enc_q.enc.cond_layer.weight_v', 'enc_q.proj.weight', 'enc_q.proj.bias'], unexpected_keys=[])
+INFO:     127.0.0.1:14031 - "GET /set_sovits_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29_e15_s1230.pth HTTP/1.1" 200 OK
+False False False
+Set seed to 1444567407
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+《堂吉诃德》节选（第一部·第一章）
+实际输入的目标文本(切句后):
+['《堂吉诃德》节选（第一部·第一章）。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.72it/s]100%|██████████| 1/1 [00:00<00:00,  1.72it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['堂吉诃德节选第一部,第一章.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 2/1500 [00:00<01:25, 17.56it/s]  0%|          | 6/1500 [00:00<00:50, 29.65it/s]  1%|          | 10/1500 [00:00<00:44, 33.78it/s]  1%|          | 14/1500 [00:00<00:43, 33.79it/s]  1%|          | 18/1500 [00:00<00:42, 35.23it/s]  1%|▏         | 22/1500 [00:00<00:41, 35.79it/s]  2%|▏         | 26/1500 [00:00<00:41, 35.68it/s]  2%|▏         | 30/1500 [00:00<00:40, 36.01it/s]  2%|▏         | 34/1500 [00:00<00:40, 36.52it/s]  3%|▎         | 38/1500 [00:01<00:39, 36.92it/s]  3%|▎         | 42/1500 [00:01<00:40, 36.12it/s]  3%|▎         | 46/1500 [00:01<00:40, 35.89it/s]  3%|▎         | 50/1500 [00:01<00:40, 36.07it/s]  4%|▎         | 54/1500 [00:01<00:39, 36.60it/s]  4%|▍         | 58/1500 [00:01<00:39, 36.76it/s]  4%|▍         | 62/1500 [00:01<00:41, 34.90it/s]  4%|▍         | 66/1500 [00:01<00:41, 34.83it/s]  4%|▍         | 67/1500 [00:01<00:41, 34.30it/s]
+T2S Decoding EOS [187 -> 255]
+############ 合成音频 ############
+并行合成中...
+0.001	0.628	2.007	0.939
+INFO:     127.0.0.1:14032 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:5306 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 2648859182
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+在拉曼查的一个地方，有一个绅士，姓名不甚重要。
+实际输入的目标文本(切句后):
+['在拉曼查的一个地方，有一个绅士，姓名不甚重要。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.36it/s]100%|██████████| 1/1 [00:00<00:00,  3.36it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['在拉曼查的一个地方,有一个绅士,姓名不甚重要.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 1/1500 [00:00<03:01,  8.25it/s]  0%|          | 5/1500 [00:00<01:01, 24.27it/s]  1%|          | 9/1500 [00:00<00:49, 29.90it/s]  1%|          | 13/1500 [00:00<00:44, 33.15it/s]  1%|          | 17/1500 [00:00<00:43, 34.06it/s]  1%|▏         | 21/1500 [00:00<00:44, 33.06it/s]  2%|▏         | 25/1500 [00:00<00:45, 32.44it/s]  2%|▏         | 29/1500 [00:00<00:46, 31.86it/s]  2%|▏         | 33/1500 [00:01<00:45, 32.26it/s]  2%|▏         | 37/1500 [00:01<00:47, 30.96it/s]  3%|▎         | 41/1500 [00:01<00:44, 32.50it/s]  3%|▎         | 45/1500 [00:01<00:49, 29.64it/s]  3%|▎         | 49/1500 [00:01<00:46, 31.33it/s]  4%|▎         | 53/1500 [00:01<00:46, 31.40it/s]  4%|▍         | 57/1500 [00:01<00:44, 32.79it/s]  4%|▍         | 61/1500 [00:01<00:45, 31.48it/s]  4%|▍         | 65/1500 [00:02<00:44, 32.43it/s]  5%|▍         | 69/1500 [00:02<00:44, 32.10it/s]  5%|▍         | 73/1500 [00:02<00:43, 32.99it/s]  5%|▌         | 77/1500 [00:02<00:43, 32.57it/s]  5%|▌         | 81/1500 [00:02<00:42, 33.63it/s]  6%|▌         | 85/1500 [00:02<00:41, 33.75it/s]  6%|▌         | 89/1500 [00:02<00:42, 33.06it/s]  6%|▌         | 93/1500 [00:02<00:41, 33.56it/s]  6%|▋         | 97/1500 [00:03<00:40, 34.73it/s]  7%|▋         | 101/1500 [00:03<00:39, 35.05it/s]  7%|▋         | 105/1500 [00:03<00:39, 35.73it/s]  7%|▋         | 109/1500 [00:03<00:38, 35.69it/s]  8%|▊         | 113/1500 [00:03<00:38, 36.00it/s]  8%|▊         | 117/1500 [00:03<00:38, 36.20it/s]  8%|▊         | 121/1500 [00:03<00:38, 36.11it/s]  8%|▊         | 125/1500 [00:03<00:37, 36.52it/s]  8%|▊         | 125/1500 [00:03<00:41, 32.80it/s]
+T2S Decoding EOS [187 -> 313]
+############ 合成音频 ############
+并行合成中...
+0.000	0.299	3.816	0.520
+INFO:     127.0.0.1:5307 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:12845 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 2386758743
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+在拉曼查的一个地方，有一个绅士，姓名不甚重要。
+实际输入的目标文本(切句后):
+['在拉曼查的一个地方，有一个绅士，姓名不甚重要。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 23.23it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['在拉曼查的一个地方,有一个绅士,姓名不甚重要.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:38, 39.35it/s]  1%|          | 8/1500 [00:00<00:39, 37.86it/s]  1%|          | 12/1500 [00:00<00:41, 36.00it/s]  1%|          | 16/1500 [00:00<00:41, 35.92it/s]  1%|▏         | 20/1500 [00:00<00:41, 35.60it/s]  2%|▏         | 24/1500 [00:00<00:40, 36.70it/s]  2%|▏         | 28/1500 [00:00<00:40, 36.50it/s]  2%|▏         | 32/1500 [00:00<00:40, 36.57it/s]  2%|▏         | 36/1500 [00:00<00:39, 36.95it/s]  3%|▎         | 40/1500 [00:01<00:40, 36.28it/s]  3%|▎         | 44/1500 [00:01<00:39, 36.43it/s]  3%|▎         | 48/1500 [00:01<00:40, 36.30it/s]  3%|▎         | 52/1500 [00:01<00:40, 36.00it/s]  4%|▎         | 56/1500 [00:01<00:40, 36.06it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.81it/s]  4%|▍         | 64/1500 [00:01<00:38, 36.88it/s]  5%|▍         | 68/1500 [00:01<00:38, 36.88it/s]  5%|▍         | 72/1500 [00:01<00:40, 35.34it/s]  5%|▌         | 76/1500 [00:02<00:40, 35.54it/s]  5%|▌         | 81/1500 [00:02<00:38, 36.76it/s]  6%|▌         | 85/1500 [00:02<00:38, 36.94it/s]  6%|▌         | 89/1500 [00:02<00:39, 35.91it/s]  6%|▌         | 93/1500 [00:02<00:38, 36.39it/s]  6%|▋         | 97/1500 [00:02<00:38, 36.03it/s]  7%|▋         | 101/1500 [00:02<00:38, 36.56it/s]  7%|▋         | 105/1500 [00:02<00:37, 37.35it/s]  7%|▋         | 109/1500 [00:02<00:36, 37.69it/s]  8%|▊         | 113/1500 [00:03<00:37, 36.92it/s]  8%|▊         | 117/1500 [00:03<00:37, 36.67it/s]  8%|▊         | 121/1500 [00:03<00:37, 37.25it/s]  8%|▊         | 125/1500 [00:03<00:37, 36.67it/s]  9%|▊         | 129/1500 [00:03<00:37, 36.57it/s]  9%|▉         | 133/1500 [00:03<00:36, 37.07it/s]  9%|▉         | 137/1500 [00:03<00:37, 36.63it/s]  9%|▉         | 138/1500 [00:03<00:37, 36.28it/s]
+T2S Decoding EOS [187 -> 326]
+############ 合成音频 ############
+并行合成中...
+0.000	0.044	3.806	0.500
+INFO:     127.0.0.1:8548 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8549 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 3939880321
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+有人说他叫吉哈达，也有人说叫基萨达。
+实际输入的目标文本(切句后):
+['有人说他叫吉哈达，也有人说叫基萨达。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.74it/s]100%|██████████| 1/1 [00:00<00:00,  5.69it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['有人说他叫吉哈达,也有人说叫基萨达.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:42, 34.96it/s]  1%|          | 8/1500 [00:00<00:44, 33.74it/s]  1%|          | 12/1500 [00:00<00:41, 35.88it/s]  1%|          | 16/1500 [00:00<00:40, 36.84it/s]  1%|▏         | 20/1500 [00:00<00:40, 36.39it/s]  2%|▏         | 24/1500 [00:00<00:41, 35.97it/s]  2%|▏         | 28/1500 [00:00<00:41, 35.53it/s]  2%|▏         | 32/1500 [00:00<00:41, 35.78it/s]  2%|▏         | 36/1500 [00:01<00:40, 35.83it/s]  3%|▎         | 40/1500 [00:01<00:40, 35.92it/s]  3%|▎         | 44/1500 [00:01<00:39, 36.68it/s]  3%|▎         | 48/1500 [00:01<00:39, 36.48it/s]  3%|▎         | 52/1500 [00:01<00:39, 36.53it/s]  4%|▎         | 56/1500 [00:01<00:38, 37.18it/s]  4%|▍         | 60/1500 [00:01<00:40, 35.89it/s]  4%|▍         | 64/1500 [00:01<00:40, 35.11it/s]  5%|▍         | 68/1500 [00:01<00:39, 36.31it/s]  5%|▍         | 72/1500 [00:01<00:39, 36.42it/s]  5%|▌         | 76/1500 [00:02<00:39, 36.31it/s]  5%|▌         | 80/1500 [00:02<00:39, 36.25it/s]  6%|▌         | 84/1500 [00:02<00:39, 36.27it/s]  6%|▌         | 88/1500 [00:02<00:38, 36.61it/s]  6%|▌         | 88/1500 [00:02<00:39, 35.77it/s]
+T2S Decoding EOS [187 -> 276]
+############ 合成音频 ############
+并行合成中...
+0.000	0.177	2.463	0.488
+INFO:     127.0.0.1:8550 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8238 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 1608355963
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+他大约五十岁，体格瘦削，脸色清癯，性格上偏爱狩猎与读骑士小说。
+实际输入的目标文本(切句后):
+['他大约五十岁，体格瘦削，脸色清癯，性格上偏爱狩猎与读骑士小说。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.64it/s]100%|██████████| 1/1 [00:00<00:00,  2.64it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['他大约五十岁,体格瘦削,脸色清癯,性格上偏爱狩猎与读骑士小说.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 2/1500 [00:00<01:25, 17.50it/s]  0%|          | 6/1500 [00:00<00:52, 28.24it/s]  1%|          | 10/1500 [00:00<00:47, 31.53it/s]  1%|          | 14/1500 [00:00<00:44, 33.12it/s]  1%|          | 18/1500 [00:00<00:43, 34.17it/s]  1%|▏         | 22/1500 [00:00<00:42, 34.81it/s]  2%|▏         | 26/1500 [00:00<00:41, 35.23it/s]  2%|▏         | 30/1500 [00:00<00:41, 35.03it/s]  2%|▏         | 34/1500 [00:01<00:41, 35.50it/s]  3%|▎         | 38/1500 [00:01<00:40, 36.11it/s]  3%|▎         | 42/1500 [00:01<00:40, 35.92it/s]  3%|▎         | 46/1500 [00:01<00:41, 35.30it/s]  3%|▎         | 50/1500 [00:01<00:40, 35.75it/s]  4%|▎         | 54/1500 [00:01<00:40, 35.62it/s]  4%|▍         | 58/1500 [00:01<00:41, 35.13it/s]  4%|▍         | 62/1500 [00:01<00:40, 35.79it/s]  4%|▍         | 66/1500 [00:01<00:40, 35.76it/s]  5%|▍         | 70/1500 [00:02<00:39, 36.02it/s]  5%|▍         | 74/1500 [00:02<00:38, 36.73it/s]  5%|▌         | 78/1500 [00:02<00:39, 36.17it/s]  5%|▌         | 82/1500 [00:02<00:39, 35.82it/s]  6%|▌         | 86/1500 [00:02<00:39, 36.19it/s]  6%|▌         | 90/1500 [00:02<00:38, 36.24it/s]  6%|▋         | 94/1500 [00:02<00:39, 35.90it/s]  7%|▋         | 98/1500 [00:02<00:38, 36.40it/s]  7%|▋         | 102/1500 [00:02<00:39, 35.77it/s]  7%|▋         | 106/1500 [00:03<00:39, 35.49it/s]  7%|▋         | 110/1500 [00:03<00:38, 36.52it/s]  8%|▊         | 114/1500 [00:03<00:38, 36.29it/s]  8%|▊         | 118/1500 [00:03<00:38, 35.67it/s]  8%|▊         | 122/1500 [00:03<00:38, 35.71it/s]  8%|▊         | 126/1500 [00:03<00:38, 35.88it/s]  9%|▊         | 130/1500 [00:03<00:37, 36.24it/s]  9%|▉         | 134/1500 [00:03<00:37, 36.28it/s]  9%|▉         | 138/1500 [00:03<00:37, 36.32it/s]  9%|▉         | 142/1500 [00:04<00:37, 35.97it/s] 10%|▉         | 146/1500 [00:04<00:37, 36.29it/s] 10%|█         | 150/1500 [00:04<00:37, 36.00it/s] 10%|█         | 154/1500 [00:04<00:40, 33.48it/s] 11%|█         | 158/1500 [00:04<00:38, 34.73it/s] 11%|█         | 162/1500 [00:04<00:37, 35.28it/s] 11%|█         | 166/1500 [00:04<00:36, 36.17it/s] 11%|█▏        | 170/1500 [00:04<00:36, 36.42it/s] 12%|█▏        | 174/1500 [00:04<00:36, 36.15it/s] 12%|█▏        | 179/1500 [00:05<00:35, 37.05it/s] 12%|█▏        | 183/1500 [00:05<00:36, 36.57it/s] 12%|█▏        | 187/1500 [00:05<00:35, 36.95it/s] 13%|█▎        | 191/1500 [00:05<00:36, 35.68it/s] 13%|█▎        | 195/1500 [00:05<00:36, 35.79it/s] 13%|█▎        | 199/1500 [00:05<00:36, 35.45it/s] 14%|█▎        | 203/1500 [00:05<00:36, 35.72it/s] 14%|█▎        | 206/1500 [00:05<00:36, 35.39it/s]
+T2S Decoding EOS [187 -> 394]
+############ 合成音频 ############
+并行合成中...
+0.000	0.380	5.830	0.502
+INFO:     127.0.0.1:8239 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1675 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:5288 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 4213394386
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+《堂吉诃德》节选（第一部·第一章）
+实际输入的目标文本(切句后):
+['《堂吉诃德》节选（第一部·第一章）。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 13.98it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['堂吉诃德节选第一部,第一章.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<00:50, 29.36it/s]  0%|          | 7/1500 [00:00<00:46, 32.42it/s]  1%|          | 11/1500 [00:00<00:41, 35.58it/s]  1%|          | 15/1500 [00:00<00:39, 37.22it/s]  1%|▏         | 19/1500 [00:00<00:40, 36.49it/s]  2%|▏         | 23/1500 [00:00<00:41, 35.36it/s]  2%|▏         | 27/1500 [00:00<00:42, 34.99it/s]  2%|▏         | 31/1500 [00:00<00:41, 35.66it/s]  2%|▏         | 35/1500 [00:00<00:41, 35.14it/s]  3%|▎         | 39/1500 [00:01<00:41, 35.15it/s]  3%|▎         | 43/1500 [00:01<00:41, 35.50it/s]  3%|▎         | 47/1500 [00:01<00:40, 35.94it/s]  3%|▎         | 51/1500 [00:01<00:40, 36.17it/s]  4%|▎         | 55/1500 [00:01<00:40, 35.97it/s]  4%|▍         | 59/1500 [00:01<00:39, 36.49it/s]  4%|▍         | 63/1500 [00:01<00:39, 36.28it/s]  4%|▍         | 67/1500 [00:01<00:39, 36.16it/s]  4%|▍         | 67/1500 [00:01<00:40, 35.19it/s]
+T2S Decoding EOS [187 -> 255]
+############ 合成音频 ############
+并行合成中...
+0.000	0.073	1.906	0.097
+INFO:     127.0.0.1:5289 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2175996225
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+在拉曼查的一个地方，有一个绅士，姓名不甚重要。
+实际输入的目标文本(切句后):
+['在拉曼查的一个地方，有一个绅士，姓名不甚重要。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 23.31it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['在拉曼查的一个地方,有一个绅士,姓名不甚重要.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:40, 37.14it/s]  1%|          | 8/1500 [00:00<00:40, 36.51it/s]  1%|          | 12/1500 [00:00<00:40, 36.55it/s]  1%|          | 16/1500 [00:00<00:40, 36.35it/s]  1%|▏         | 20/1500 [00:00<00:39, 37.56it/s]  2%|▏         | 24/1500 [00:00<00:40, 36.82it/s]  2%|▏         | 28/1500 [00:00<00:40, 36.53it/s]  2%|▏         | 32/1500 [00:00<00:40, 36.12it/s]  2%|▏         | 36/1500 [00:00<00:40, 36.01it/s]  3%|▎         | 40/1500 [00:01<00:41, 35.41it/s]  3%|▎         | 44/1500 [00:01<00:40, 36.22it/s]  3%|▎         | 48/1500 [00:01<00:40, 36.21it/s]  3%|▎         | 52/1500 [00:01<00:39, 36.46it/s]  4%|▎         | 56/1500 [00:01<00:39, 36.54it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.26it/s]  4%|▍         | 64/1500 [00:01<00:39, 36.51it/s]  5%|▍         | 68/1500 [00:01<00:38, 37.20it/s]  5%|▍         | 72/1500 [00:01<00:38, 36.79it/s]  5%|▌         | 76/1500 [00:02<00:38, 37.16it/s]  5%|▌         | 80/1500 [00:02<00:38, 36.95it/s]  6%|▌         | 84/1500 [00:02<00:38, 36.85it/s]  6%|▌         | 88/1500 [00:02<00:38, 36.48it/s]  6%|▌         | 92/1500 [00:02<00:38, 36.92it/s]  6%|▋         | 96/1500 [00:02<00:37, 37.36it/s]  7%|▋         | 100/1500 [00:02<00:37, 37.24it/s]  7%|▋         | 104/1500 [00:02<00:37, 37.00it/s]  7%|▋         | 108/1500 [00:02<00:37, 37.05it/s]  7%|▋         | 112/1500 [00:03<00:38, 36.12it/s]  8%|▊         | 116/1500 [00:03<00:39, 35.23it/s]  8%|▊         | 119/1500 [00:03<00:38, 36.00it/s]
+T2S Decoding EOS [187 -> 307]
+############ 合成音频 ############
+并行合成中...
+0.000	0.043	3.308	0.483
+INFO:     127.0.0.1:5291 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 1379369207
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+有人说他叫吉哈达，也有人说叫基萨达。
+实际输入的目标文本(切句后):
+['有人说他叫吉哈达，也有人说叫基萨达。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 23.77it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['有人说他叫吉哈达,也有人说叫基萨达.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:41, 36.48it/s]  1%|          | 8/1500 [00:00<00:40, 36.57it/s]  1%|          | 12/1500 [00:00<00:40, 36.84it/s]  1%|          | 16/1500 [00:00<00:40, 36.23it/s]  1%|▏         | 20/1500 [00:00<00:40, 36.87it/s]  2%|▏         | 24/1500 [00:00<00:39, 37.21it/s]  2%|▏         | 28/1500 [00:00<00:39, 37.00it/s]  2%|▏         | 32/1500 [00:00<00:39, 37.47it/s]  2%|▏         | 36/1500 [00:00<00:38, 37.72it/s]  3%|▎         | 40/1500 [00:01<00:38, 37.84it/s]  3%|▎         | 44/1500 [00:01<00:38, 37.35it/s]  3%|▎         | 48/1500 [00:01<00:38, 37.61it/s]  3%|▎         | 52/1500 [00:01<00:38, 38.07it/s]  4%|▎         | 56/1500 [00:01<00:38, 37.60it/s]  4%|▍         | 60/1500 [00:01<00:38, 37.19it/s]  4%|▍         | 64/1500 [00:01<00:38, 37.39it/s]  5%|▍         | 68/1500 [00:01<00:39, 36.48it/s]  5%|▍         | 72/1500 [00:01<00:38, 36.73it/s]  5%|▌         | 76/1500 [00:02<00:38, 37.11it/s]  5%|▌         | 80/1500 [00:02<00:38, 36.70it/s]  5%|▌         | 82/1500 [00:02<00:38, 36.69it/s]
+T2S Decoding EOS [187 -> 270]
+############ 合成音频 ############
+并行合成中...
+0.000	0.043	2.242	0.464
+INFO:     127.0.0.1:12322 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2615849684
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+他大约五十岁，体格瘦削，脸色清癯，性格上偏爱狩猎与读骑士小说。
+实际输入的目标文本(切句后):
+['他大约五十岁，体格瘦削，脸色清癯，性格上偏爱狩猎与读骑士小说。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 22.18it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['他大约五十岁,体格瘦削,脸色清癯,性格上偏爱狩猎与读骑士小说.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 5/1500 [00:00<00:38, 39.00it/s]  1%|          | 9/1500 [00:00<00:39, 37.99it/s]  1%|          | 13/1500 [00:00<00:38, 38.14it/s]  1%|          | 17/1500 [00:00<00:39, 37.88it/s]  1%|▏         | 21/1500 [00:00<00:39, 37.63it/s]  2%|▏         | 25/1500 [00:00<00:39, 37.39it/s]  2%|▏         | 29/1500 [00:00<00:39, 37.07it/s]  2%|▏         | 33/1500 [00:00<00:39, 37.06it/s]  2%|▏         | 37/1500 [00:00<00:39, 36.97it/s]  3%|▎         | 41/1500 [00:01<00:39, 37.13it/s]  3%|▎         | 45/1500 [00:01<00:39, 37.16it/s]  3%|▎         | 49/1500 [00:01<00:38, 37.49it/s]  4%|▎         | 53/1500 [00:01<00:39, 37.00it/s]  4%|▍         | 57/1500 [00:01<00:38, 37.55it/s]  4%|▍         | 61/1500 [00:01<00:39, 36.79it/s]  4%|▍         | 65/1500 [00:01<00:39, 36.69it/s]  5%|▍         | 69/1500 [00:01<00:38, 37.27it/s]  5%|▍         | 73/1500 [00:01<00:38, 37.54it/s]  5%|▌         | 77/1500 [00:02<00:37, 37.52it/s]  5%|▌         | 81/1500 [00:02<00:37, 37.53it/s]  6%|▌         | 85/1500 [00:02<00:37, 37.53it/s]  6%|▌         | 89/1500 [00:02<00:37, 37.37it/s]  6%|▌         | 93/1500 [00:02<00:37, 37.39it/s]  6%|▋         | 97/1500 [00:02<00:37, 37.38it/s]  7%|▋         | 101/1500 [00:02<00:38, 36.40it/s]  7%|▋         | 105/1500 [00:02<00:38, 36.35it/s]  7%|▋         | 109/1500 [00:02<00:38, 36.05it/s]  8%|▊         | 113/1500 [00:03<00:38, 36.21it/s]  8%|▊         | 117/1500 [00:03<00:37, 36.43it/s]  8%|▊         | 121/1500 [00:03<00:37, 36.83it/s]  8%|▊         | 125/1500 [00:03<00:37, 36.88it/s]  9%|▊         | 129/1500 [00:03<00:36, 37.45it/s]  9%|▉         | 133/1500 [00:03<00:36, 37.18it/s]  9%|▉         | 137/1500 [00:03<00:36, 37.35it/s]  9%|▉         | 141/1500 [00:03<00:37, 36.65it/s] 10%|▉         | 145/1500 [00:03<00:36, 36.83it/s] 10%|▉         | 149/1500 [00:04<00:37, 36.47it/s] 10%|█         | 153/1500 [00:04<00:37, 36.16it/s] 10%|█         | 157/1500 [00:04<00:37, 36.19it/s] 11%|█         | 161/1500 [00:04<00:36, 36.63it/s] 11%|█         | 165/1500 [00:04<00:36, 36.39it/s] 11%|█▏        | 169/1500 [00:04<00:36, 36.85it/s] 12%|█▏        | 173/1500 [00:04<00:35, 37.27it/s] 12%|█▏        | 177/1500 [00:04<00:35, 37.12it/s] 12%|█▏        | 181/1500 [00:04<00:35, 37.04it/s] 12%|█▏        | 185/1500 [00:04<00:35, 36.88it/s] 13%|█▎        | 189/1500 [00:05<00:35, 36.63it/s] 13%|█▎        | 193/1500 [00:05<00:35, 37.22it/s] 13%|█▎        | 197/1500 [00:05<00:34, 37.34it/s] 13%|█▎        | 201/1500 [00:05<00:34, 37.49it/s] 14%|█▎        | 205/1500 [00:05<00:34, 37.25it/s] 14%|█▍        | 209/1500 [00:05<00:35, 36.46it/s] 14%|█▍        | 213/1500 [00:05<00:34, 36.97it/s] 14%|█▍        | 217/1500 [00:05<00:34, 37.20it/s] 14%|█▍        | 217/1500 [00:05<00:34, 36.81it/s]
+T2S Decoding EOS [187 -> 405]
+############ 合成音频 ############
+并行合成中...
+0.000	0.046	5.899	0.473
+INFO:     127.0.0.1:8038 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2206679762
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+他所居住的房屋中，有一位女管家、一位外甥女，还有一个勤劳的仆人。
+实际输入的目标文本(切句后):
+['他所居住的房屋中，有一位女管家、一位外甥女，还有一个勤劳的仆人。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.39it/s]100%|██████████| 1/1 [00:00<00:00,  5.39it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['他所居住的房屋中,有一位女管家,一位外甥女,还有一个勤劳的仆人.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<00:56, 26.72it/s]  0%|          | 7/1500 [00:00<00:48, 31.06it/s]  1%|          | 11/1500 [00:00<00:44, 33.16it/s]  1%|          | 15/1500 [00:00<00:46, 32.13it/s]  1%|▏         | 19/1500 [00:00<00:44, 33.01it/s]  2%|▏         | 23/1500 [00:00<00:46, 31.59it/s]  2%|▏         | 27/1500 [00:00<00:46, 31.73it/s]  2%|▏         | 31/1500 [00:00<00:47, 31.16it/s]  2%|▏         | 35/1500 [00:01<00:45, 32.30it/s]  3%|▎         | 39/1500 [00:01<00:45, 32.15it/s]  3%|▎         | 43/1500 [00:01<00:46, 31.65it/s]  3%|▎         | 47/1500 [00:01<00:44, 32.34it/s]  3%|▎         | 51/1500 [00:01<00:44, 32.88it/s]  4%|▎         | 55/1500 [00:01<00:41, 34.64it/s]  4%|▍         | 59/1500 [00:01<00:43, 32.94it/s]  4%|▍         | 63/1500 [00:01<00:44, 32.53it/s]  4%|▍         | 67/1500 [00:02<00:42, 33.88it/s]  5%|▍         | 71/1500 [00:02<00:41, 34.72it/s]  5%|▌         | 75/1500 [00:02<00:42, 33.71it/s]  5%|▌         | 79/1500 [00:02<00:45, 31.57it/s]  6%|▌         | 83/1500 [00:02<00:46, 30.59it/s]  6%|▌         | 87/1500 [00:02<00:46, 30.55it/s]  6%|▌         | 91/1500 [00:02<00:46, 30.41it/s]  6%|▋         | 95/1500 [00:02<00:45, 30.57it/s]  7%|▋         | 99/1500 [00:03<00:44, 31.43it/s]  7%|▋         | 103/1500 [00:03<00:46, 30.22it/s]  7%|▋         | 107/1500 [00:03<00:44, 31.59it/s]  7%|▋         | 111/1500 [00:03<00:42, 32.50it/s]  8%|▊         | 115/1500 [00:03<00:43, 31.86it/s]  8%|▊         | 119/1500 [00:03<00:43, 32.08it/s]  8%|▊         | 123/1500 [00:03<00:44, 31.27it/s]  8%|▊         | 127/1500 [00:03<00:43, 31.73it/s]  9%|▉         | 132/1500 [00:04<00:39, 34.46it/s]  9%|▉         | 136/1500 [00:04<00:40, 34.10it/s]  9%|▉         | 140/1500 [00:04<00:39, 34.22it/s] 10%|▉         | 144/1500 [00:04<00:39, 34.13it/s] 10%|▉         | 148/1500 [00:04<00:39, 33.93it/s] 10%|▉         | 149/1500 [00:04<00:42, 32.08it/s]
+T2S Decoding EOS [187 -> 337]
+############ 合成音频 ############
+并行合成中...
+0.000	0.186	4.649	0.503
+INFO:     127.0.0.1:12902 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2711289129
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+这个绅士大多数收入都用于购买书籍，尤其是关于骑士游侠的小说。
+实际输入的目标文本(切句后):
+['这个绅士大多数收入都用于购买书籍，尤其是关于骑士游侠的小说。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.33it/s]100%|██████████| 1/1 [00:00<00:00,  6.33it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['这个绅士大多数收入都用于购买书籍,尤其是关于骑士游侠的小说.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:38, 38.83it/s]  1%|          | 8/1500 [00:00<00:39, 37.47it/s]  1%|          | 12/1500 [00:00<00:40, 36.71it/s]  1%|          | 16/1500 [00:00<00:39, 37.60it/s]  1%|▏         | 20/1500 [00:00<00:39, 37.09it/s]  2%|▏         | 24/1500 [00:00<00:39, 37.38it/s]  2%|▏         | 28/1500 [00:00<00:40, 36.34it/s]  2%|▏         | 32/1500 [00:00<00:39, 36.86it/s]  2%|▏         | 36/1500 [00:00<00:39, 36.62it/s]  3%|▎         | 40/1500 [00:01<00:40, 36.32it/s]  3%|▎         | 44/1500 [00:01<00:39, 36.55it/s]  3%|▎         | 48/1500 [00:01<00:39, 36.38it/s]  3%|▎         | 52/1500 [00:01<00:39, 36.70it/s]  4%|▎         | 56/1500 [00:01<00:39, 36.44it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.55it/s]  4%|▍         | 64/1500 [00:01<00:39, 36.51it/s]  5%|▍         | 68/1500 [00:01<00:39, 36.59it/s]  5%|▍         | 72/1500 [00:01<00:39, 36.22it/s]  5%|▌         | 76/1500 [00:02<00:39, 36.06it/s]  5%|▌         | 80/1500 [00:02<00:40, 35.43it/s]  6%|▌         | 84/1500 [00:02<00:40, 34.88it/s]  6%|▌         | 88/1500 [00:02<00:40, 34.54it/s]  6%|▌         | 92/1500 [00:02<00:39, 35.23it/s]  6%|▋         | 96/1500 [00:02<00:39, 35.50it/s]  7%|▋         | 100/1500 [00:02<00:39, 35.52it/s]  7%|▋         | 104/1500 [00:02<00:39, 35.62it/s]  7%|▋         | 108/1500 [00:02<00:39, 35.30it/s]  7%|▋         | 112/1500 [00:03<00:40, 34.49it/s]  8%|▊         | 116/1500 [00:03<00:39, 35.06it/s]  8%|▊         | 120/1500 [00:03<00:38, 35.46it/s]  8%|▊         | 124/1500 [00:03<00:38, 35.42it/s]  9%|▊         | 128/1500 [00:03<00:38, 35.82it/s]  9%|▉         | 132/1500 [00:03<00:38, 35.87it/s]  9%|▉         | 136/1500 [00:03<00:38, 35.86it/s]  9%|▉         | 140/1500 [00:03<00:38, 35.61it/s] 10%|▉         | 144/1500 [00:03<00:37, 36.02it/s] 10%|▉         | 148/1500 [00:04<00:37, 35.70it/s] 10%|█         | 152/1500 [00:04<00:37, 35.50it/s] 10%|█         | 154/1500 [00:04<00:37, 35.70it/s]
+T2S Decoding EOS [187 -> 342]
+############ 合成音频 ############
+并行合成中...
+0.000	0.160	4.316	0.477
+INFO:     127.0.0.1:12915 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2635849522
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+他对这些故事极为痴迷，以至于几乎忘记了狩猎和庄园经营。
+实际输入的目标文本(切句后):
+['他对这些故事极为痴迷，以至于几乎忘记了狩猎和庄园经营。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  7.50it/s]100%|██████████| 1/1 [00:00<00:00,  7.50it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['他对这些故事极为痴迷,以至于几乎忘记了狩猎和庄园经营.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:40, 36.53it/s]  1%|          | 8/1500 [00:00<00:39, 37.90it/s]  1%|          | 12/1500 [00:00<00:39, 37.53it/s]  1%|          | 16/1500 [00:00<00:39, 37.74it/s]  1%|▏         | 20/1500 [00:00<00:39, 37.58it/s]  2%|▏         | 24/1500 [00:00<00:39, 37.65it/s]  2%|▏         | 28/1500 [00:00<00:39, 37.01it/s]  2%|▏         | 32/1500 [00:00<00:39, 36.90it/s]  2%|▏         | 36/1500 [00:00<00:40, 36.19it/s]  3%|▎         | 40/1500 [00:01<00:39, 36.50it/s]  3%|▎         | 44/1500 [00:01<00:39, 36.68it/s]  3%|▎         | 48/1500 [00:01<00:39, 36.33it/s]  3%|▎         | 52/1500 [00:01<00:39, 36.34it/s]  4%|▎         | 56/1500 [00:01<00:39, 36.58it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.79it/s]  4%|▍         | 64/1500 [00:01<00:39, 36.73it/s]  5%|▍         | 68/1500 [00:01<00:39, 36.62it/s]  5%|▍         | 72/1500 [00:01<00:38, 36.83it/s]  5%|▌         | 76/1500 [00:02<00:38, 36.95it/s]  5%|▌         | 80/1500 [00:02<00:38, 36.64it/s]  6%|▌         | 84/1500 [00:02<00:38, 36.77it/s]  6%|▌         | 88/1500 [00:02<00:38, 36.91it/s]  6%|▌         | 92/1500 [00:02<00:37, 37.09it/s]  6%|▋         | 96/1500 [00:02<00:37, 37.23it/s]  7%|▋         | 100/1500 [00:02<00:37, 36.96it/s]  7%|▋         | 104/1500 [00:02<00:38, 36.02it/s]  7%|▋         | 108/1500 [00:02<00:38, 36.59it/s]  7%|▋         | 112/1500 [00:03<00:38, 36.33it/s]  8%|▊         | 116/1500 [00:03<00:37, 36.74it/s]  8%|▊         | 120/1500 [00:03<00:37, 36.57it/s]  8%|▊         | 124/1500 [00:03<00:37, 36.56it/s]  9%|▊         | 128/1500 [00:03<00:37, 36.30it/s]  9%|▉         | 132/1500 [00:03<00:36, 37.05it/s]  9%|▉         | 134/1500 [00:03<00:37, 36.48it/s]
+T2S Decoding EOS [187 -> 322]
+############ 合成音频 ############
+并行合成中...
+0.000	0.136	3.677	0.482
+INFO:     127.0.0.1:3237 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2324541497
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+他读书入迷，甚至不分昼夜。
+实际输入的目标文本(切句后):
+['他读书入迷，甚至不分昼夜。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 14.94it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['他读书入迷,甚至不分昼夜.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:40, 36.79it/s]  1%|          | 8/1500 [00:00<00:39, 37.60it/s]  1%|          | 12/1500 [00:00<00:40, 36.76it/s]  1%|          | 16/1500 [00:00<00:40, 37.02it/s]  1%|▏         | 20/1500 [00:00<00:39, 37.23it/s]  2%|▏         | 24/1500 [00:00<00:41, 35.90it/s]  2%|▏         | 28/1500 [00:00<00:44, 32.93it/s]  2%|▏         | 32/1500 [00:00<00:44, 33.34it/s]  2%|▏         | 36/1500 [00:01<00:43, 33.37it/s]  3%|▎         | 40/1500 [00:01<00:43, 33.51it/s]  3%|▎         | 44/1500 [00:01<00:43, 33.69it/s]  3%|▎         | 48/1500 [00:01<00:45, 32.21it/s]  3%|▎         | 52/1500 [00:01<00:43, 33.42it/s]  4%|▎         | 56/1500 [00:01<00:42, 33.98it/s]  4%|▍         | 60/1500 [00:01<00:42, 33.54it/s]  4%|▍         | 62/1500 [00:01<00:43, 33.21it/s]
+T2S Decoding EOS [187 -> 250]
+############ 合成音频 ############
+并行合成中...
+0.000	0.070	1.869	0.555
+INFO:     127.0.0.1:3239 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 442235320
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+。渐渐地，他的想象力被书中那些骑士的英勇事迹完全占据。
+实际输入的目标文本(切句后):
+['。渐渐地，他的想象力被书中那些骑士的英勇事迹完全占据。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.32it/s]100%|██████████| 1/1 [00:00<00:00,  6.32it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['.渐渐地,他的想象力被书中那些骑士的英勇事迹完全占据.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:39, 37.60it/s]  1%|          | 8/1500 [00:00<00:40, 36.99it/s]  1%|          | 12/1500 [00:00<00:42, 35.42it/s]  1%|          | 16/1500 [00:00<00:43, 34.48it/s]  1%|▏         | 20/1500 [00:00<00:42, 34.70it/s]  2%|▏         | 24/1500 [00:00<00:42, 35.10it/s]  2%|▏         | 28/1500 [00:00<00:41, 35.40it/s]  2%|▏         | 32/1500 [00:00<00:40, 36.14it/s]  2%|▏         | 36/1500 [00:01<00:40, 35.77it/s]  3%|▎         | 40/1500 [00:01<00:40, 35.98it/s]  3%|▎         | 44/1500 [00:01<00:39, 36.40it/s]  3%|▎         | 48/1500 [00:01<00:40, 36.24it/s]  3%|▎         | 52/1500 [00:01<00:40, 36.04it/s]  4%|▎         | 56/1500 [00:01<00:40, 36.10it/s]  4%|▍         | 60/1500 [00:01<00:40, 35.50it/s]  4%|▍         | 64/1500 [00:01<00:40, 35.73it/s]  5%|▍         | 68/1500 [00:01<00:41, 34.91it/s]  5%|▍         | 72/1500 [00:02<00:40, 35.44it/s]  5%|▌         | 76/1500 [00:02<00:40, 35.54it/s]  5%|▌         | 80/1500 [00:02<00:39, 36.24it/s]  6%|▌         | 84/1500 [00:02<00:38, 36.49it/s]  6%|▌         | 88/1500 [00:02<00:38, 36.61it/s]  6%|▌         | 92/1500 [00:02<00:39, 35.70it/s]  6%|▋         | 96/1500 [00:02<00:39, 35.81it/s]  7%|▋         | 100/1500 [00:02<00:39, 35.87it/s]  7%|▋         | 104/1500 [00:02<00:38, 36.00it/s]  7%|▋         | 108/1500 [00:03<00:38, 36.24it/s]  7%|▋         | 112/1500 [00:03<00:38, 36.48it/s]  8%|▊         | 116/1500 [00:03<00:37, 36.60it/s]  8%|▊         | 120/1500 [00:03<00:37, 36.96it/s]  8%|▊         | 124/1500 [00:03<00:37, 36.39it/s]  9%|▊         | 128/1500 [00:03<00:38, 35.91it/s]  9%|▊         | 131/1500 [00:03<00:38, 35.64it/s]
+T2S Decoding EOS [187 -> 319]
+############ 合成音频 ############
+并行合成中...
+0.000	0.159	3.679	0.498
+INFO:     127.0.0.1:3241 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2335234065
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+他相信那些故事都是真实发生的，并开始幻想自己也可以成为一名游侠骑士，去世界各地行侠仗义。
+实际输入的目标文本(切句后):
+['他相信那些故事都是真实发生的，并开始幻想自己也可以成为一名游侠骑士，去世界各地行侠仗义。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.52it/s]100%|██████████| 1/1 [00:00<00:00,  4.52it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['他相信那些故事都是真实发生的,并开始幻想自己也可以成为一名游侠骑士,去世界各地行侠仗义.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:40, 36.94it/s]  1%|          | 8/1500 [00:00<00:43, 34.44it/s]  1%|          | 12/1500 [00:00<00:43, 33.98it/s]  1%|          | 16/1500 [00:00<00:43, 34.31it/s]  1%|▏         | 20/1500 [00:00<00:42, 35.17it/s]  2%|▏         | 24/1500 [00:00<00:43, 33.81it/s]  2%|▏         | 28/1500 [00:00<00:44, 32.71it/s]  2%|▏         | 32/1500 [00:00<00:45, 32.16it/s]  2%|▏         | 36/1500 [00:01<00:46, 31.63it/s]  3%|▎         | 40/1500 [00:01<00:44, 32.59it/s]  3%|▎         | 44/1500 [00:01<00:43, 33.81it/s]  3%|▎         | 48/1500 [00:01<00:42, 34.26it/s]  3%|▎         | 52/1500 [00:01<00:43, 32.99it/s]  4%|▎         | 56/1500 [00:01<00:42, 33.70it/s]  4%|▍         | 60/1500 [00:01<00:45, 31.93it/s]  4%|▍         | 64/1500 [00:01<00:46, 31.20it/s]  5%|▍         | 68/1500 [00:02<00:49, 28.81it/s]  5%|▍         | 72/1500 [00:02<00:46, 30.70it/s]  5%|▌         | 76/1500 [00:02<00:46, 30.30it/s]  5%|▌         | 80/1500 [00:02<00:47, 29.91it/s]  6%|▌         | 84/1500 [00:02<00:44, 31.73it/s]  6%|▌         | 88/1500 [00:02<00:46, 30.66it/s]  6%|▌         | 92/1500 [00:02<00:45, 31.15it/s]  6%|▋         | 96/1500 [00:02<00:44, 31.43it/s]  7%|▋         | 100/1500 [00:03<00:44, 31.44it/s]  7%|▋         | 104/1500 [00:03<00:43, 31.86it/s]  7%|▋         | 108/1500 [00:03<00:44, 31.60it/s]  7%|▋         | 112/1500 [00:03<00:45, 30.48it/s]  8%|▊         | 116/1500 [00:03<00:44, 31.15it/s]  8%|▊         | 120/1500 [00:03<00:42, 32.63it/s]  8%|▊         | 124/1500 [00:03<00:42, 32.75it/s]  9%|▊         | 128/1500 [00:03<00:41, 32.84it/s]  9%|▉         | 132/1500 [00:04<00:43, 31.71it/s]  9%|▉         | 136/1500 [00:04<00:43, 31.35it/s]  9%|▉         | 140/1500 [00:04<00:44, 30.52it/s] 10%|▉         | 144/1500 [00:04<00:43, 31.35it/s] 10%|▉         | 148/1500 [00:04<00:43, 31.39it/s] 10%|█         | 152/1500 [00:04<00:43, 30.84it/s] 10%|█         | 156/1500 [00:04<00:45, 29.49it/s] 11%|█         | 160/1500 [00:05<00:43, 30.98it/s] 11%|█         | 164/1500 [00:05<00:45, 29.24it/s] 11%|█         | 168/1500 [00:05<00:43, 30.39it/s] 11%|█▏        | 172/1500 [00:05<00:44, 29.91it/s] 12%|█▏        | 176/1500 [00:05<00:42, 31.16it/s] 12%|█▏        | 180/1500 [00:05<00:40, 32.44it/s] 12%|█▏        | 184/1500 [00:05<00:41, 31.38it/s] 13%|█▎        | 188/1500 [00:05<00:40, 32.70it/s] 13%|█▎        | 192/1500 [00:06<00:41, 31.74it/s] 13%|█▎        | 196/1500 [00:06<00:42, 30.33it/s] 13%|█▎        | 200/1500 [00:06<00:41, 31.52it/s] 14%|█▎        | 204/1500 [00:06<00:40, 31.69it/s] 14%|█▍        | 208/1500 [00:06<00:39, 33.12it/s] 14%|█▍        | 212/1500 [00:06<00:40, 32.14it/s] 14%|█▍        | 216/1500 [00:06<00:39, 32.12it/s] 15%|█▍        | 220/1500 [00:06<00:40, 31.97it/s] 15%|█▍        | 222/1500 [00:07<00:40, 31.62it/s]
+T2S Decoding EOS [187 -> 410]
+############ 合成音频 ############
+并行合成中...
+0.000	0.222	7.030	0.509
+INFO:     127.0.0.1:10607 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2720899968
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+。于是，他决定为自己打造一副盔甲，寻找一匹战马，并为自己取一个响亮的骑士名号。
+实际输入的目标文本(切句后):
+['。于是，他决定为自己打造一副盔甲，寻找一匹战马，并为自己取一个响亮的骑士名号。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.89it/s]100%|██████████| 1/1 [00:00<00:00,  6.89it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['.于是,他决定为自己打造一副盔甲,寻找一匹战马,并为自己取一个响亮的骑士名号.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:43, 34.40it/s]  1%|          | 9/1500 [00:00<00:39, 37.60it/s]  1%|          | 13/1500 [00:00<00:40, 36.71it/s]  1%|          | 17/1500 [00:00<00:41, 36.15it/s]  1%|▏         | 21/1500 [00:00<00:40, 36.08it/s]  2%|▏         | 25/1500 [00:00<00:40, 36.59it/s]  2%|▏         | 29/1500 [00:00<00:40, 36.48it/s]  2%|▏         | 33/1500 [00:00<00:40, 36.40it/s]  2%|▏         | 37/1500 [00:01<00:39, 36.80it/s]  3%|▎         | 41/1500 [00:01<00:39, 36.76it/s]  3%|▎         | 45/1500 [00:01<00:39, 36.56it/s]  3%|▎         | 49/1500 [00:01<00:38, 37.31it/s]  4%|▎         | 53/1500 [00:01<00:39, 36.53it/s]  4%|▍         | 57/1500 [00:01<00:40, 35.78it/s]  4%|▍         | 61/1500 [00:01<00:39, 36.00it/s]  4%|▍         | 65/1500 [00:01<00:39, 36.21it/s]  5%|▍         | 69/1500 [00:01<00:39, 36.49it/s]  5%|▍         | 73/1500 [00:01<00:38, 36.74it/s]  5%|▌         | 77/1500 [00:02<00:39, 36.30it/s]  5%|▌         | 81/1500 [00:02<00:38, 36.80it/s]  6%|▌         | 85/1500 [00:02<00:38, 37.19it/s]  6%|▌         | 89/1500 [00:02<00:37, 37.31it/s]  6%|▌         | 93/1500 [00:02<00:37, 37.13it/s]  6%|▋         | 97/1500 [00:02<00:37, 37.29it/s]  7%|▋         | 101/1500 [00:02<00:37, 37.64it/s]  7%|▋         | 105/1500 [00:02<00:37, 37.14it/s]  7%|▋         | 109/1500 [00:02<00:37, 36.87it/s]  8%|▊         | 113/1500 [00:03<00:37, 37.13it/s]  8%|▊         | 117/1500 [00:03<00:37, 36.93it/s]  8%|▊         | 121/1500 [00:03<00:37, 36.63it/s]  8%|▊         | 125/1500 [00:03<00:37, 36.67it/s]  9%|▊         | 129/1500 [00:03<00:38, 36.00it/s]  9%|▉         | 133/1500 [00:03<00:37, 36.31it/s]  9%|▉         | 137/1500 [00:03<00:37, 36.52it/s]  9%|▉         | 141/1500 [00:03<00:37, 36.63it/s] 10%|▉         | 145/1500 [00:03<00:36, 37.37it/s] 10%|▉         | 149/1500 [00:04<00:37, 36.43it/s] 10%|█         | 153/1500 [00:04<00:36, 36.86it/s] 10%|█         | 157/1500 [00:04<00:36, 36.80it/s] 11%|█         | 161/1500 [00:04<00:36, 36.59it/s] 11%|█         | 165/1500 [00:04<00:36, 36.11it/s] 11%|█▏        | 169/1500 [00:04<00:36, 36.01it/s] 12%|█▏        | 173/1500 [00:04<00:36, 36.42it/s] 12%|█▏        | 177/1500 [00:04<00:36, 36.34it/s] 12%|█▏        | 181/1500 [00:04<00:35, 36.94it/s] 12%|█▏        | 185/1500 [00:05<00:35, 36.80it/s] 13%|█▎        | 189/1500 [00:05<00:35, 37.43it/s] 13%|█▎        | 190/1500 [00:05<00:35, 36.51it/s]
+T2S Decoding EOS [187 -> 378]
+############ 合成音频 ############
+并行合成中...
+0.000	0.147	5.207	0.500
+INFO:     127.0.0.1:10608 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 3772597752
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+他经过长时间思索，终于为自己的坐骑取名“罗西南特”，意为“昔日之马”，虽然这匹马实际上又老又瘦，但在他眼中却是无比高贵的战马。
+实际输入的目标文本(切句后):
+['他经过长时间思索，终于为自己的坐骑取名“罗西南特”，意为“昔日之马”，虽然这匹马实际上又老又瘦，但在他眼中却是无比高贵的战马。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.56it/s]100%|██████████| 1/1 [00:00<00:00,  3.55it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['他经过长时间思索,终于为自己的坐骑取名罗西南特,意为昔日之马,虽然这匹马实际上又老又瘦,但在他眼中却是无比高贵的战马.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:40, 37.02it/s]  1%|          | 8/1500 [00:00<00:41, 36.09it/s]  1%|          | 12/1500 [00:00<00:41, 35.68it/s]  1%|          | 16/1500 [00:00<00:40, 36.71it/s]  1%|▏         | 20/1500 [00:00<00:40, 36.93it/s]  2%|▏         | 24/1500 [00:00<00:39, 36.94it/s]  2%|▏         | 28/1500 [00:00<00:40, 36.52it/s]  2%|▏         | 32/1500 [00:00<00:39, 37.32it/s]  2%|▏         | 36/1500 [00:00<00:39, 37.25it/s]  3%|▎         | 40/1500 [00:01<00:39, 36.65it/s]  3%|▎         | 44/1500 [00:01<00:39, 37.13it/s]  3%|▎         | 48/1500 [00:01<00:40, 36.11it/s]  3%|▎         | 52/1500 [00:01<00:40, 35.78it/s]  4%|▎         | 56/1500 [00:01<00:39, 36.28it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.22it/s]  4%|▍         | 64/1500 [00:01<00:39, 36.11it/s]  5%|▍         | 68/1500 [00:01<00:39, 35.97it/s]  5%|▍         | 72/1500 [00:01<00:39, 36.28it/s]  5%|▌         | 76/1500 [00:02<00:39, 36.33it/s]  5%|▌         | 80/1500 [00:02<00:39, 35.83it/s]  6%|▌         | 84/1500 [00:02<00:38, 36.39it/s]  6%|▌         | 88/1500 [00:02<00:39, 35.94it/s]  6%|▌         | 92/1500 [00:02<00:39, 36.08it/s]  6%|▋         | 96/1500 [00:02<00:39, 35.62it/s]  7%|▋         | 100/1500 [00:02<00:39, 35.82it/s]  7%|▋         | 104/1500 [00:02<00:39, 35.56it/s]  7%|▋         | 108/1500 [00:02<00:38, 35.94it/s]  7%|▋         | 112/1500 [00:03<00:38, 35.71it/s]  8%|▊         | 116/1500 [00:03<00:38, 35.97it/s]  8%|▊         | 120/1500 [00:03<00:39, 35.34it/s]  8%|▊         | 124/1500 [00:03<00:39, 35.09it/s]  9%|▊         | 128/1500 [00:03<00:38, 35.65it/s]  9%|▉         | 132/1500 [00:03<00:38, 35.76it/s]  9%|▉         | 136/1500 [00:03<00:38, 35.82it/s]  9%|▉         | 140/1500 [00:03<00:37, 35.83it/s] 10%|▉         | 144/1500 [00:03<00:37, 35.81it/s] 10%|▉         | 148/1500 [00:04<00:37, 36.16it/s] 10%|█         | 152/1500 [00:04<00:37, 36.33it/s] 10%|█         | 156/1500 [00:04<00:36, 36.37it/s] 11%|█         | 160/1500 [00:04<00:37, 35.50it/s] 11%|█         | 164/1500 [00:04<00:37, 36.07it/s] 11%|█         | 168/1500 [00:04<00:37, 35.78it/s] 11%|█▏        | 172/1500 [00:04<00:36, 36.42it/s] 12%|█▏        | 176/1500 [00:04<00:36, 35.98it/s] 12%|█▏        | 180/1500 [00:04<00:37, 35.61it/s] 12%|█▏        | 184/1500 [00:05<00:36, 35.72it/s] 13%|█▎        | 188/1500 [00:05<00:36, 36.13it/s] 13%|█▎        | 192/1500 [00:05<00:36, 35.98it/s] 13%|█▎        | 196/1500 [00:05<00:36, 35.26it/s] 13%|█▎        | 200/1500 [00:05<00:36, 35.46it/s] 14%|█▎        | 204/1500 [00:05<00:36, 35.21it/s] 14%|█▍        | 208/1500 [00:05<00:37, 34.90it/s] 14%|█▍        | 212/1500 [00:05<00:37, 34.42it/s] 14%|█▍        | 216/1500 [00:06<00:37, 34.45it/s] 15%|█▍        | 220/1500 [00:06<00:36, 35.41it/s] 15%|█▍        | 224/1500 [00:06<00:35, 35.52it/s] 15%|█▌        | 228/1500 [00:06<00:34, 36.48it/s] 15%|█▌        | 232/1500 [00:06<00:34, 37.04it/s] 16%|█▌        | 236/1500 [00:06<00:34, 37.16it/s] 16%|█▌        | 240/1500 [00:06<00:33, 37.47it/s] 16%|█▋        | 244/1500 [00:06<00:33, 37.62it/s] 17%|█▋        | 248/1500 [00:06<00:33, 37.08it/s] 17%|█▋        | 252/1500 [00:06<00:33, 36.82it/s] 17%|█▋        | 256/1500 [00:07<00:34, 35.97it/s] 17%|█▋        | 260/1500 [00:07<00:34, 36.22it/s] 18%|█▊        | 264/1500 [00:07<00:33, 36.43it/s] 18%|█▊        | 268/1500 [00:07<00:34, 36.15it/s] 18%|█▊        | 272/1500 [00:07<00:33, 36.90it/s] 18%|█▊        | 276/1500 [00:07<00:32, 37.09it/s] 19%|█▊        | 280/1500 [00:07<00:32, 37.18it/s] 19%|█▉        | 284/1500 [00:07<00:33, 36.37it/s] 19%|█▉        | 288/1500 [00:07<00:34, 35.56it/s] 19%|█▉        | 292/1500 [00:08<00:33, 35.82it/s] 20%|█▉        | 296/1500 [00:08<00:33, 36.23it/s] 20%|██        | 300/1500 [00:08<00:33, 36.36it/s] 20%|██        | 304/1500 [00:08<00:34, 35.01it/s] 21%|██        | 308/1500 [00:08<00:34, 35.02it/s] 21%|██        | 312/1500 [00:08<00:33, 35.30it/s] 21%|██        | 316/1500 [00:08<00:33, 34.94it/s] 21%|██▏       | 320/1500 [00:08<00:33, 35.74it/s] 22%|██▏       | 324/1500 [00:08<00:33, 35.62it/s] 22%|██▏       | 328/1500 [00:09<00:33, 35.46it/s] 22%|██▏       | 332/1500 [00:09<00:32, 35.89it/s] 22%|██▏       | 336/1500 [00:09<00:32, 35.94it/s] 23%|██▎       | 340/1500 [00:09<00:32, 35.54it/s] 23%|██▎       | 341/1500 [00:09<00:32, 35.88it/s]
+T2S Decoding EOS [187 -> 529]
+############ 合成音频 ############
+并行合成中...
+0.000	0.283	9.508	0.553
+INFO:     127.0.0.1:11483 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2052816559
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+。随后，他也为自己取名堂吉诃德·德·拉曼查，决心像书中的骑士一样，游历世界，纠正不公，保护弱者，赢得荣耀。
+实际输入的目标文本(切句后):
+['。随后，他也为自己取名堂吉诃德·德·拉曼查，决心像书中的骑士一样，游历世界，纠正不公，保护弱者，赢得荣耀。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.46it/s]100%|██████████| 1/1 [00:00<00:00,  4.46it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['.随后,他也为自己取名堂吉诃德,德,拉曼查,决心像书中的骑士一样,游历世界,纠正不公,保护弱者,赢得荣耀.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:43, 34.24it/s]  1%|          | 8/1500 [00:00<00:41, 36.09it/s]  1%|          | 12/1500 [00:00<00:40, 36.38it/s]  1%|          | 16/1500 [00:00<00:40, 36.56it/s]  1%|▏         | 20/1500 [00:00<00:40, 36.75it/s]  2%|▏         | 24/1500 [00:00<00:40, 36.26it/s]  2%|▏         | 28/1500 [00:00<00:41, 35.88it/s]  2%|▏         | 32/1500 [00:00<00:40, 36.24it/s]  2%|▏         | 36/1500 [00:00<00:40, 36.18it/s]  3%|▎         | 40/1500 [00:01<00:41, 35.34it/s]  3%|▎         | 44/1500 [00:01<00:40, 36.32it/s]  3%|▎         | 48/1500 [00:01<00:40, 35.95it/s]  3%|▎         | 52/1500 [00:01<00:39, 36.42it/s]  4%|▎         | 56/1500 [00:01<00:39, 36.91it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.89it/s]  4%|▍         | 64/1500 [00:01<00:38, 37.14it/s]  5%|▍         | 68/1500 [00:01<00:39, 36.54it/s]  5%|▍         | 72/1500 [00:01<00:39, 36.14it/s]  5%|▌         | 76/1500 [00:02<00:38, 37.02it/s]  5%|▌         | 80/1500 [00:02<00:38, 36.76it/s]  6%|▌         | 84/1500 [00:02<00:38, 36.58it/s]  6%|▌         | 88/1500 [00:02<00:38, 36.83it/s]  6%|▌         | 92/1500 [00:02<00:38, 37.00it/s]  6%|▋         | 96/1500 [00:02<00:38, 36.73it/s]  7%|▋         | 100/1500 [00:02<00:38, 36.77it/s]  7%|▋         | 104/1500 [00:02<00:38, 36.58it/s]  7%|▋         | 108/1500 [00:02<00:37, 36.89it/s]  7%|▋         | 112/1500 [00:03<00:37, 37.11it/s]  8%|▊         | 116/1500 [00:03<00:37, 37.24it/s]  8%|▊         | 120/1500 [00:03<00:36, 37.40it/s]  8%|▊         | 124/1500 [00:03<00:37, 37.13it/s]  9%|▊         | 128/1500 [00:03<00:37, 36.78it/s]  9%|▉         | 132/1500 [00:03<00:36, 37.05it/s]  9%|▉         | 136/1500 [00:03<00:36, 36.88it/s]  9%|▉         | 140/1500 [00:03<00:37, 36.55it/s] 10%|▉         | 144/1500 [00:03<00:36, 36.81it/s] 10%|▉         | 148/1500 [00:04<00:36, 36.59it/s] 10%|█         | 152/1500 [00:04<00:37, 36.32it/s] 10%|█         | 156/1500 [00:04<00:36, 36.49it/s] 11%|█         | 160/1500 [00:04<00:36, 36.26it/s] 11%|█         | 164/1500 [00:04<00:37, 35.75it/s] 11%|█         | 168/1500 [00:04<00:37, 35.52it/s] 11%|█▏        | 172/1500 [00:04<00:37, 35.81it/s] 12%|█▏        | 176/1500 [00:04<00:36, 36.04it/s] 12%|█▏        | 180/1500 [00:04<00:35, 36.84it/s] 12%|█▏        | 184/1500 [00:05<00:36, 36.20it/s] 13%|█▎        | 188/1500 [00:05<00:36, 36.12it/s] 13%|█▎        | 192/1500 [00:05<00:36, 35.84it/s] 13%|█▎        | 196/1500 [00:05<00:36, 36.04it/s] 13%|█▎        | 200/1500 [00:05<00:36, 35.76it/s] 14%|█▎        | 204/1500 [00:05<00:35, 36.37it/s] 14%|█▍        | 208/1500 [00:05<00:35, 36.16it/s] 14%|█▍        | 212/1500 [00:05<00:36, 35.72it/s] 14%|█▍        | 216/1500 [00:05<00:35, 36.37it/s] 15%|█▍        | 220/1500 [00:06<00:35, 35.86it/s] 15%|█▍        | 224/1500 [00:06<00:35, 35.98it/s] 15%|█▌        | 228/1500 [00:06<00:34, 36.40it/s] 15%|█▌        | 232/1500 [00:06<00:34, 36.29it/s] 16%|█▌        | 236/1500 [00:06<00:34, 36.21it/s] 16%|█▌        | 240/1500 [00:06<00:34, 36.47it/s] 16%|█▋        | 244/1500 [00:06<00:34, 36.03it/s] 17%|█▋        | 248/1500 [00:06<00:35, 35.59it/s] 17%|█▋        | 252/1500 [00:06<00:35, 35.65it/s] 17%|█▋        | 256/1500 [00:07<00:34, 35.86it/s] 17%|█▋        | 260/1500 [00:07<00:34, 35.57it/s] 18%|█▊        | 264/1500 [00:07<00:34, 35.34it/s] 18%|█▊        | 268/1500 [00:07<00:35, 34.72it/s] 18%|█▊        | 272/1500 [00:07<00:34, 35.09it/s] 18%|█▊        | 276/1500 [00:07<00:34, 35.35it/s] 19%|█▊        | 280/1500 [00:07<00:34, 35.66it/s] 19%|█▉        | 284/1500 [00:07<00:34, 35.09it/s] 19%|█▉        | 288/1500 [00:07<00:33, 35.73it/s] 19%|█▉        | 292/1500 [00:08<00:33, 35.75it/s] 20%|█▉        | 296/1500 [00:08<00:33, 36.16it/s] 20%|██        | 300/1500 [00:08<00:33, 36.14it/s] 20%|██        | 303/1500 [00:08<00:33, 36.11it/s]
+T2S Decoding EOS [187 -> 491]
+############ 合成音频 ############
+并行合成中...
+0.000	0.225	8.394	0.520
+INFO:     127.0.0.1:10415 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 1462990244
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+他甚至开始思考，自己未来的爱人应该是谁，因为每一位真正的骑士都必须有一位心爱的女士作为精神支柱。
+实际输入的目标文本(切句后):
+['他甚至开始思考，自己未来的爱人应该是谁，因为每一位真正的骑士都必须有一位心爱的女士作为精神支柱。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.83it/s]100%|██████████| 1/1 [00:00<00:00,  5.83it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['他甚至开始思考,自己未来的爱人应该是谁,因为每一位真正的骑士都必须有一位心爱的女士作为精神支柱.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:41, 36.17it/s]  1%|          | 8/1500 [00:00<00:41, 35.84it/s]  1%|          | 12/1500 [00:00<00:42, 34.67it/s]  1%|          | 16/1500 [00:00<00:44, 33.01it/s]  1%|▏         | 20/1500 [00:00<00:44, 33.42it/s]  2%|▏         | 24/1500 [00:00<00:45, 32.49it/s]  2%|▏         | 28/1500 [00:00<00:44, 33.13it/s]  2%|▏         | 32/1500 [00:00<00:42, 34.65it/s]  2%|▏         | 36/1500 [00:01<00:43, 33.28it/s]  3%|▎         | 40/1500 [00:01<00:43, 33.28it/s]  3%|▎         | 44/1500 [00:01<00:43, 33.10it/s]  3%|▎         | 48/1500 [00:01<00:43, 33.75it/s]  3%|▎         | 52/1500 [00:01<00:42, 34.17it/s]  4%|▎         | 56/1500 [00:01<00:42, 33.62it/s]  4%|▍         | 60/1500 [00:01<00:44, 32.58it/s]  4%|▍         | 64/1500 [00:01<00:44, 32.36it/s]  5%|▍         | 68/1500 [00:02<00:43, 33.08it/s]  5%|▍         | 72/1500 [00:02<00:42, 33.39it/s]  5%|▌         | 76/1500 [00:02<00:42, 33.30it/s]  5%|▌         | 80/1500 [00:02<00:43, 32.89it/s]  6%|▌         | 84/1500 [00:02<00:44, 31.69it/s]  6%|▌         | 88/1500 [00:02<00:44, 31.47it/s]  6%|▌         | 92/1500 [00:02<00:43, 32.67it/s]  6%|▋         | 96/1500 [00:02<00:42, 33.19it/s]  7%|▋         | 100/1500 [00:03<00:42, 32.73it/s]  7%|▋         | 104/1500 [00:03<00:42, 32.51it/s]  7%|▋         | 108/1500 [00:03<00:40, 34.00it/s]  7%|▋         | 112/1500 [00:03<00:41, 33.70it/s]  8%|▊         | 116/1500 [00:03<00:43, 32.00it/s]  8%|▊         | 120/1500 [00:03<00:44, 30.94it/s]  8%|▊         | 124/1500 [00:03<00:43, 31.34it/s]  9%|▊         | 128/1500 [00:03<00:44, 31.10it/s]  9%|▉         | 132/1500 [00:04<00:46, 29.63it/s]  9%|▉         | 136/1500 [00:04<00:45, 30.02it/s]  9%|▉         | 140/1500 [00:04<00:46, 29.25it/s] 10%|▉         | 143/1500 [00:04<00:48, 28.10it/s] 10%|▉         | 147/1500 [00:04<00:47, 28.69it/s] 10%|█         | 151/1500 [00:04<00:43, 30.91it/s] 10%|█         | 155/1500 [00:04<00:42, 31.58it/s] 11%|█         | 159/1500 [00:04<00:43, 31.04it/s] 11%|█         | 163/1500 [00:05<00:41, 32.07it/s] 11%|█         | 167/1500 [00:05<00:44, 29.90it/s] 11%|█▏        | 171/1500 [00:05<00:43, 30.69it/s] 12%|█▏        | 175/1500 [00:05<00:41, 31.70it/s] 12%|█▏        | 179/1500 [00:05<00:42, 31.10it/s] 12%|█▏        | 183/1500 [00:05<00:43, 30.41it/s] 12%|█▏        | 187/1500 [00:05<00:43, 30.41it/s] 13%|█▎        | 191/1500 [00:05<00:42, 30.92it/s] 13%|█▎        | 195/1500 [00:06<00:40, 32.13it/s] 13%|█▎        | 199/1500 [00:06<00:41, 31.35it/s] 14%|█▎        | 203/1500 [00:06<00:43, 29.89it/s] 14%|█▍        | 207/1500 [00:06<00:42, 30.15it/s] 14%|█▍        | 211/1500 [00:06<00:41, 31.19it/s] 14%|█▍        | 215/1500 [00:06<00:39, 32.38it/s] 15%|█▍        | 219/1500 [00:06<00:37, 33.84it/s] 15%|█▍        | 223/1500 [00:06<00:37, 33.77it/s] 15%|█▌        | 227/1500 [00:07<00:37, 33.62it/s] 15%|█▌        | 231/1500 [00:07<00:38, 32.76it/s] 16%|█▌        | 235/1500 [00:07<00:39, 32.32it/s] 16%|█▌        | 235/1500 [00:07<00:39, 31.90it/s]
+T2S Decoding EOS [187 -> 423]
+############ 合成音频 ############
+并行合成中...
+0.000	0.172	7.372	0.518
+INFO:     127.0.0.1:10416 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 996729106
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+经过一番想象，他选定了一位村中的农家女子，并将她理想化为“杜尔西内亚·德尔·托波索”，虽然她本人对此一无所知。
+实际输入的目标文本(切句后):
+['经过一番想象，他选定了一位村中的农家女子，并将她理想化为“杜尔西内亚·德尔·托波索”，虽然她本人对此一无所知。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.95it/s]100%|██████████| 1/1 [00:00<00:00,  5.95it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['经过一番想象,他选定了一位村中的农家女子,并将她理想化为杜尔西内亚,德尔,托波索,虽然她本人对此一无所知.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:47, 31.24it/s]  1%|          | 8/1500 [00:00<00:47, 31.22it/s]  1%|          | 12/1500 [00:00<00:46, 31.88it/s]  1%|          | 16/1500 [00:00<00:45, 32.83it/s]  1%|▏         | 20/1500 [00:00<00:46, 31.73it/s]  2%|▏         | 24/1500 [00:00<00:47, 31.39it/s]  2%|▏         | 28/1500 [00:00<00:47, 31.10it/s]  2%|▏         | 32/1500 [00:01<00:48, 29.97it/s]  2%|▏         | 36/1500 [00:01<00:47, 30.77it/s]  3%|▎         | 40/1500 [00:01<00:46, 31.72it/s]  3%|▎         | 44/1500 [00:01<00:47, 30.46it/s]  3%|▎         | 48/1500 [00:01<00:47, 30.43it/s]  3%|▎         | 52/1500 [00:01<00:46, 30.93it/s]  4%|▎         | 56/1500 [00:01<00:46, 31.10it/s]  4%|▍         | 60/1500 [00:01<00:46, 31.09it/s]  4%|▍         | 64/1500 [00:02<00:47, 30.33it/s]  5%|▍         | 68/1500 [00:02<00:45, 31.37it/s]  5%|▍         | 72/1500 [00:02<00:44, 32.23it/s]  5%|▌         | 76/1500 [00:02<00:43, 32.38it/s]  5%|▌         | 80/1500 [00:02<00:44, 31.63it/s]  6%|▌         | 84/1500 [00:02<00:45, 31.02it/s]  6%|▌         | 88/1500 [00:02<00:45, 31.31it/s]  6%|▌         | 92/1500 [00:02<00:46, 30.45it/s]  6%|▋         | 96/1500 [00:03<00:46, 30.16it/s]  7%|▋         | 100/1500 [00:03<00:44, 31.43it/s]  7%|▋         | 104/1500 [00:03<00:46, 29.76it/s]  7%|▋         | 108/1500 [00:03<00:45, 30.34it/s]  7%|▋         | 112/1500 [00:03<00:45, 30.74it/s]  8%|▊         | 116/1500 [00:03<00:43, 31.95it/s]  8%|▊         | 120/1500 [00:03<00:43, 31.41it/s]  8%|▊         | 124/1500 [00:03<00:44, 30.70it/s]  9%|▊         | 128/1500 [00:04<00:45, 30.35it/s]  9%|▉         | 132/1500 [00:04<00:43, 31.24it/s]  9%|▉         | 136/1500 [00:04<00:42, 31.79it/s]  9%|▉         | 140/1500 [00:04<00:43, 31.28it/s] 10%|▉         | 144/1500 [00:04<00:43, 31.21it/s] 10%|▉         | 148/1500 [00:04<00:41, 32.28it/s] 10%|█         | 152/1500 [00:04<00:41, 32.39it/s] 10%|█         | 156/1500 [00:04<00:40, 33.11it/s] 11%|█         | 160/1500 [00:05<00:40, 32.76it/s] 11%|█         | 164/1500 [00:05<00:41, 32.24it/s] 11%|█         | 168/1500 [00:05<00:40, 33.12it/s] 11%|█▏        | 172/1500 [00:05<00:38, 34.55it/s] 12%|█▏        | 176/1500 [00:05<00:37, 35.34it/s] 12%|█▏        | 180/1500 [00:05<00:37, 35.57it/s] 12%|█▏        | 184/1500 [00:05<00:36, 36.02it/s] 13%|█▎        | 188/1500 [00:05<00:36, 36.35it/s] 13%|█▎        | 192/1500 [00:05<00:35, 36.60it/s] 13%|█▎        | 196/1500 [00:06<00:36, 35.98it/s] 13%|█▎        | 200/1500 [00:06<00:36, 35.94it/s] 14%|█▎        | 204/1500 [00:06<00:35, 36.63it/s] 14%|█▍        | 208/1500 [00:06<00:35, 36.52it/s] 14%|█▍        | 212/1500 [00:06<00:34, 36.88it/s] 14%|█▍        | 216/1500 [00:06<00:34, 37.31it/s] 15%|█▍        | 220/1500 [00:06<00:34, 36.76it/s] 15%|█▍        | 224/1500 [00:06<00:34, 36.52it/s] 15%|█▌        | 228/1500 [00:06<00:35, 35.58it/s] 15%|█▌        | 232/1500 [00:07<00:34, 36.40it/s] 16%|█▌        | 236/1500 [00:07<00:35, 35.86it/s] 16%|█▌        | 240/1500 [00:07<00:35, 35.75it/s] 16%|█▋        | 244/1500 [00:07<00:35, 35.88it/s] 17%|█▋        | 248/1500 [00:07<00:34, 35.97it/s] 17%|█▋        | 252/1500 [00:07<00:35, 35.48it/s] 17%|█▋        | 256/1500 [00:07<00:34, 35.84it/s] 17%|█▋        | 260/1500 [00:07<00:34, 35.74it/s] 18%|█▊        | 264/1500 [00:07<00:34, 35.83it/s] 18%|█▊        | 268/1500 [00:08<00:34, 35.96it/s] 18%|█▊        | 272/1500 [00:08<00:34, 35.58it/s] 18%|█▊        | 276/1500 [00:08<00:34, 35.09it/s] 19%|█▊        | 280/1500 [00:08<00:34, 35.01it/s] 19%|█▉        | 284/1500 [00:08<00:34, 35.76it/s] 19%|█▉        | 288/1500 [00:08<00:34, 35.55it/s] 19%|█▉        | 292/1500 [00:08<00:33, 35.56it/s] 20%|█▉        | 296/1500 [00:08<00:33, 35.85it/s] 20%|██        | 300/1500 [00:09<00:34, 35.29it/s] 20%|██        | 304/1500 [00:09<00:33, 35.40it/s] 21%|██        | 308/1500 [00:09<00:33, 35.48it/s] 21%|██        | 312/1500 [00:09<00:33, 35.15it/s] 21%|██        | 313/1500 [00:09<00:35, 33.29it/s]
+T2S Decoding EOS [187 -> 501]
+############ 合成音频 ############
+并行合成中...
+0.000	0.170	9.404	0.490
+INFO:     127.0.0.1:12512 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 223658237
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+。从此，这位原本普通的乡绅，彻底沉浸在骑士幻想之中，并准备踏上他的游侠之路。
+实际输入的目标文本(切句后):
+['。从此，这位原本普通的乡绅，彻底沉浸在骑士幻想之中，并准备踏上他的游侠之路。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.95it/s]100%|██████████| 1/1 [00:00<00:00,  6.95it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['.从此,这位原本普通的乡绅,彻底沉浸在骑士幻想之中,并准备踏上他的游侠之路.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:39, 37.52it/s]  1%|          | 8/1500 [00:00<00:40, 36.75it/s]  1%|          | 12/1500 [00:00<00:39, 37.65it/s]  1%|          | 16/1500 [00:00<00:41, 35.44it/s]  1%|▏         | 20/1500 [00:00<00:41, 35.31it/s]  2%|▏         | 24/1500 [00:00<00:41, 35.36it/s]  2%|▏         | 28/1500 [00:00<00:41, 35.69it/s]  2%|▏         | 32/1500 [00:00<00:40, 36.38it/s]  2%|▏         | 36/1500 [00:00<00:40, 36.41it/s]  3%|▎         | 40/1500 [00:01<00:40, 36.34it/s]  3%|▎         | 44/1500 [00:01<00:39, 36.49it/s]  3%|▎         | 48/1500 [00:01<00:40, 36.23it/s]  3%|▎         | 52/1500 [00:01<00:39, 36.32it/s]  4%|▎         | 56/1500 [00:01<00:39, 36.61it/s]  4%|▍         | 60/1500 [00:01<00:39, 36.42it/s]  4%|▍         | 64/1500 [00:01<00:39, 36.69it/s]  5%|▍         | 68/1500 [00:01<00:39, 36.69it/s]  5%|▍         | 72/1500 [00:01<00:39, 35.88it/s]  5%|▌         | 76/1500 [00:02<00:39, 36.23it/s]  5%|▌         | 80/1500 [00:02<00:39, 35.95it/s]  6%|▌         | 84/1500 [00:02<00:39, 36.23it/s]  6%|▌         | 88/1500 [00:02<00:38, 36.37it/s]  6%|▌         | 92/1500 [00:02<00:38, 36.13it/s]  6%|▋         | 96/1500 [00:02<00:39, 35.65it/s]  7%|▋         | 100/1500 [00:02<00:38, 35.95it/s]  7%|▋         | 104/1500 [00:02<00:38, 36.19it/s]  7%|▋         | 108/1500 [00:02<00:38, 36.39it/s]  7%|▋         | 112/1500 [00:03<00:37, 36.75it/s]  8%|▊         | 116/1500 [00:03<00:37, 36.53it/s]  8%|▊         | 120/1500 [00:03<00:37, 36.99it/s]  8%|▊         | 124/1500 [00:03<00:36, 37.20it/s]  9%|▊         | 128/1500 [00:03<00:37, 36.29it/s]  9%|▉         | 132/1500 [00:03<00:37, 36.85it/s]  9%|▉         | 136/1500 [00:03<00:37, 36.45it/s]  9%|▉         | 140/1500 [00:03<00:37, 36.42it/s] 10%|▉         | 144/1500 [00:03<00:36, 36.76it/s] 10%|▉         | 148/1500 [00:04<00:36, 36.64it/s] 10%|█         | 152/1500 [00:04<00:37, 35.80it/s] 10%|█         | 156/1500 [00:04<00:36, 36.96it/s] 11%|█         | 160/1500 [00:04<00:36, 37.14it/s] 11%|█         | 164/1500 [00:04<00:36, 36.94it/s] 11%|█         | 168/1500 [00:04<00:35, 37.47it/s] 11%|█▏        | 172/1500 [00:04<00:36, 36.71it/s] 12%|█▏        | 175/1500 [00:04<00:36, 36.23it/s]
+T2S Decoding EOS [187 -> 363]
+############ 合成音频 ############
+并行合成中...
+0.000	0.146	4.833	0.496
+INFO:     127.0.0.1:7959 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11910 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:6790 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:10604 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3114 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2451 - "GET / HTTP/1.1" 404 Not Found
+ERROR:root:Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "asyncio\events.py", line 80, in _run
+  File "asyncio\proactor_events.py", line 162, in _call_connection_lost
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+INFO:     127.0.0.1:13936 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2213 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2226 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:5439 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2160 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2139 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:5557 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4487 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3244 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7754 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:1025 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9512 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9515 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:11020 - "GET / HTTP/1.1" 404 Not Found
+ERROR:root:Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "asyncio\events.py", line 80, in _run
+  File "asyncio\proactor_events.py", line 162, in _call_connection_lost
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+INFO:     127.0.0.1:11021 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:11022 - "GET / HTTP/1.1" 404 Not Found
+Loading Text2Semantic weights from D:\eBookSVC\model\银狼\银狼-e10.ckpt
+INFO:     127.0.0.1:11023 - "GET /set_gpt_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%5C%E9%93%B6%E7%8B%BC%5C%E9%93%B6%E7%8B%BC-e10.ckpt HTTP/1.1" 200 OK
+Loading VITS weights from D:\eBookSVC\model\银狼\银狼_e15_s480.pth. _IncompatibleKeys(missing_keys=['enc_q.pre.weight', 'enc_q.pre.bias', 'enc_q.enc.in_layers.0.bias', 'enc_q.enc.in_layers.0.weight_g', 'enc_q.enc.in_layers.0.weight_v', 'enc_q.enc.in_layers.1.bias', 'enc_q.enc.in_layers.1.weight_g', 'enc_q.enc.in_layers.1.weight_v', 'enc_q.enc.in_layers.2.bias', 'enc_q.enc.in_layers.2.weight_g', 'enc_q.enc.in_layers.2.weight_v', 'enc_q.enc.in_layers.3.bias', 'enc_q.enc.in_layers.3.weight_g', 'enc_q.enc.in_layers.3.weight_v', 'enc_q.enc.in_layers.4.bias', 'enc_q.enc.in_layers.4.weight_g', 'enc_q.enc.in_layers.4.weight_v', 'enc_q.enc.in_layers.5.bias', 'enc_q.enc.in_layers.5.weight_g', 'enc_q.enc.in_layers.5.weight_v', 'enc_q.enc.in_layers.6.bias', 'enc_q.enc.in_layers.6.weight_g', 'enc_q.enc.in_layers.6.weight_v', 'enc_q.enc.in_layers.7.bias', 'enc_q.enc.in_layers.7.weight_g', 'enc_q.enc.in_layers.7.weight_v', 'enc_q.enc.in_layers.8.bias', 'enc_q.enc.in_layers.8.weight_g', 'enc_q.enc.in_layers.8.weight_v', 'enc_q.enc.in_layers.9.bias', 'enc_q.enc.in_layers.9.weight_g', 'enc_q.enc.in_layers.9.weight_v', 'enc_q.enc.in_layers.10.bias', 'enc_q.enc.in_layers.10.weight_g', 'enc_q.enc.in_layers.10.weight_v', 'enc_q.enc.in_layers.11.bias', 'enc_q.enc.in_layers.11.weight_g', 'enc_q.enc.in_layers.11.weight_v', 'enc_q.enc.in_layers.12.bias', 'enc_q.enc.in_layers.12.weight_g', 'enc_q.enc.in_layers.12.weight_v', 'enc_q.enc.in_layers.13.bias', 'enc_q.enc.in_layers.13.weight_g', 'enc_q.enc.in_layers.13.weight_v', 'enc_q.enc.in_layers.14.bias', 'enc_q.enc.in_layers.14.weight_g', 'enc_q.enc.in_layers.14.weight_v', 'enc_q.enc.in_layers.15.bias', 'enc_q.enc.in_layers.15.weight_g', 'enc_q.enc.in_layers.15.weight_v', 'enc_q.enc.res_skip_layers.0.bias', 'enc_q.enc.res_skip_layers.0.weight_g', 'enc_q.enc.res_skip_layers.0.weight_v', 'enc_q.enc.res_skip_layers.1.bias', 'enc_q.enc.res_skip_layers.1.weight_g', 'enc_q.enc.res_skip_layers.1.weight_v', 'enc_q.enc.res_skip_layers.2.bias', 'enc_q.enc.res_skip_layers.2.weight_g', 'enc_q.enc.res_skip_layers.2.weight_v', 'enc_q.enc.res_skip_layers.3.bias', 'enc_q.enc.res_skip_layers.3.weight_g', 'enc_q.enc.res_skip_layers.3.weight_v', 'enc_q.enc.res_skip_layers.4.bias', 'enc_q.enc.res_skip_layers.4.weight_g', 'enc_q.enc.res_skip_layers.4.weight_v', 'enc_q.enc.res_skip_layers.5.bias', 'enc_q.enc.res_skip_layers.5.weight_g', 'enc_q.enc.res_skip_layers.5.weight_v', 'enc_q.enc.res_skip_layers.6.bias', 'enc_q.enc.res_skip_layers.6.weight_g', 'enc_q.enc.res_skip_layers.6.weight_v', 'enc_q.enc.res_skip_layers.7.bias', 'enc_q.enc.res_skip_layers.7.weight_g', 'enc_q.enc.res_skip_layers.7.weight_v', 'enc_q.enc.res_skip_layers.8.bias', 'enc_q.enc.res_skip_layers.8.weight_g', 'enc_q.enc.res_skip_layers.8.weight_v', 'enc_q.enc.res_skip_layers.9.bias', 'enc_q.enc.res_skip_layers.9.weight_g', 'enc_q.enc.res_skip_layers.9.weight_v', 'enc_q.enc.res_skip_layers.10.bias', 'enc_q.enc.res_skip_layers.10.weight_g', 'enc_q.enc.res_skip_layers.10.weight_v', 'enc_q.enc.res_skip_layers.11.bias', 'enc_q.enc.res_skip_layers.11.weight_g', 'enc_q.enc.res_skip_layers.11.weight_v', 'enc_q.enc.res_skip_layers.12.bias', 'enc_q.enc.res_skip_layers.12.weight_g', 'enc_q.enc.res_skip_layers.12.weight_v', 'enc_q.enc.res_skip_layers.13.bias', 'enc_q.enc.res_skip_layers.13.weight_g', 'enc_q.enc.res_skip_layers.13.weight_v', 'enc_q.enc.res_skip_layers.14.bias', 'enc_q.enc.res_skip_layers.14.weight_g', 'enc_q.enc.res_skip_layers.14.weight_v', 'enc_q.enc.res_skip_layers.15.bias', 'enc_q.enc.res_skip_layers.15.weight_g', 'enc_q.enc.res_skip_layers.15.weight_v', 'enc_q.enc.cond_layer.bias', 'enc_q.enc.cond_layer.weight_g', 'enc_q.enc.cond_layer.weight_v', 'enc_q.proj.weight', 'enc_q.proj.bias'], unexpected_keys=[])
+INFO:     127.0.0.1:11024 - "GET /set_sovits_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%5C%E9%93%B6%E7%8B%BC%5C%E9%93%B6%E7%8B%BC_e15_s480.pth HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11025 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:11026 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:12035 - "GET / HTTP/1.1" 404 Not Found
+ERROR:root:Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "asyncio\events.py", line 80, in _run
+  File "asyncio\proactor_events.py", line 162, in _call_connection_lost
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+False False False
+Set seed to 1618893752
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+。你好，开拓者。
+实际输入的目标文本(切句后):
+['。你好，开拓者。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 17.85it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['.你好,开拓者.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 2/1500 [00:00<01:40, 14.98it/s]  0%|          | 6/1500 [00:00<00:56, 26.21it/s]  1%|          | 10/1500 [00:00<00:49, 30.19it/s]  1%|          | 15/1500 [00:00<00:42, 34.77it/s]  1%|▏         | 19/1500 [00:00<00:42, 35.04it/s]  2%|▏         | 23/1500 [00:00<00:41, 35.31it/s]  2%|▏         | 27/1500 [00:00<00:41, 35.43it/s]  2%|▏         | 31/1500 [00:00<00:41, 35.49it/s]  2%|▏         | 35/1500 [00:01<00:41, 35.39it/s]  3%|▎         | 39/1500 [00:01<00:41, 35.05it/s]  3%|▎         | 43/1500 [00:01<00:41, 35.15it/s]  3%|▎         | 47/1500 [00:01<00:41, 35.27it/s]  3%|▎         | 51/1500 [00:01<00:41, 35.07it/s]  4%|▎         | 55/1500 [00:01<00:41, 35.16it/s]  4%|▎         | 55/1500 [00:01<00:43, 33.38it/s]
+T2S Decoding EOS [178 -> 234]
+############ 合成音频 ############
+并行合成中...
+1.682	0.078	1.681	0.599
+INFO:     127.0.0.1:12036 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:12717 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 848934497
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+这是你的本地听书工具的第一次发声测试，如果你能听到这段话，说明一切正常。
+实际输入的目标文本(切句后):
+['这是你的本地听书工具的第一次发声测试，如果你能听到这段话，说明一切正常。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.44it/s]100%|██████████| 1/1 [00:00<00:00,  3.43it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['这是你的本地听书工具的第一次发声测试,如果你能听到这段话,说明一切正常.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<00:59, 25.04it/s]  0%|          | 7/1500 [00:00<00:48, 30.53it/s]  1%|          | 11/1500 [00:00<00:44, 33.54it/s]  1%|          | 15/1500 [00:00<00:42, 35.10it/s]  1%|▏         | 19/1500 [00:00<00:41, 35.27it/s]  2%|▏         | 23/1500 [00:00<00:41, 35.48it/s]  2%|▏         | 27/1500 [00:00<00:41, 35.89it/s]  2%|▏         | 31/1500 [00:00<00:40, 36.36it/s]  2%|▏         | 35/1500 [00:00<00:39, 36.84it/s]  3%|▎         | 39/1500 [00:01<00:39, 36.95it/s]  3%|▎         | 43/1500 [00:01<00:38, 37.51it/s]  3%|▎         | 47/1500 [00:01<00:38, 37.70it/s]  3%|▎         | 51/1500 [00:01<00:38, 37.24it/s]  4%|▎         | 55/1500 [00:01<00:39, 36.78it/s]  4%|▍         | 59/1500 [00:01<00:39, 36.70it/s]  4%|▍         | 62/1500 [00:01<00:40, 35.50it/s]
+T2S Decoding EOS [178 -> 241]
+############ 合成音频 ############
+并行合成中...
+0.000	0.293	1.750	0.204
+INFO:     127.0.0.1:12718 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10149 - "GET / HTTP/1.1" 404 Not Found
+ERROR:root:Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "asyncio\events.py", line 80, in _run
+  File "asyncio\proactor_events.py", line 162, in _call_connection_lost
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+False False False
+Set seed to 2022096233
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+。你好，开拓者。
+实际输入的目标文本(切句后):
+['。你好，开拓者。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 11.31it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['.你好,开拓者.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<00:56, 26.55it/s]  0%|          | 6/1500 [00:00<00:52, 28.30it/s]  1%|          | 10/1500 [00:00<00:51, 29.14it/s]  1%|          | 14/1500 [00:00<00:50, 29.43it/s]  1%|          | 18/1500 [00:00<00:49, 29.81it/s]  1%|▏         | 22/1500 [00:00<00:47, 30.97it/s]  2%|▏         | 26/1500 [00:00<00:47, 30.87it/s]  2%|▏         | 30/1500 [00:00<00:46, 31.30it/s]  2%|▏         | 31/1500 [00:01<00:49, 29.59it/s]
+T2S Decoding EOS [178 -> 210]
+############ 合成音频 ############
+并行合成中...
+0.000	0.089	1.053	0.359
+INFO:     127.0.0.1:10150 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6757 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 300637748
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+这是你的本地听书工具的第一次发声测试，如果你能听到这段话，说明一切正常。
+实际输入的目标文本(切句后):
+['这是你的本地听书工具的第一次发声测试，如果你能听到这段话，说明一切正常。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 21.88it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['这是你的本地听书工具的第一次发声测试,如果你能听到这段话,说明一切正常.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:45, 32.91it/s]  1%|          | 8/1500 [00:00<00:42, 34.70it/s]  1%|          | 12/1500 [00:00<00:41, 35.83it/s]  1%|          | 16/1500 [00:00<00:41, 35.78it/s]  1%|▏         | 20/1500 [00:00<00:41, 35.85it/s]  2%|▏         | 25/1500 [00:00<00:39, 37.13it/s]  2%|▏         | 29/1500 [00:00<00:39, 36.93it/s]  2%|▏         | 33/1500 [00:00<00:39, 37.30it/s]  3%|▎         | 38/1500 [00:01<00:38, 38.19it/s]  3%|▎         | 42/1500 [00:01<00:37, 38.47it/s]  3%|▎         | 46/1500 [00:01<00:37, 38.65it/s]  3%|▎         | 50/1500 [00:01<00:37, 38.89it/s]  4%|▎         | 55/1500 [00:01<00:36, 39.16it/s]  4%|▍         | 59/1500 [00:01<00:36, 38.97it/s]  4%|▍         | 62/1500 [00:01<00:38, 37.31it/s]
+T2S Decoding EOS [178 -> 241]
+############ 合成音频 ############
+并行合成中...
+0.000	0.046	1.665	0.090
+INFO:     127.0.0.1:6758 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6759 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 2142165089
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+这是你的本地听书工具的第一次发声测试，如果你能听到这段话，说明一切正常。
+实际输入的目标文本(切句后):
+['这是你的本地听书工具的第一次发声测试，如果你能听到这段话，说明一切正常。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 20.52it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['这是你的本地听书工具的第一次发声测试,如果你能听到这段话,说明一切正常.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:42, 35.57it/s]  1%|          | 8/1500 [00:00<00:41, 36.28it/s]  1%|          | 13/1500 [00:00<00:38, 38.25it/s]  1%|          | 17/1500 [00:00<00:39, 37.48it/s]  1%|▏         | 21/1500 [00:00<00:41, 35.44it/s]  2%|▏         | 25/1500 [00:00<00:42, 34.79it/s]  2%|▏         | 29/1500 [00:00<00:41, 35.25it/s]  2%|▏         | 33/1500 [00:00<00:40, 36.14it/s]  2%|▏         | 37/1500 [00:01<00:40, 35.91it/s]  3%|▎         | 41/1500 [00:01<00:40, 36.04it/s]  3%|▎         | 45/1500 [00:01<00:41, 34.93it/s]  3%|▎         | 49/1500 [00:01<00:41, 34.96it/s]  4%|▎         | 53/1500 [00:01<00:41, 34.88it/s]  4%|▍         | 57/1500 [00:01<00:41, 34.85it/s]  4%|▍         | 61/1500 [00:01<00:40, 35.34it/s]  4%|▍         | 62/1500 [00:01<00:41, 34.98it/s]
+T2S Decoding EOS [178 -> 241]
+############ 合成音频 ############
+并行合成中...
+0.000	0.050	1.774	0.104
+INFO:     127.0.0.1:6760 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10651 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7150 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:14288 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7361 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:11851 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8226 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 1981827956
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+西班牙伟大的小说家、戏剧家和诗人，欧洲文艺复兴时期杰出的现实主义作家。
+实际输入的目标文本(切句后):
+['西班牙伟大的小说家、戏剧家和诗人，欧洲文艺复兴时期杰出的现实主义作家。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.51it/s]100%|██████████| 1/1 [00:00<00:00,  1.51it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['西班牙伟大的小说家,戏剧家和诗人,欧洲文艺复兴时期杰出的现实主义作家.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 2/1500 [00:00<01:31, 16.42it/s]  0%|          | 6/1500 [00:00<00:59, 25.27it/s]  1%|          | 10/1500 [00:00<00:48, 30.96it/s]  1%|          | 14/1500 [00:00<00:44, 33.64it/s]  1%|          | 18/1500 [00:00<00:41, 35.53it/s]  2%|▏         | 23/1500 [00:00<00:37, 39.38it/s]  2%|▏         | 27/1500 [00:00<00:38, 37.84it/s]  2%|▏         | 31/1500 [00:00<00:39, 37.49it/s]  2%|▏         | 36/1500 [00:01<00:38, 38.39it/s]  3%|▎         | 41/1500 [00:01<00:37, 39.36it/s]  3%|▎         | 45/1500 [00:01<00:37, 38.93it/s]  3%|▎         | 49/1500 [00:01<00:38, 38.16it/s]  4%|▎         | 53/1500 [00:01<00:38, 38.03it/s]  4%|▍         | 57/1500 [00:01<00:38, 37.82it/s]  4%|▍         | 61/1500 [00:01<00:37, 37.93it/s]  4%|▍         | 65/1500 [00:01<00:38, 37.58it/s]  5%|▍         | 69/1500 [00:01<00:37, 37.67it/s]  5%|▍         | 73/1500 [00:01<00:37, 38.13it/s]  5%|▍         | 73/1500 [00:02<00:39, 36.08it/s]
+T2S Decoding EOS [178 -> 252]
+############ 合成音频 ############
+并行合成中...
+0.001	0.708	2.067	1.158
+INFO:     127.0.0.1:8227 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4358 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 1984512924
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+代表作有长篇小说《伽拉苔亚》《堂吉诃德》《贝雪莱斯和西吉斯蒙达历险记》，以及短篇小说集《警世典范小说集》。
+实际输入的目标文本(切句后):
+['代表作有长篇小说《伽拉苔亚》《堂吉诃德》《贝雪莱斯和西吉斯蒙达历险记》，以及短篇小说集《警世典范小说集》。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.70it/s]100%|██████████| 1/1 [00:00<00:00,  2.70it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['代表作有长篇小说伽拉苔亚堂吉诃德贝雪莱斯和西吉斯蒙达历险记,以及短篇小说集警世典范小说集.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<01:03, 23.53it/s]  0%|          | 7/1500 [00:00<00:48, 30.80it/s]  1%|          | 11/1500 [00:00<00:44, 33.67it/s]  1%|          | 15/1500 [00:00<00:41, 35.63it/s]  1%|▏         | 19/1500 [00:00<00:40, 36.69it/s]  2%|▏         | 23/1500 [00:00<00:40, 36.84it/s]  2%|▏         | 27/1500 [00:00<00:39, 36.95it/s]  2%|▏         | 31/1500 [00:00<00:38, 37.69it/s]  2%|▏         | 35/1500 [00:00<00:38, 37.61it/s]  3%|▎         | 39/1500 [00:01<00:38, 37.80it/s]  3%|▎         | 43/1500 [00:01<00:38, 37.68it/s]  3%|▎         | 47/1500 [00:01<00:38, 37.71it/s]  3%|▎         | 51/1500 [00:01<00:38, 37.72it/s]  4%|▎         | 56/1500 [00:01<00:37, 38.64it/s]  4%|▍         | 60/1500 [00:01<00:38, 37.05it/s]  4%|▍         | 64/1500 [00:01<00:38, 37.22it/s]  5%|▍         | 69/1500 [00:01<00:36, 39.03it/s]  5%|▍         | 73/1500 [00:01<00:37, 38.40it/s]  5%|▌         | 77/1500 [00:02<00:36, 38.54it/s]  5%|▌         | 81/1500 [00:02<00:36, 38.46it/s]  6%|▌         | 85/1500 [00:02<00:37, 38.17it/s]  6%|▌         | 89/1500 [00:02<00:37, 37.90it/s]  6%|▌         | 93/1500 [00:02<00:36, 38.30it/s]  6%|▋         | 97/1500 [00:02<00:36, 37.94it/s]  7%|▋         | 101/1500 [00:02<00:36, 37.88it/s]  7%|▋         | 105/1500 [00:02<00:38, 36.40it/s]  7%|▋         | 109/1500 [00:02<00:37, 37.00it/s]  8%|▊         | 113/1500 [00:03<00:37, 36.83it/s]  8%|▊         | 117/1500 [00:03<00:37, 36.76it/s]  8%|▊         | 122/1500 [00:03<00:36, 37.92it/s]  8%|▊         | 126/1500 [00:03<00:36, 37.71it/s]  9%|▊         | 131/1500 [00:03<00:35, 38.85it/s]  9%|▉         | 135/1500 [00:03<00:35, 38.70it/s]  9%|▉         | 140/1500 [00:03<00:34, 39.02it/s] 10%|▉         | 144/1500 [00:03<00:35, 38.31it/s] 10%|▉         | 148/1500 [00:03<00:34, 38.63it/s] 10%|█         | 152/1500 [00:04<00:34, 38.62it/s] 10%|█         | 156/1500 [00:04<00:34, 38.81it/s] 10%|█         | 157/1500 [00:04<00:35, 37.33it/s]
+T2S Decoding EOS [178 -> 336]
+############ 合成音频 ############
+并行合成中...
+0.000	0.375	4.214	0.540
+INFO:     127.0.0.1:4359 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4360 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 1260487120
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+代表作有长篇小说《伽拉苔亚》《堂吉诃德》《贝雪莱斯和西吉斯蒙达历险记》，以及短篇小说集《警世典范小说集》。
+实际输入的目标文本(切句后):
+['代表作有长篇小说《伽拉苔亚》《堂吉诃德》《贝雪莱斯和西吉斯蒙达历险记》，以及短篇小说集《警世典范小说集》。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 21.37it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['代表作有长篇小说伽拉苔亚堂吉诃德贝雪莱斯和西吉斯蒙达历险记,以及短篇小说集警世典范小说集.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:38, 39.07it/s]  1%|          | 8/1500 [00:00<00:39, 37.66it/s]  1%|          | 12/1500 [00:00<00:39, 37.26it/s]  1%|          | 16/1500 [00:00<00:39, 37.62it/s]  1%|▏         | 20/1500 [00:00<00:38, 38.27it/s]  2%|▏         | 24/1500 [00:00<00:38, 38.65it/s]  2%|▏         | 28/1500 [00:00<00:38, 38.20it/s]  2%|▏         | 32/1500 [00:00<00:38, 38.44it/s]  2%|▏         | 36/1500 [00:00<00:38, 37.94it/s]  3%|▎         | 40/1500 [00:01<00:38, 37.95it/s]  3%|▎         | 44/1500 [00:01<00:38, 38.19it/s]  3%|▎         | 48/1500 [00:01<00:38, 37.61it/s]  4%|▎         | 53/1500 [00:01<00:37, 38.46it/s]  4%|▍         | 57/1500 [00:01<00:37, 38.63it/s]  4%|▍         | 61/1500 [00:01<00:37, 38.62it/s]  4%|▍         | 65/1500 [00:01<00:37, 38.42it/s]  5%|▍         | 69/1500 [00:01<00:36, 38.70it/s]  5%|▍         | 73/1500 [00:01<00:36, 39.00it/s]  5%|▌         | 78/1500 [00:02<00:36, 39.20it/s]  5%|▌         | 82/1500 [00:02<00:37, 37.54it/s]  6%|▌         | 86/1500 [00:02<00:38, 36.78it/s]  6%|▌         | 90/1500 [00:02<00:41, 34.19it/s]  6%|▋         | 96/1500 [00:02<00:37, 37.93it/s]  7%|▋         | 100/1500 [00:02<00:37, 37.11it/s]  7%|▋         | 104/1500 [00:02<00:40, 34.73it/s]  7%|▋         | 109/1500 [00:02<00:38, 36.39it/s]  8%|▊         | 113/1500 [00:03<00:38, 35.61it/s]  8%|▊         | 117/1500 [00:03<00:39, 35.32it/s]  8%|▊         | 121/1500 [00:03<00:38, 36.22it/s]  8%|▊         | 125/1500 [00:03<00:37, 36.72it/s]  9%|▊         | 129/1500 [00:03<00:36, 37.31it/s]  9%|▉         | 133/1500 [00:03<00:36, 37.83it/s]  9%|▉         | 137/1500 [00:03<00:35, 38.12it/s]  9%|▉         | 141/1500 [00:03<00:35, 38.62it/s] 10%|▉         | 145/1500 [00:03<00:34, 38.73it/s] 10%|▉         | 149/1500 [00:03<00:35, 38.48it/s] 10%|█         | 153/1500 [00:04<00:34, 38.57it/s] 10%|█         | 157/1500 [00:04<00:34, 38.46it/s] 11%|█         | 161/1500 [00:04<00:34, 38.55it/s] 11%|█         | 165/1500 [00:04<00:34, 38.74it/s] 11%|█▏        | 169/1500 [00:04<00:34, 38.50it/s] 12%|█▏        | 173/1500 [00:04<00:34, 38.41it/s] 12%|█▏        | 177/1500 [00:04<00:34, 38.51it/s] 12%|█▏        | 181/1500 [00:04<00:34, 38.45it/s] 12%|█▏        | 182/1500 [00:04<00:35, 37.64it/s]
+T2S Decoding EOS [178 -> 361]
+############ 合成音频 ############
+并行合成中...
+0.000	0.048	4.839	0.392
+INFO:     127.0.0.1:2161 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2173 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 1809886357
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+《堂吉诃德》（1606—1615）是塞万提斯最杰出的作品。
+实际输入的目标文本(切句后):
+['《堂吉诃德》（1606—1615）是塞万提斯最杰出的作品。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 10.38it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['堂吉诃德幺六零六幺六幺五是塞万提斯最杰出的作品.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 6/1500 [00:00<00:29, 50.43it/s]  1%|          | 12/1500 [00:00<00:34, 43.02it/s]  1%|          | 17/1500 [00:00<00:37, 39.99it/s]  1%|▏         | 22/1500 [00:00<00:37, 39.79it/s]  2%|▏         | 28/1500 [00:00<00:34, 43.02it/s]  2%|▏         | 33/1500 [00:00<00:35, 41.36it/s]  3%|▎         | 38/1500 [00:00<00:36, 40.33it/s]  3%|▎         | 41/1500 [00:01<00:36, 39.81it/s]
+T2S Decoding EOS [178 -> 220]
+############ 合成音频 ############
+并行合成中...
+0.000	0.098	1.035	0.374
+INFO:     127.0.0.1:2174 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:5850 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 736804968
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+俄国批评家别林斯基说：“在欧洲所有一切文学作品中，把严肃和滑稽，悲剧性和喜剧性，生活中的琐屑和庸俗与伟大和美丽如此水乳交融.这样的范例仅见于塞万提斯的《堂吉诃德》。
+实际输入的目标文本(切句后):
+['俄国批评家别林斯基说：“在欧洲所有一切文学作品中，把严肃和滑稽，悲剧性和喜剧性，生活中的琐屑和庸俗与伟大和美丽如此水乳交融.这样的范例仅见于塞万提斯的《堂吉诃德》。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.38it/s]100%|██████████| 1/1 [00:00<00:00,  3.38it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['俄国批评家别林斯基说,在欧洲所有一切文学作品中,把严肃和滑稽,悲剧性和喜剧性,生活中的琐屑和庸俗与伟大和美丽如此水乳交融.这样的范例仅见于塞万提斯的堂吉诃德.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 2/1500 [00:00<01:17, 19.40it/s]  0%|          | 6/1500 [00:00<00:52, 28.47it/s]  1%|          | 10/1500 [00:00<00:46, 31.71it/s]  1%|          | 14/1500 [00:00<00:43, 34.11it/s]  1%|          | 18/1500 [00:00<00:41, 35.38it/s]  1%|▏         | 22/1500 [00:00<00:40, 36.22it/s]  2%|▏         | 26/1500 [00:00<00:40, 36.70it/s]  2%|▏         | 30/1500 [00:00<00:40, 36.45it/s]  2%|▏         | 34/1500 [00:00<00:40, 36.01it/s]  3%|▎         | 38/1500 [00:01<00:40, 36.23it/s]  3%|▎         | 42/1500 [00:01<00:39, 36.59it/s]  3%|▎         | 46/1500 [00:01<00:39, 37.05it/s]  3%|▎         | 50/1500 [00:01<00:38, 37.66it/s]  4%|▎         | 55/1500 [00:01<00:36, 39.80it/s]  4%|▍         | 59/1500 [00:01<00:37, 38.54it/s]  4%|▍         | 63/1500 [00:01<00:38, 37.37it/s]  4%|▍         | 67/1500 [00:01<00:38, 36.92it/s]  5%|▍         | 71/1500 [00:01<00:38, 37.26it/s]  5%|▌         | 75/1500 [00:02<00:37, 37.59it/s]  5%|▌         | 79/1500 [00:02<00:37, 37.83it/s]  6%|▌         | 83/1500 [00:02<00:37, 37.45it/s]  6%|▌         | 87/1500 [00:02<00:39, 36.21it/s]  6%|▌         | 92/1500 [00:02<00:37, 37.30it/s]  6%|▋         | 96/1500 [00:02<00:37, 37.36it/s]  7%|▋         | 100/1500 [00:02<00:37, 37.07it/s]  7%|▋         | 104/1500 [00:02<00:37, 37.20it/s]  7%|▋         | 108/1500 [00:02<00:38, 36.33it/s]  7%|▋         | 112/1500 [00:03<00:37, 36.77it/s]  8%|▊         | 116/1500 [00:03<00:37, 37.22it/s]  8%|▊         | 120/1500 [00:03<00:36, 37.93it/s]  8%|▊         | 124/1500 [00:03<00:36, 37.35it/s]  9%|▊         | 128/1500 [00:03<00:36, 37.87it/s]  9%|▉         | 132/1500 [00:03<00:36, 37.48it/s]  9%|▉         | 136/1500 [00:03<00:35, 38.05it/s]  9%|▉         | 140/1500 [00:03<00:36, 37.54it/s] 10%|▉         | 144/1500 [00:03<00:36, 37.52it/s] 10%|▉         | 148/1500 [00:04<00:36, 37.44it/s] 10%|█         | 153/1500 [00:04<00:33, 39.82it/s] 10%|█         | 157/1500 [00:04<00:34, 39.50it/s] 11%|█         | 161/1500 [00:04<00:34, 39.30it/s] 11%|█         | 165/1500 [00:04<00:34, 38.56it/s] 11%|█▏        | 169/1500 [00:04<00:34, 38.68it/s] 12%|█▏        | 173/1500 [00:04<00:34, 38.61it/s] 12%|█▏        | 177/1500 [00:04<00:33, 38.92it/s] 12%|█▏        | 181/1500 [00:04<00:33, 38.98it/s] 12%|█▏        | 185/1500 [00:04<00:33, 39.10it/s] 13%|█▎        | 189/1500 [00:05<00:33, 38.70it/s] 13%|█▎        | 193/1500 [00:05<00:33, 38.78it/s] 13%|█▎        | 197/1500 [00:05<00:33, 38.70it/s] 13%|█▎        | 201/1500 [00:05<00:33, 38.47it/s] 14%|█▎        | 205/1500 [00:05<00:33, 38.19it/s] 14%|█▍        | 209/1500 [00:05<00:33, 38.55it/s] 14%|█▍        | 213/1500 [00:05<00:34, 37.52it/s] 15%|█▍        | 218/1500 [00:05<00:33, 38.53it/s] 15%|█▍        | 222/1500 [00:05<00:33, 38.55it/s] 15%|█▌        | 227/1500 [00:06<00:31, 40.01it/s] 15%|█▌        | 231/1500 [00:06<00:31, 39.67it/s] 16%|█▌        | 236/1500 [00:06<00:30, 40.90it/s] 16%|█▌        | 241/1500 [00:06<00:31, 39.38it/s] 16%|█▋        | 245/1500 [00:06<00:31, 39.30it/s] 17%|█▋        | 249/1500 [00:06<00:31, 39.23it/s] 17%|█▋        | 253/1500 [00:06<00:32, 38.92it/s] 17%|█▋        | 257/1500 [00:06<00:32, 38.34it/s] 17%|█▋        | 261/1500 [00:06<00:32, 37.97it/s] 18%|█▊        | 267/1500 [00:07<00:28, 43.35it/s] 18%|█▊        | 272/1500 [00:07<00:28, 42.62it/s] 18%|█▊        | 277/1500 [00:07<00:29, 40.87it/s] 19%|█▉        | 282/1500 [00:07<00:30, 40.47it/s] 19%|█▉        | 287/1500 [00:07<00:31, 38.86it/s] 19%|█▉        | 291/1500 [00:07<00:31, 38.90it/s] 20%|█▉        | 295/1500 [00:07<00:30, 39.16it/s] 20%|██        | 300/1500 [00:07<00:30, 39.29it/s] 20%|██        | 304/1500 [00:07<00:30, 39.33it/s] 21%|██        | 309/1500 [00:08<00:30, 39.38it/s] 21%|██        | 313/1500 [00:08<00:30, 38.91it/s] 21%|██        | 317/1500 [00:08<00:31, 37.94it/s] 21%|██▏       | 321/1500 [00:08<00:30, 38.33it/s] 22%|██▏       | 325/1500 [00:08<00:31, 37.76it/s] 22%|██▏       | 326/1500 [00:08<00:30, 37.93it/s]
+T2S Decoding EOS [178 -> 505]
+############ 合成音频 ############
+并行合成中...
+0.000	0.297	8.598	0.409
+INFO:     127.0.0.1:5851 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10929 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:13165 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8712 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:8714 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3509 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:3521 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:11055 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:14557 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:9467 - "GET / HTTP/1.1" 404 Not Found
+Loading Text2Semantic weights from D:\eBookSVC\model\银狼\银狼-e10.ckpt
+INFO:     127.0.0.1:9483 - "GET /set_gpt_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%5C%E9%93%B6%E7%8B%BC%5C%E9%93%B6%E7%8B%BC-e10.ckpt HTTP/1.1" 200 OK
+Loading VITS weights from D:\eBookSVC\model\银狼\银狼_e15_s480.pth. _IncompatibleKeys(missing_keys=['enc_q.pre.weight', 'enc_q.pre.bias', 'enc_q.enc.in_layers.0.bias', 'enc_q.enc.in_layers.0.weight_g', 'enc_q.enc.in_layers.0.weight_v', 'enc_q.enc.in_layers.1.bias', 'enc_q.enc.in_layers.1.weight_g', 'enc_q.enc.in_layers.1.weight_v', 'enc_q.enc.in_layers.2.bias', 'enc_q.enc.in_layers.2.weight_g', 'enc_q.enc.in_layers.2.weight_v', 'enc_q.enc.in_layers.3.bias', 'enc_q.enc.in_layers.3.weight_g', 'enc_q.enc.in_layers.3.weight_v', 'enc_q.enc.in_layers.4.bias', 'enc_q.enc.in_layers.4.weight_g', 'enc_q.enc.in_layers.4.weight_v', 'enc_q.enc.in_layers.5.bias', 'enc_q.enc.in_layers.5.weight_g', 'enc_q.enc.in_layers.5.weight_v', 'enc_q.enc.in_layers.6.bias', 'enc_q.enc.in_layers.6.weight_g', 'enc_q.enc.in_layers.6.weight_v', 'enc_q.enc.in_layers.7.bias', 'enc_q.enc.in_layers.7.weight_g', 'enc_q.enc.in_layers.7.weight_v', 'enc_q.enc.in_layers.8.bias', 'enc_q.enc.in_layers.8.weight_g', 'enc_q.enc.in_layers.8.weight_v', 'enc_q.enc.in_layers.9.bias', 'enc_q.enc.in_layers.9.weight_g', 'enc_q.enc.in_layers.9.weight_v', 'enc_q.enc.in_layers.10.bias', 'enc_q.enc.in_layers.10.weight_g', 'enc_q.enc.in_layers.10.weight_v', 'enc_q.enc.in_layers.11.bias', 'enc_q.enc.in_layers.11.weight_g', 'enc_q.enc.in_layers.11.weight_v', 'enc_q.enc.in_layers.12.bias', 'enc_q.enc.in_layers.12.weight_g', 'enc_q.enc.in_layers.12.weight_v', 'enc_q.enc.in_layers.13.bias', 'enc_q.enc.in_layers.13.weight_g', 'enc_q.enc.in_layers.13.weight_v', 'enc_q.enc.in_layers.14.bias', 'enc_q.enc.in_layers.14.weight_g', 'enc_q.enc.in_layers.14.weight_v', 'enc_q.enc.in_layers.15.bias', 'enc_q.enc.in_layers.15.weight_g', 'enc_q.enc.in_layers.15.weight_v', 'enc_q.enc.res_skip_layers.0.bias', 'enc_q.enc.res_skip_layers.0.weight_g', 'enc_q.enc.res_skip_layers.0.weight_v', 'enc_q.enc.res_skip_layers.1.bias', 'enc_q.enc.res_skip_layers.1.weight_g', 'enc_q.enc.res_skip_layers.1.weight_v', 'enc_q.enc.res_skip_layers.2.bias', 'enc_q.enc.res_skip_layers.2.weight_g', 'enc_q.enc.res_skip_layers.2.weight_v', 'enc_q.enc.res_skip_layers.3.bias', 'enc_q.enc.res_skip_layers.3.weight_g', 'enc_q.enc.res_skip_layers.3.weight_v', 'enc_q.enc.res_skip_layers.4.bias', 'enc_q.enc.res_skip_layers.4.weight_g', 'enc_q.enc.res_skip_layers.4.weight_v', 'enc_q.enc.res_skip_layers.5.bias', 'enc_q.enc.res_skip_layers.5.weight_g', 'enc_q.enc.res_skip_layers.5.weight_v', 'enc_q.enc.res_skip_layers.6.bias', 'enc_q.enc.res_skip_layers.6.weight_g', 'enc_q.enc.res_skip_layers.6.weight_v', 'enc_q.enc.res_skip_layers.7.bias', 'enc_q.enc.res_skip_layers.7.weight_g', 'enc_q.enc.res_skip_layers.7.weight_v', 'enc_q.enc.res_skip_layers.8.bias', 'enc_q.enc.res_skip_layers.8.weight_g', 'enc_q.enc.res_skip_layers.8.weight_v', 'enc_q.enc.res_skip_layers.9.bias', 'enc_q.enc.res_skip_layers.9.weight_g', 'enc_q.enc.res_skip_layers.9.weight_v', 'enc_q.enc.res_skip_layers.10.bias', 'enc_q.enc.res_skip_layers.10.weight_g', 'enc_q.enc.res_skip_layers.10.weight_v', 'enc_q.enc.res_skip_layers.11.bias', 'enc_q.enc.res_skip_layers.11.weight_g', 'enc_q.enc.res_skip_layers.11.weight_v', 'enc_q.enc.res_skip_layers.12.bias', 'enc_q.enc.res_skip_layers.12.weight_g', 'enc_q.enc.res_skip_layers.12.weight_v', 'enc_q.enc.res_skip_layers.13.bias', 'enc_q.enc.res_skip_layers.13.weight_g', 'enc_q.enc.res_skip_layers.13.weight_v', 'enc_q.enc.res_skip_layers.14.bias', 'enc_q.enc.res_skip_layers.14.weight_g', 'enc_q.enc.res_skip_layers.14.weight_v', 'enc_q.enc.res_skip_layers.15.bias', 'enc_q.enc.res_skip_layers.15.weight_g', 'enc_q.enc.res_skip_layers.15.weight_v', 'enc_q.enc.cond_layer.bias', 'enc_q.enc.cond_layer.weight_g', 'enc_q.enc.cond_layer.weight_v', 'enc_q.proj.weight', 'enc_q.proj.bias'], unexpected_keys=[])
+INFO:     127.0.0.1:7764 - "GET /set_sovits_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%5C%E9%93%B6%E7%8B%BC%5C%E9%93%B6%E7%8B%BC_e15_s480.pth HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7767 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:7768 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:4836 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:11274 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 1689203582
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+我哥哥杰姆快满十三岁的时候，胳膊肘遭受了一次严重的骨折。
+实际输入的目标文本(切句后):
+['我哥哥杰姆快满十三岁的时候，胳膊肘遭受了一次严重的骨折。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['我哥哥杰姆快满十三岁的时候,胳膊肘遭受了一次严重的骨折.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 2/1500 [00:00<01:39, 15.03it/s]  0%|          | 6/1500 [00:00<00:58, 25.47it/s]  1%|          | 10/1500 [00:00<00:53, 28.06it/s]  1%|          | 14/1500 [00:00<00:49, 29.93it/s]  1%|          | 18/1500 [00:00<00:47, 31.50it/s]  1%|▏         | 22/1500 [00:00<00:44, 32.96it/s]  2%|▏         | 26/1500 [00:00<00:43, 34.11it/s]  2%|▏         | 30/1500 [00:00<00:43, 33.52it/s]  2%|▏         | 34/1500 [00:01<00:43, 33.85it/s]  3%|▎         | 38/1500 [00:01<00:42, 34.09it/s]  3%|▎         | 42/1500 [00:01<00:42, 34.05it/s]  3%|▎         | 42/1500 [00:01<00:46, 31.05it/s]
+T2S Decoding EOS [178 -> 221]
+############ 合成音频 ############
+并行合成中...
+0.001	0.778	1.410	1.074
+INFO:     127.0.0.1:11275 - "POST /tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11277 - "GET / HTTP/1.1" 404 Not Found
+False False False
+Set seed to 4106891502
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+等到伤痛痊愈，他也不再担惊受怕，唯恐永远也玩不成橄榄球之后，就很少想到自己受伤的事儿了。
+实际输入的目标文本(切句后):
+['等到伤痛痊愈，他也不再担惊受怕，唯恐永远也玩不成橄榄球之后，就很少想到自己受伤的事儿了。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.85it/s]100%|██████████| 1/1 [00:00<00:00,  2.85it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['等到伤痛痊愈,他也不再担惊受怕,唯恐永远也玩不成橄榄球之后,就很少想到自己受伤的事儿了.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<00:58, 25.60it/s]  0%|          | 7/1500 [00:00<00:48, 30.67it/s]  1%|          | 11/1500 [00:00<00:46, 32.07it/s]  1%|          | 15/1500 [00:00<00:47, 31.21it/s]  1%|▏         | 19/1500 [00:00<00:46, 32.15it/s]  2%|▏         | 23/1500 [00:00<00:47, 30.78it/s]  2%|▏         | 27/1500 [00:00<00:47, 30.91it/s]  2%|▏         | 31/1500 [00:00<00:46, 31.59it/s]  2%|▏         | 35/1500 [00:01<00:46, 31.77it/s]  3%|▎         | 39/1500 [00:01<00:45, 32.14it/s]  3%|▎         | 43/1500 [00:01<00:44, 32.42it/s]  3%|▎         | 47/1500 [00:01<00:45, 32.16it/s]  3%|▎         | 51/1500 [00:01<00:43, 33.04it/s]  4%|▎         | 55/1500 [00:01<00:43, 33.59it/s]  4%|▍         | 59/1500 [00:01<00:43, 33.04it/s]  4%|▍         | 63/1500 [00:01<00:42, 33.56it/s]  4%|▍         | 67/1500 [00:02<00:42, 34.04it/s]  5%|▍         | 71/1500 [00:02<00:42, 33.68it/s]  5%|▌         | 75/1500 [00:02<00:41, 34.07it/s]  5%|▌         | 79/1500 [00:02<00:42, 33.21it/s]  6%|▌         | 83/1500 [00:02<00:43, 32.50it/s]  6%|▌         | 87/1500 [00:02<00:42, 33.20it/s]  6%|▌         | 91/1500 [00:02<00:43, 32.67it/s]  6%|▋         | 95/1500 [00:02<00:42, 33.04it/s]  7%|▋         | 99/1500 [00:03<00:42, 33.14it/s]  7%|▋         | 103/1500 [00:03<00:42, 32.89it/s]  7%|▋         | 105/1500 [00:03<00:43, 32.27it/s]
+T2S Decoding EOS [178 -> 284]
+############ 合成音频 ############
+并行合成中...
+0.000	0.357	3.264	0.586
+INFO:     127.0.0.1:11285 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2824735173
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+事情的结果是，他的左胳膊比右胳膊稍微短了点儿；站立或者走路的时候，左手手背与身体成直角，拇指和大腿平行——但他对这些毫不在意，只要他还能传球、开球。
+实际输入的目标文本(切句后):
+['事情的结果是，他的左胳膊比右胳膊稍微短了点儿；站立或者走路的时候，左手手背与身体成直角，拇指和大腿平行——但他对这些毫不在意，只要他还能传球、开球。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.19it/s]100%|██████████| 1/1 [00:00<00:00,  3.19it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['事情的结果是,他的左胳膊比右胳膊稍微短了点儿,站立或者走路的时候,左手手背与身体成直角,拇指和大腿平行但他对这些毫不在意,只要他还能传球,开球.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<00:53, 28.24it/s]  0%|          | 6/1500 [00:00<00:52, 28.29it/s]  1%|          | 10/1500 [00:00<00:49, 30.18it/s]  1%|          | 14/1500 [00:00<00:48, 30.34it/s]  1%|          | 18/1500 [00:00<00:49, 30.14it/s]  1%|▏         | 22/1500 [00:00<00:50, 29.36it/s]  2%|▏         | 25/1500 [00:00<00:50, 29.46it/s]  2%|▏         | 29/1500 [00:00<00:49, 29.46it/s]  2%|▏         | 33/1500 [00:01<00:49, 29.90it/s]  2%|▏         | 37/1500 [00:01<00:47, 30.84it/s]  3%|▎         | 41/1500 [00:01<00:45, 31.76it/s]  3%|▎         | 45/1500 [00:01<00:44, 32.77it/s]  3%|▎         | 49/1500 [00:01<00:43, 33.28it/s]  4%|▎         | 53/1500 [00:01<00:44, 32.64it/s]  4%|▍         | 57/1500 [00:01<00:45, 31.99it/s]  4%|▍         | 61/1500 [00:01<00:47, 30.35it/s]  4%|▍         | 65/1500 [00:02<00:45, 31.37it/s]  5%|▍         | 69/1500 [00:02<00:44, 32.24it/s]  5%|▍         | 73/1500 [00:02<00:43, 32.88it/s]  5%|▌         | 77/1500 [00:02<00:42, 33.26it/s]  5%|▌         | 81/1500 [00:02<00:42, 33.36it/s]  6%|▌         | 85/1500 [00:02<00:43, 32.82it/s]  6%|▌         | 89/1500 [00:02<00:42, 33.58it/s]  6%|▌         | 93/1500 [00:02<00:41, 33.76it/s]  6%|▋         | 97/1500 [00:03<00:41, 33.95it/s]  7%|▋         | 101/1500 [00:03<00:40, 34.36it/s]  7%|▋         | 105/1500 [00:03<00:40, 34.71it/s]  7%|▋         | 109/1500 [00:03<00:40, 33.93it/s]  8%|▊         | 113/1500 [00:03<00:40, 34.17it/s]  8%|▊         | 117/1500 [00:03<00:40, 34.22it/s]  8%|▊         | 121/1500 [00:03<00:39, 34.59it/s]  8%|▊         | 125/1500 [00:03<00:39, 35.12it/s]  9%|▊         | 129/1500 [00:03<00:40, 34.20it/s]  9%|▉         | 133/1500 [00:04<00:42, 32.52it/s]  9%|▉         | 137/1500 [00:04<00:42, 31.97it/s]  9%|▉         | 141/1500 [00:04<00:43, 30.90it/s] 10%|▉         | 145/1500 [00:04<00:43, 31.14it/s] 10%|▉         | 149/1500 [00:04<00:41, 32.40it/s] 10%|█         | 153/1500 [00:04<00:40, 33.18it/s] 10%|█         | 157/1500 [00:04<00:39, 34.12it/s] 11%|█         | 161/1500 [00:04<00:39, 34.16it/s] 11%|█         | 165/1500 [00:05<00:38, 34.36it/s] 11%|█▏        | 169/1500 [00:05<00:37, 35.22it/s] 12%|█▏        | 173/1500 [00:05<00:38, 34.19it/s] 12%|█▏        | 177/1500 [00:05<00:38, 34.46it/s] 12%|█▏        | 181/1500 [00:05<00:38, 34.29it/s] 12%|█▏        | 185/1500 [00:05<00:38, 34.42it/s] 13%|█▎        | 189/1500 [00:05<00:37, 34.80it/s] 13%|█▎        | 193/1500 [00:05<00:37, 34.50it/s] 13%|█▎        | 197/1500 [00:06<00:39, 33.34it/s] 13%|█▎        | 201/1500 [00:06<00:38, 34.08it/s] 14%|█▎        | 205/1500 [00:06<00:37, 34.79it/s] 14%|█▍        | 209/1500 [00:06<00:37, 34.83it/s] 14%|█▍        | 213/1500 [00:06<00:36, 35.05it/s] 14%|█▍        | 217/1500 [00:06<00:36, 35.30it/s] 15%|█▍        | 221/1500 [00:06<00:36, 35.12it/s] 15%|█▌        | 225/1500 [00:06<00:36, 34.63it/s] 15%|█▌        | 229/1500 [00:06<00:36, 34.55it/s] 16%|█▌        | 233/1500 [00:07<00:37, 33.85it/s] 16%|█▌        | 237/1500 [00:07<00:37, 33.70it/s] 16%|█▌        | 241/1500 [00:07<00:37, 33.96it/s] 16%|█▋        | 245/1500 [00:07<00:37, 33.54it/s] 17%|█▋        | 249/1500 [00:07<00:38, 32.23it/s] 17%|█▋        | 250/1500 [00:07<00:37, 32.90it/s]
+T2S Decoding EOS [178 -> 429]
+############ 合成音频 ############
+并行合成中...
+0.000	0.315	7.605	1.419
+INFO:     127.0.0.1:7065 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2462952188
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+等过了一些年，日子长到足够让当事人回首往事时，我们有时候会谈论导致他受伤的那些过往事件。
+实际输入的目标文本(切句后):
+['等过了一些年，日子长到足够让当事人回首往事时，我们有时候会谈论导致他受伤的那些过往事件。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.28it/s]100%|██████████| 1/1 [00:00<00:00,  4.27it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['等过了一些年,日子长到足够让当事人回首往事时,我们有时候会谈论导致他受伤的那些过往事件.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<00:55, 26.89it/s]  0%|          | 7/1500 [00:00<00:49, 30.06it/s]  1%|          | 10/1500 [00:00<00:50, 29.72it/s]  1%|          | 14/1500 [00:00<00:47, 31.12it/s]  1%|          | 18/1500 [00:00<00:46, 31.96it/s]  1%|▏         | 22/1500 [00:00<00:47, 31.41it/s]  2%|▏         | 26/1500 [00:00<00:45, 32.66it/s]  2%|▏         | 30/1500 [00:00<00:45, 32.45it/s]  2%|▏         | 34/1500 [00:01<00:44, 32.80it/s]  3%|▎         | 38/1500 [00:01<00:44, 33.11it/s]  3%|▎         | 42/1500 [00:01<00:44, 33.02it/s]  3%|▎         | 46/1500 [00:01<00:44, 32.80it/s]  3%|▎         | 50/1500 [00:01<00:43, 33.15it/s]  4%|▎         | 54/1500 [00:01<00:43, 33.15it/s]  4%|▍         | 58/1500 [00:01<00:43, 33.46it/s]  4%|▍         | 62/1500 [00:01<00:42, 33.73it/s]  4%|▍         | 66/1500 [00:02<00:42, 34.00it/s]  5%|▍         | 70/1500 [00:02<00:40, 34.89it/s]  5%|▍         | 74/1500 [00:02<00:40, 35.25it/s]  5%|▌         | 78/1500 [00:02<00:40, 34.84it/s]  5%|▌         | 82/1500 [00:02<00:40, 35.05it/s]  6%|▌         | 83/1500 [00:02<00:43, 32.87it/s]
+T2S Decoding EOS [178 -> 262]
+############ 合成音频 ############
+并行合成中...
+0.000	0.236	2.531	0.537
+INFO:     127.0.0.1:7082 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 3344645931
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+我坚持认为，一切都是尤厄尔家的人引起的，但比我大四岁的杰姆却说，事情的起因比这还要早得多。
+实际输入的目标文本(切句后):
+['我坚持认为，一切都是尤厄尔家的人引起的，但比我大四岁的杰姆却说，事情的起因比这还要早得多。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.41it/s]100%|██████████| 1/1 [00:00<00:00,  5.40it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['我坚持认为,一切都是尤厄尔家的人引起的,但比我大四岁的杰姆却说,事情的起因比这还要早得多.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:45, 32.90it/s]  1%|          | 8/1500 [00:00<00:44, 33.82it/s]  1%|          | 12/1500 [00:00<00:42, 35.25it/s]  1%|          | 16/1500 [00:00<00:42, 34.91it/s]  1%|▏         | 20/1500 [00:00<00:41, 35.50it/s]  2%|▏         | 24/1500 [00:00<00:41, 35.86it/s]  2%|▏         | 28/1500 [00:00<00:41, 35.15it/s]  2%|▏         | 32/1500 [00:00<00:41, 35.50it/s]  2%|▏         | 36/1500 [00:01<00:42, 34.17it/s]  3%|▎         | 40/1500 [00:01<00:44, 32.81it/s]  3%|▎         | 44/1500 [00:01<00:43, 33.27it/s]  3%|▎         | 48/1500 [00:01<00:44, 32.97it/s]  3%|▎         | 52/1500 [00:01<00:44, 32.51it/s]  4%|▎         | 56/1500 [00:01<00:42, 33.58it/s]  4%|▍         | 60/1500 [00:01<00:42, 33.61it/s]  4%|▍         | 64/1500 [00:01<00:41, 34.24it/s]  5%|▍         | 68/1500 [00:01<00:41, 34.35it/s]  5%|▍         | 72/1500 [00:02<00:42, 33.57it/s]  5%|▌         | 76/1500 [00:02<00:41, 34.51it/s]  5%|▌         | 80/1500 [00:02<00:40, 35.17it/s]  6%|▌         | 84/1500 [00:02<00:41, 33.94it/s]  6%|▌         | 88/1500 [00:02<00:41, 33.87it/s]  6%|▌         | 92/1500 [00:02<00:41, 33.63it/s]  6%|▋         | 96/1500 [00:02<00:42, 33.07it/s]  7%|▋         | 100/1500 [00:02<00:41, 33.76it/s]  7%|▋         | 104/1500 [00:03<00:41, 33.47it/s]  7%|▋         | 107/1500 [00:03<00:41, 33.51it/s]
+T2S Decoding EOS [178 -> 286]
+############ 合成音频 ############
+并行合成中...
+0.000	0.187	3.197	0.599
+INFO:     127.0.0.1:13677 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 801671321
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+。他说，从迪尔来到我们这儿的那个夏天起——确切地说，是当迪尔怂恿我们把怪人拉德利引出来的时候，事情就开始了。
+实际输入的目标文本(切句后):
+['。他说，从迪尔来到我们这儿的那个夏天起——确切地说，是当迪尔怂恿我们把怪人拉德利引出来的时候，事情就开始了。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.77it/s]100%|██████████| 1/1 [00:00<00:00,  4.75it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['.他说,从迪尔来到我们这儿的那个夏天起确切地说,是当迪尔怂恿我们把怪人拉德利引出来的时候,事情就开始了.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 3/1500 [00:00<00:51, 29.23it/s]  0%|          | 7/1500 [00:00<00:44, 33.62it/s]  1%|          | 11/1500 [00:00<00:44, 33.59it/s]  1%|          | 15/1500 [00:00<00:46, 31.94it/s]  1%|▏         | 19/1500 [00:00<00:45, 32.78it/s]  2%|▏         | 23/1500 [00:00<00:44, 33.23it/s]  2%|▏         | 27/1500 [00:00<00:44, 33.16it/s]  2%|▏         | 31/1500 [00:00<00:44, 32.82it/s]  2%|▏         | 35/1500 [00:01<00:44, 33.11it/s]  3%|▎         | 39/1500 [00:01<00:43, 33.32it/s]  3%|▎         | 43/1500 [00:01<00:43, 33.22it/s]  3%|▎         | 47/1500 [00:01<00:43, 33.16it/s]  3%|▎         | 51/1500 [00:01<00:43, 33.47it/s]  4%|▎         | 55/1500 [00:01<00:43, 33.11it/s]  4%|▍         | 59/1500 [00:01<00:44, 32.63it/s]  4%|▍         | 63/1500 [00:01<00:43, 33.08it/s]  4%|▍         | 67/1500 [00:02<00:42, 33.57it/s]  5%|▍         | 71/1500 [00:02<00:42, 33.60it/s]  5%|▌         | 75/1500 [00:02<00:41, 33.95it/s]  5%|▌         | 79/1500 [00:02<00:42, 33.34it/s]  6%|▌         | 83/1500 [00:02<00:43, 32.84it/s]  6%|▌         | 87/1500 [00:02<00:41, 33.82it/s]  6%|▌         | 91/1500 [00:02<00:41, 33.81it/s]  6%|▋         | 95/1500 [00:02<00:41, 33.46it/s]  7%|▋         | 99/1500 [00:02<00:41, 33.64it/s]  7%|▋         | 103/1500 [00:03<00:41, 33.82it/s]  7%|▋         | 107/1500 [00:03<00:40, 34.13it/s]  7%|▋         | 111/1500 [00:03<00:41, 33.78it/s]  8%|▊         | 115/1500 [00:03<00:45, 30.46it/s]  8%|▊         | 119/1500 [00:03<00:45, 30.25it/s]  8%|▊         | 123/1500 [00:03<00:46, 29.43it/s]  8%|▊         | 127/1500 [00:03<00:45, 30.20it/s]  9%|▊         | 128/1500 [00:03<00:42, 32.38it/s]
+T2S Decoding EOS [178 -> 307]
+############ 合成音频 ############
+并行合成中...
+0.000	0.211	3.963	0.653
+INFO:     127.0.0.1:13678 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 970353421
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 银狼。
+############ 切分文本 ############
+实际输入的目标文本:
+INFO:     127.0.0.1:13682 - "POST /tts HTTP/1.1" 400 Bad Request
+Loading Text2Semantic weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)-e10.ckpt
+INFO:     127.0.0.1:4976 - "GET /set_gpt_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29-e10.ckpt HTTP/1.1" 200 OK
+Loading VITS weights from D:\eBookSVC\model/开拓者（女）/开拓者(女)_e15_s1230.pth. _IncompatibleKeys(missing_keys=['enc_q.pre.weight', 'enc_q.pre.bias', 'enc_q.enc.in_layers.0.bias', 'enc_q.enc.in_layers.0.weight_g', 'enc_q.enc.in_layers.0.weight_v', 'enc_q.enc.in_layers.1.bias', 'enc_q.enc.in_layers.1.weight_g', 'enc_q.enc.in_layers.1.weight_v', 'enc_q.enc.in_layers.2.bias', 'enc_q.enc.in_layers.2.weight_g', 'enc_q.enc.in_layers.2.weight_v', 'enc_q.enc.in_layers.3.bias', 'enc_q.enc.in_layers.3.weight_g', 'enc_q.enc.in_layers.3.weight_v', 'enc_q.enc.in_layers.4.bias', 'enc_q.enc.in_layers.4.weight_g', 'enc_q.enc.in_layers.4.weight_v', 'enc_q.enc.in_layers.5.bias', 'enc_q.enc.in_layers.5.weight_g', 'enc_q.enc.in_layers.5.weight_v', 'enc_q.enc.in_layers.6.bias', 'enc_q.enc.in_layers.6.weight_g', 'enc_q.enc.in_layers.6.weight_v', 'enc_q.enc.in_layers.7.bias', 'enc_q.enc.in_layers.7.weight_g', 'enc_q.enc.in_layers.7.weight_v', 'enc_q.enc.in_layers.8.bias', 'enc_q.enc.in_layers.8.weight_g', 'enc_q.enc.in_layers.8.weight_v', 'enc_q.enc.in_layers.9.bias', 'enc_q.enc.in_layers.9.weight_g', 'enc_q.enc.in_layers.9.weight_v', 'enc_q.enc.in_layers.10.bias', 'enc_q.enc.in_layers.10.weight_g', 'enc_q.enc.in_layers.10.weight_v', 'enc_q.enc.in_layers.11.bias', 'enc_q.enc.in_layers.11.weight_g', 'enc_q.enc.in_layers.11.weight_v', 'enc_q.enc.in_layers.12.bias', 'enc_q.enc.in_layers.12.weight_g', 'enc_q.enc.in_layers.12.weight_v', 'enc_q.enc.in_layers.13.bias', 'enc_q.enc.in_layers.13.weight_g', 'enc_q.enc.in_layers.13.weight_v', 'enc_q.enc.in_layers.14.bias', 'enc_q.enc.in_layers.14.weight_g', 'enc_q.enc.in_layers.14.weight_v', 'enc_q.enc.in_layers.15.bias', 'enc_q.enc.in_layers.15.weight_g', 'enc_q.enc.in_layers.15.weight_v', 'enc_q.enc.res_skip_layers.0.bias', 'enc_q.enc.res_skip_layers.0.weight_g', 'enc_q.enc.res_skip_layers.0.weight_v', 'enc_q.enc.res_skip_layers.1.bias', 'enc_q.enc.res_skip_layers.1.weight_g', 'enc_q.enc.res_skip_layers.1.weight_v', 'enc_q.enc.res_skip_layers.2.bias', 'enc_q.enc.res_skip_layers.2.weight_g', 'enc_q.enc.res_skip_layers.2.weight_v', 'enc_q.enc.res_skip_layers.3.bias', 'enc_q.enc.res_skip_layers.3.weight_g', 'enc_q.enc.res_skip_layers.3.weight_v', 'enc_q.enc.res_skip_layers.4.bias', 'enc_q.enc.res_skip_layers.4.weight_g', 'enc_q.enc.res_skip_layers.4.weight_v', 'enc_q.enc.res_skip_layers.5.bias', 'enc_q.enc.res_skip_layers.5.weight_g', 'enc_q.enc.res_skip_layers.5.weight_v', 'enc_q.enc.res_skip_layers.6.bias', 'enc_q.enc.res_skip_layers.6.weight_g', 'enc_q.enc.res_skip_layers.6.weight_v', 'enc_q.enc.res_skip_layers.7.bias', 'enc_q.enc.res_skip_layers.7.weight_g', 'enc_q.enc.res_skip_layers.7.weight_v', 'enc_q.enc.res_skip_layers.8.bias', 'enc_q.enc.res_skip_layers.8.weight_g', 'enc_q.enc.res_skip_layers.8.weight_v', 'enc_q.enc.res_skip_layers.9.bias', 'enc_q.enc.res_skip_layers.9.weight_g', 'enc_q.enc.res_skip_layers.9.weight_v', 'enc_q.enc.res_skip_layers.10.bias', 'enc_q.enc.res_skip_layers.10.weight_g', 'enc_q.enc.res_skip_layers.10.weight_v', 'enc_q.enc.res_skip_layers.11.bias', 'enc_q.enc.res_skip_layers.11.weight_g', 'enc_q.enc.res_skip_layers.11.weight_v', 'enc_q.enc.res_skip_layers.12.bias', 'enc_q.enc.res_skip_layers.12.weight_g', 'enc_q.enc.res_skip_layers.12.weight_v', 'enc_q.enc.res_skip_layers.13.bias', 'enc_q.enc.res_skip_layers.13.weight_g', 'enc_q.enc.res_skip_layers.13.weight_v', 'enc_q.enc.res_skip_layers.14.bias', 'enc_q.enc.res_skip_layers.14.weight_g', 'enc_q.enc.res_skip_layers.14.weight_v', 'enc_q.enc.res_skip_layers.15.bias', 'enc_q.enc.res_skip_layers.15.weight_g', 'enc_q.enc.res_skip_layers.15.weight_v', 'enc_q.enc.cond_layer.bias', 'enc_q.enc.cond_layer.weight_g', 'enc_q.enc.cond_layer.weight_v', 'enc_q.proj.weight', 'enc_q.proj.bias'], unexpected_keys=[])
+INFO:     127.0.0.1:2836 - "GET /set_sovits_weights?weights_path=D%3A%5CeBookSVC%5Cmodel%2F%E5%BC%80%E6%8B%93%E8%80%85%EF%BC%88%E5%A5%B3%EF%BC%89%2F%E5%BC%80%E6%8B%93%E8%80%85%28%E5%A5%B3%29_e15_s1230.pth HTTP/1.1" 200 OK
+False False False
+Set seed to 3353010068
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+我哥哥杰姆快满十三岁的时候，胳膊肘遭受了一次严重的骨折。
+实际输入的目标文本(切句后):
+['我哥哥杰姆快满十三岁的时候，胳膊肘遭受了一次严重的骨折。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 21.50it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['我哥哥杰姆快满十三岁的时候,胳膊肘遭受了一次严重的骨折.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:41, 35.99it/s]  1%|          | 8/1500 [00:00<00:45, 32.92it/s]  1%|          | 12/1500 [00:00<00:46, 31.91it/s]  1%|          | 16/1500 [00:00<00:46, 32.16it/s]  1%|▏         | 20/1500 [00:00<00:46, 31.93it/s]  2%|▏         | 24/1500 [00:00<00:44, 32.97it/s]  2%|▏         | 28/1500 [00:00<00:43, 33.65it/s]  2%|▏         | 32/1500 [00:00<00:44, 33.26it/s]  2%|▏         | 36/1500 [00:01<00:44, 33.15it/s]  3%|▎         | 40/1500 [00:01<00:43, 33.53it/s]  3%|▎         | 44/1500 [00:01<00:44, 32.73it/s]  3%|▎         | 48/1500 [00:01<00:45, 32.08it/s]  3%|▎         | 52/1500 [00:01<00:46, 30.83it/s]  4%|▎         | 56/1500 [00:01<00:46, 30.91it/s]  4%|▍         | 60/1500 [00:01<00:46, 30.78it/s]  4%|▍         | 64/1500 [00:02<00:47, 30.38it/s]  5%|▍         | 68/1500 [00:02<00:46, 30.54it/s]  5%|▍         | 72/1500 [00:02<00:45, 31.70it/s]  5%|▌         | 76/1500 [00:02<00:43, 32.67it/s]  5%|▌         | 80/1500 [00:02<00:42, 33.45it/s]  6%|▌         | 84/1500 [00:02<00:43, 32.85it/s]  6%|▌         | 88/1500 [00:02<00:41, 33.67it/s]  6%|▌         | 92/1500 [00:02<00:41, 34.20it/s]  6%|▋         | 96/1500 [00:02<00:40, 34.42it/s]  7%|▋         | 100/1500 [00:03<00:40, 34.75it/s]  7%|▋         | 104/1500 [00:03<00:40, 34.81it/s]  7%|▋         | 108/1500 [00:03<00:40, 34.63it/s]  7%|▋         | 112/1500 [00:03<00:40, 34.58it/s]  8%|▊         | 114/1500 [00:03<00:42, 32.68it/s]
+T2S Decoding EOS [187 -> 302]
+############ 合成音频 ############
+并行合成中...
+2.107	0.132	3.499	0.821
+INFO:     127.0.0.1:8751 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 90163229
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+等到伤痛痊愈，他也不再担惊受怕，唯恐永远也玩不成橄榄球之后，就很少想到自己受伤的事儿了。
+实际输入的目标文本(切句后):
+['等到伤痛痊愈，他也不再担惊受怕，唯恐永远也玩不成橄榄球之后，就很少想到自己受伤的事儿了。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  8.39it/s]100%|██████████| 1/1 [00:00<00:00,  8.35it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['等到伤痛痊愈,他也不再担惊受怕,唯恐永远也玩不成橄榄球之后,就很少想到自己受伤的事儿了.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 2/1500 [00:00<01:26, 17.35it/s]  0%|          | 6/1500 [00:00<00:54, 27.44it/s]  1%|          | 10/1500 [00:00<00:47, 31.15it/s]  1%|          | 14/1500 [00:00<00:46, 31.75it/s]  1%|          | 18/1500 [00:00<00:45, 32.54it/s]  1%|▏         | 22/1500 [00:00<00:45, 32.45it/s]  2%|▏         | 26/1500 [00:00<00:44, 32.87it/s]  2%|▏         | 30/1500 [00:00<00:43, 33.43it/s]  2%|▏         | 34/1500 [00:01<00:43, 33.37it/s]  3%|▎         | 38/1500 [00:01<00:43, 33.90it/s]  3%|▎         | 42/1500 [00:01<00:42, 34.52it/s]  3%|▎         | 46/1500 [00:01<00:42, 34.27it/s]  3%|▎         | 50/1500 [00:01<00:41, 34.76it/s]  4%|▎         | 54/1500 [00:01<00:41, 35.25it/s]  4%|▍         | 58/1500 [00:01<00:41, 34.61it/s]  4%|▍         | 62/1500 [00:01<00:41, 34.69it/s]  4%|▍         | 66/1500 [00:01<00:41, 34.77it/s]  5%|▍         | 70/1500 [00:02<00:42, 33.73it/s]  5%|▍         | 74/1500 [00:02<00:41, 34.29it/s]  5%|▌         | 78/1500 [00:02<00:40, 34.73it/s]  5%|▌         | 82/1500 [00:02<00:41, 33.87it/s]  6%|▌         | 86/1500 [00:02<00:41, 33.92it/s]  6%|▌         | 90/1500 [00:02<00:41, 33.73it/s]  6%|▋         | 94/1500 [00:02<00:41, 33.83it/s]  7%|▋         | 98/1500 [00:02<00:41, 34.09it/s]  7%|▋         | 102/1500 [00:03<00:40, 34.53it/s]  7%|▋         | 106/1500 [00:03<00:40, 34.83it/s]  7%|▋         | 110/1500 [00:03<00:39, 34.79it/s]  8%|▊         | 114/1500 [00:03<00:40, 34.12it/s]  8%|▊         | 118/1500 [00:03<00:39, 34.64it/s]  8%|▊         | 122/1500 [00:03<00:39, 35.29it/s]  8%|▊         | 126/1500 [00:03<00:39, 34.56it/s]  9%|▊         | 130/1500 [00:03<00:39, 34.90it/s]  9%|▉         | 134/1500 [00:03<00:39, 34.80it/s]  9%|▉         | 138/1500 [00:04<00:39, 34.48it/s]  9%|▉         | 142/1500 [00:04<00:38, 35.03it/s] 10%|▉         | 146/1500 [00:04<00:38, 35.40it/s] 10%|█         | 150/1500 [00:04<00:38, 34.67it/s] 10%|█         | 154/1500 [00:04<00:38, 34.91it/s] 11%|█         | 158/1500 [00:04<00:38, 35.30it/s] 11%|█         | 162/1500 [00:04<00:38, 34.32it/s] 11%|█         | 166/1500 [00:04<00:38, 34.81it/s] 11%|█▏        | 170/1500 [00:04<00:38, 34.58it/s] 12%|█▏        | 174/1500 [00:05<00:38, 34.49it/s] 12%|█▏        | 178/1500 [00:05<00:38, 34.44it/s] 12%|█▏        | 182/1500 [00:05<00:38, 34.59it/s] 12%|█▏        | 186/1500 [00:05<00:38, 34.06it/s] 13%|█▎        | 190/1500 [00:05<00:37, 34.74it/s] 13%|█▎        | 194/1500 [00:05<00:37, 35.13it/s] 13%|█▎        | 198/1500 [00:05<00:37, 34.29it/s] 13%|█▎        | 202/1500 [00:05<00:37, 34.76it/s] 14%|█▎        | 206/1500 [00:06<00:37, 34.16it/s] 14%|█▍        | 210/1500 [00:06<00:37, 34.47it/s] 14%|█▍        | 211/1500 [00:06<00:37, 34.00it/s]
+T2S Decoding EOS [187 -> 399]
+############ 合成音频 ############
+并行合成中...
+0.000	0.121	6.211	0.538
+INFO:     127.0.0.1:4127 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 2207524464
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+等到伤痛痊愈，他也不再担惊受怕，唯恐永远也玩不成橄榄球之后，就很少想到自己受伤的事儿了。
+实际输入的目标文本(切句后):
+['等到伤痛痊愈，他也不再担惊受怕，唯恐永远也玩不成橄榄球之后，就很少想到自己受伤的事儿了。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 19.93it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['等到伤痛痊愈,他也不再担惊受怕,唯恐永远也玩不成橄榄球之后,就很少想到自己受伤的事儿了.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:46, 32.42it/s]  1%|          | 8/1500 [00:00<00:47, 31.50it/s]  1%|          | 12/1500 [00:00<00:46, 32.25it/s]  1%|          | 16/1500 [00:00<00:45, 32.97it/s]  1%|▏         | 20/1500 [00:00<00:46, 32.05it/s]  2%|▏         | 24/1500 [00:00<00:45, 32.79it/s]  2%|▏         | 28/1500 [00:00<00:44, 33.38it/s]  2%|▏         | 32/1500 [00:00<00:45, 32.29it/s]  2%|▏         | 36/1500 [00:01<00:44, 32.75it/s]  3%|▎         | 40/1500 [00:01<00:44, 32.89it/s]  3%|▎         | 44/1500 [00:01<00:44, 32.44it/s]  3%|▎         | 48/1500 [00:01<00:43, 33.13it/s]  3%|▎         | 52/1500 [00:01<00:44, 32.59it/s]  4%|▎         | 56/1500 [00:01<00:43, 33.13it/s]  4%|▍         | 60/1500 [00:01<00:43, 33.32it/s]  4%|▍         | 64/1500 [00:01<00:43, 33.02it/s]  5%|▍         | 68/1500 [00:02<00:42, 33.35it/s]  5%|▍         | 72/1500 [00:02<00:42, 33.24it/s]  5%|▌         | 76/1500 [00:02<00:43, 32.64it/s]  5%|▌         | 80/1500 [00:02<00:42, 33.45it/s]  6%|▌         | 84/1500 [00:02<00:42, 33.36it/s]  6%|▌         | 88/1500 [00:02<00:42, 33.39it/s]  6%|▌         | 92/1500 [00:02<00:42, 33.14it/s]  6%|▋         | 96/1500 [00:02<00:43, 32.20it/s]  7%|▋         | 100/1500 [00:03<00:42, 32.87it/s]  7%|▋         | 104/1500 [00:03<00:42, 32.63it/s]  7%|▋         | 108/1500 [00:03<00:43, 32.01it/s]  7%|▋         | 112/1500 [00:03<00:42, 32.62it/s]  8%|▊         | 116/1500 [00:03<00:41, 33.23it/s]  8%|▊         | 120/1500 [00:03<00:42, 32.34it/s]  8%|▊         | 124/1500 [00:03<00:41, 33.09it/s]  9%|▊         | 128/1500 [00:03<00:41, 33.01it/s]  9%|▉         | 132/1500 [00:04<00:41, 33.07it/s]  9%|▉         | 136/1500 [00:04<00:41, 33.10it/s]  9%|▉         | 140/1500 [00:04<00:41, 32.47it/s] 10%|▉         | 144/1500 [00:04<00:41, 32.51it/s] 10%|▉         | 148/1500 [00:04<00:41, 32.72it/s] 10%|█         | 152/1500 [00:04<00:41, 32.53it/s] 10%|█         | 156/1500 [00:04<00:40, 33.01it/s] 11%|█         | 160/1500 [00:04<00:40, 33.48it/s] 11%|█         | 164/1500 [00:04<00:40, 33.25it/s] 11%|█         | 168/1500 [00:05<00:39, 33.63it/s] 11%|█▏        | 172/1500 [00:05<00:40, 33.12it/s] 12%|█▏        | 176/1500 [00:05<00:39, 33.76it/s] 12%|█▏        | 180/1500 [00:05<00:38, 34.12it/s] 12%|█▏        | 184/1500 [00:05<00:39, 32.98it/s] 13%|█▎        | 188/1500 [00:05<00:39, 33.62it/s] 13%|█▎        | 192/1500 [00:05<00:38, 33.82it/s] 13%|█▎        | 196/1500 [00:05<00:39, 33.33it/s] 13%|█▎        | 200/1500 [00:06<00:38, 33.89it/s] 14%|█▎        | 204/1500 [00:06<00:39, 32.49it/s] 14%|█▍        | 208/1500 [00:06<00:40, 32.10it/s] 14%|█▍        | 209/1500 [00:06<00:39, 32.77it/s]
+T2S Decoding EOS [187 -> 397]
+############ 合成音频 ############
+并行合成中...
+0.000	0.051	6.381	0.539
+INFO:     127.0.0.1:3665 - "POST /tts HTTP/1.1" 200 OK
+False False False
+Set seed to 3236712965
+并行推理模式已开启
+分桶处理模式已开启
+实际输入的参考文本: 虽然嘴上说着不高兴，身体的反应还是很真实的。还是多去找找帕姆吧！
+############ 切分文本 ############
+实际输入的目标文本:
+事情的结果是，他的左胳膊比右胳膊稍微短了点儿；站立或者走路的时候，左手手背与身体成直角，拇指和大腿平行——但他对这些毫不在意，只要他还能传球、开球。
+实际输入的目标文本(切句后):
+['事情的结果是，他的左胳膊比右胳膊稍微短了点儿；站立或者走路的时候，左手手背与身体成直角，拇指和大腿平行——但他对这些毫不在意，只要他还能传球、开球。']
+############ 提取文本Bert特征 ############
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 16.62it/s]
+############ 推理 ############
+前端处理后的文本(每句): ['事情的结果是,他的左胳膊比右胳膊稍微短了点儿,站立或者走路的时候,左手手背与身体成直角,拇指和大腿平行但他对这些毫不在意,只要他还能传球,开球.']
+############ 预测语义Token ############
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 4/1500 [00:00<00:47, 31.53it/s]  1%|          | 8/1500 [00:00<00:48, 30.52it/s]  1%|          | 12/1500 [00:00<00:45, 32.64it/s]  1%|          | 16/1500 [00:00<00:43, 33.88it/s]  1%|▏         | 20/1500 [00:00<00:45, 32.34it/s]  2%|▏         | 24/1500 [00:00<00:45, 32.39it/s]  2%|▏         | 28/1500 [00:00<00:47, 30.73it/s]  2%|▏         | 32/1500 [00:01<00:48, 30.34it/s]  2%|▏         | 36/1500 [00:01<00:47, 30.70it/s]  3%|▎         | 40/1500 [00:01<00:47, 30.90it/s]  3%|▎         | 44/1500 [00:01<00:46, 31.20it/s]  3%|▎         | 48/1500 [00:01<00:45, 32.01it/s]  3%|▎         | 52/1500 [00:01<00:47, 30.42it/s]  4%|▎         | 56/1500 [00:01<00:46, 30.86it/s]  4%|▍         | 60/1500 [00:01<00:48, 29.89it/s]  4%|▍         | 64/1500 [00:02<00:49, 28.88it/s]  5%|▍         | 68/1500 [00:02<00:49, 29.14it/s]  5%|▍         | 72/1500 [00:02<00:48, 29.58it/s]  5%|▌         | 76/1500 [00:02<00:47, 30.30it/s]  5%|▌         | 80/1500 [00:02<00:47, 30.04it/s]  6%|▌         | 84/1500 [00:02<00:45, 31.40it/s]  6%|▌         | 88/1500 [00:02<00:44, 31.83it/s]  6%|▌         | 92/1500 [00:02<00:46, 30.59it/s]  6%|▋         | 96/1500 [00:03<00:46, 30.28it/s]  7%|▋         | 100/1500 [00:03<00:46, 30.37it/s]  7%|▋         | 104/1500 [00:03<00:44, 31.48it/s]  7%|▋         | 108/1500 [00:03<00:43, 32.11it/s]  7%|▋         | 112/1500 [00:03<00:43, 31.80it/s]  8%|▊         | 116/1500 [00:03<00:43, 31.78it/s]  8%|▊         | 120/1500 [00:03<00:45, 30.61it/s]  8%|▊         | 124/1500 [00:04<00:47, 29.08it/s]  8%|▊         | 127/1500 [00:04<00:47, 29.16it/s]  9%|▊         | 130/1500 [00:04<00:47, 29.04it/s]  9%|▉         | 134/1500 [00:04<00:44, 30.81it/s]  9%|▉         | 138/1500 [00:04<00:43, 31.46it/s]  9%|▉         | 142/1500 [00:04<00:45, 29.72it/s] 10%|▉         | 146/1500 [00:04<00:43, 30.97it/s] 10%|█         | 150/1500 [00:04<00:43, 31.19it/s] 10%|█         | 154/1500 [00:04<00:42, 31.85it/s] 11%|█         | 158/1500 [00:05<00:40, 32.79it/s] 11%|█         | 162/1500 [00:05<00:40, 33.30it/s] 11%|█         | 166/1500 [00:05<00:39, 34.00it/s] 11%|█▏        | 170/1500 [00:05<00:38, 34.65it/s] 12%|█▏        | 174/1500 [00:05<00:39, 33.99it/s] 12%|█▏        | 178/1500 [00:05<00:38, 34.39it/s] 12%|█▏        | 182/1500 [00:05<00:37, 35.04it/s] 12%|█▏        | 186/1500 [00:05<00:38, 34.46it/s] 13%|█▎        | 190/1500 [00:06<00:38, 33.80it/s] 13%|█▎        | 194/1500 [00:06<00:38, 34.06it/s] 13%|█▎        | 198/1500 [00:06<00:38, 33.82it/s] 13%|█▎        | 202/1500 [00:06<00:37, 34.25it/s] 14%|█▎        | 206/1500 [00:06<00:37, 34.89it/s] 14%|█▍        | 210/1500 [00:06<00:37, 33.98it/s] 14%|█▍        | 214/1500 [00:06<00:37, 34.43it/s] 15%|█▍        | 218/1500 [00:06<00:38, 33.08it/s] 15%|█▍        | 222/1500 [00:06<00:38, 33.34it/s] 15%|█▌        | 226/1500 [00:07<00:37, 33.82it/s] 15%|█▌        | 230/1500 [00:07<00:39, 32.43it/s] 16%|█▌        | 234/1500 [00:07<00:40, 30.99it/s] 16%|█▌        | 238/1500 [00:07<00:41, 30.50it/s] 16%|█▌        | 242/1500 [00:07<00:41, 30.47it/s] 16%|█▋        | 246/1500 [00:07<00:39, 31.44it/s] 17%|█▋        | 250/1500 [00:07<00:39, 31.91it/s] 17%|█▋        | 254/1500 [00:08<00:39, 31.74it/s] 17%|█▋        | 258/1500 [00:08<00:38, 32.18it/s] 17%|█▋        | 262/1500 [00:08<00:39, 31.52it/s] 18%|█▊        | 266/1500 [00:08<00:39, 31.61it/s] 18%|█▊        | 270/1500 [00:08<00:38, 32.24it/s] 18%|█▊        | 274/1500 [00:08<00:39, 31.14it/s] 19%|█▊        | 278/1500 [00:08<00:39, 31.27it/s] 19%|█▉        | 282/1500 [00:08<00:43, 27.96it/s] 19%|█▉        | 286/1500 [00:09<00:41, 29.43it/s] 19%|█▉        | 290/1500 [00:09<00:39, 30.54it/s] 20%|█▉        | 294/1500 [00:09<00:39, 30.61it/s] 20%|█▉        | 298/1500 [00:09<00:37, 32.07it/s] 20%|██        | 302/1500 [00:09<00:36, 32.71it/s] 20%|██        | 306/1500 [00:09<00:35, 33.27it/s] 21%|██        | 310/1500 [00:09<00:36, 32.82it/s] 21%|██        | 314/1500 [00:09<00:37, 31.61it/s] 21%|██        | 318/1500 [00:10<00:37, 31.45it/s] 21%|██▏       | 322/1500 [00:10<00:38, 30.86it/s] 22%|██▏       | 326/1500 [00:10<00:38, 30.11it/s] 22%|██▏       | 330/1500 [00:10<00:38, 30.74it/s] 22%|██▏       | 334/1500 [00:10<00:36, 32.24it/s] 23%|██▎       | 338/1500 [00:10<00:35, 32.85it/s] 23%|██▎       | 342/1500 [00:10<00:35, 33.02it/s] 23%|██▎       | 346/1500 [00:10<00:39, 29.33it/s] 23%|██▎       | 350/1500 [00:11<00:37, 30.58it/s] 24%|██▎       | 354/1500 [00:11<00:36, 31.47it/s] 24%|██▍       | 358/1500 [00:11<00:36, 31.12it/s] 24%|██▍       | 362/1500 [00:11<00:34, 32.57it/s] 24%|██▍       | 366/1500 [00:11<00:34, 33.23it/s] 25%|██▍       | 370/1500 [00:11<00:33, 34.18it/s] 25%|██▍       | 374/1500 [00:11<00:32, 34.94it/s] 25%|██▌       | 378/1500 [00:11<00:31, 35.11it/s] 25%|██▌       | 382/1500 [00:11<00:31, 35.51it/s] 26%|██▌       | 386/1500 [00:12<00:31, 35.91it/s] 26%|██▌       | 390/1500 [00:12<00:31, 35.48it/s] 26%|██▋       | 394/1500 [00:12<00:30, 35.92it/s] 27%|██▋       | 398/1500 [00:12<00:30, 36.07it/s] 27%|██▋       | 402/1500 [00:12<00:30, 36.31it/s] 27%|██▋       | 406/1500 [00:12<00:29, 36.55it/s] 27%|██▋       | 410/1500 [00:12<00:29, 36.76it/s] 28%|██▊       | 414/1500 [00:12<00:30, 35.58it/s] 28%|██▊       | 418/1500 [00:12<00:30, 35.78it/s] 28%|██▊       | 418/1500 [00:13<00:33, 32.10it/s]
+T2S Decoding EOS [187 -> 606]
+############ 合成音频 ############
+并行合成中...
+0.000	0.062	13.038	0.581
+INFO:     127.0.0.1:1456 - "POST /tts HTTP/1.1" 200 OK

@@ -1,0 +1,7 @@
+edge-tts>=6.1.0
+ebooklib>=0.18
+beautifulsoup4>=4.12
+fastapi>=0.110
+uvicorn>=0.27
+python-multipart>=0.0.9
+PyMuPDF>=1.24
