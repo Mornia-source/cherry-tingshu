@@ -49,27 +49,57 @@ async function importPack(file) {
   await DB.put("books", {
     id, book: m.book || "未命名", chapter: m.chapter || "", voice: m.voice || "",
     speed: m.speed || 1, sentences: m.sentences || [], audioCount: audio.length,
+    bookId: m.book_id || ("title:" + (m.book || "未命名")),  // 按电子书归类的稳定标识
+    chapterIndex: (m.chapter_index != null ? m.chapter_index : 0),
+    source: m.source || "", totalChapters: m.total_chapters || 0,
     importedAt: Date.now(),
   });
   alert(`导入成功：${m.book} · ${m.chapter}（${stored} 句音频）`);
   renderLibrary();
 }
 
-/* ---------------- 书架 ---------------- */
+/* ---------------- 书架（按电子书归类，下钻到章节） ---------------- */
+const Lib = { mode: "books", bookId: null };
 async function renderLibrary() {
   const box = $("#book-list");
-  const books = (await DB.all("books")).sort((a, b) => b.importedAt - a.importedAt);
-  if (!books.length) {
+  const all = await DB.all("books");
+  if (!all.length) {
+    Lib.mode = "books";
     box.innerHTML = `<div class="empty"><svg class="app-logo"><use href="#cherry-logo"></use></svg>
       <p>书架还是空的<br>导入一个听书包开始收听吧</p></div>`;
     return;
   }
+  if (Lib.mode === "chapters") return renderChapters(box, all);
+
+  // 一级：按 bookId 归类成“书”
+  const groups = {};
+  for (const r of all) (groups[r.bookId] = groups[r.bookId] || []).push(r);
+  const books = Object.values(groups).sort((a, b) =>
+    Math.max(...b.map(x => x.importedAt)) - Math.max(...a.map(x => x.importedAt)));
   box.innerHTML = "";
-  for (const b of books) {
+  for (const chs of books) {
+    const b = chs[0];
     const card = document.createElement("div"); card.className = "book-card";
     card.innerHTML = `<h4>${b.book}</h4>
-      <div class="meta">${b.chapter} · ${b.voice} · ${b.speed}× · ${b.sentences.length} 句</div>`;
-    card.onclick = () => openBook(b.id);
+      <div class="meta">已导入 ${chs.length} 章 · ${b.voice}${b.totalChapters ? " · 全书 " + b.totalChapters + " 章" : ""}</div>`;
+    card.onclick = () => { Lib.mode = "chapters"; Lib.bookId = b.bookId; renderLibrary(); };
+    box.appendChild(card);
+  }
+}
+function renderChapters(box, all) {
+  const chs = all.filter(r => r.bookId === Lib.bookId)
+    .sort((a, b) => a.chapterIndex - b.chapterIndex);
+  if (!chs.length) { Lib.mode = "books"; return renderLibrary(); }
+  const title = chs[0].book;
+  box.innerHTML = `<div class="sub-head">
+      <button class="icon-btn" id="lib-back"><i class="fas fa-chevron-left"></i></button>
+      <span>${title}</span></div>`;
+  $("#lib-back").onclick = () => { Lib.mode = "books"; renderLibrary(); };
+  for (const c of chs) {
+    const card = document.createElement("div"); card.className = "book-card";
+    card.innerHTML = `<h4>${c.chapter}</h4>
+      <div class="meta">${c.voice} · ${c.speed}× · ${c.sentences.length} 句</div>`;
+    card.onclick = () => openBook(c.id);
     box.appendChild(card);
   }
 }
@@ -180,7 +210,7 @@ function toggleDark() {
   root.setAttribute("data-theme", dark ? "light" : "dark");
   $("#btn-theme").innerHTML = `<i class="fas fa-${dark ? "moon" : "sun"}"></i>`;
   localStorage.setItem("m-dark", dark ? "0" : "1");
-  const cur = THEMES.find(t => t.name === localStorage.getItem("m-theme")) || THEMES[0];
+  const cur = THEMES.find(t => t.name === localStorage.getItem("m-theme")) || THEMES[1];
   applyTheme(cur);
 }
 
@@ -198,7 +228,7 @@ async function init() {
   renderThemePresets();
   // 恢复设置
   if (localStorage.getItem("m-dark") === "1") { document.documentElement.setAttribute("data-theme", "dark"); $("#btn-theme").innerHTML = '<i class="fas fa-sun"></i>'; }
-  applyTheme(THEMES.find(t => t.name === localStorage.getItem("m-theme")) || THEMES[0]);
+  applyTheme(THEMES.find(t => t.name === localStorage.getItem("m-theme")) || THEMES[1]);  // 默认粉色(樱)
   const font = +(localStorage.getItem("m-font") || 19); $("#font-range").value = font; setFont(font);
   await renderLibrary();
 

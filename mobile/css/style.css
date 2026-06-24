@@ -1,7 +1,7 @@
 :root {
-  --primary: #8770e2;
-  --primary-d: #6a55c4;
-  --logo-c1: #8770e2; --logo-c3: #353460; --logo-c5: #ece6f7;
+  --primary: #e26d8a;
+  --primary-d: #c4536f;
+  --logo-c1: #e26d8a; --logo-c3: #5a2740; --logo-c5: #fbe9ef;
   --bg: #f6f4fb; --surface: #ffffff; --text: #2a2740; --muted: #8b86a3;
   --border: #e7e2f3; --serif: "Noto Serif SC", "Songti SC", serif;
   --safe-top: env(safe-area-inset-top, 0px);
@@ -52,6 +52,8 @@ body {
 .book-card .meta { font-size: 12.5px; color: var(--muted); }
 .empty { text-align: center; color: var(--muted); padding: 60px 20px; }
 .empty .app-logo { width: 64px; height: 64px; opacity: .5; margin-bottom: 12px; }
+.sub-head { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; font-weight: 600; font-family: var(--serif); font-size: 16px; }
+.sub-head .icon-btn { width: 34px; height: 34px; font-size: 16px; }
 
 /* 阅读器 */
 .reader-head { display: flex; align-items: center; gap: 6px; padding: 8px 4px 12px; }

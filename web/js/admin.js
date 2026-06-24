@@ -321,37 +321,24 @@ function renderPregenAdmin() {
   if (pgAdminPage < pages) $("#pg-a-next").onclick = () => { pgAdminPage++; renderPregenAdmin(); };
 }
 
-async function exportPregen() {
-  try {
-    const res = await api("/api/pregen/export", { raw: true });
-    const blob = await res.blob();
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "樱桃听书-预生成音频库.zip";
-    a.click(); URL.revokeObjectURL(a.href);
-  } catch (e) { alert("导出失败：" + e.message); }
+// 浏览器原生下载（边下边写盘，不把整包读进内存，避免大文件 Failed to fetch）
+function nativeDownload(url, filename) {
+  const sep = url.includes("?") ? "&" : "?";
+  const a = document.createElement("a");
+  a.href = url + sep + "tok=" + encodeURIComponent(App.token || "");
+  if (filename) a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
 }
-async function exportMobilePack(it) {
-  try {
-    const q = `bid=${it.bid}&chapter=${it.chapter}&voice=${encodeURIComponent(it.voice)}&speed=${it.speed}`;
-    const res = await api("/api/pregen/export_mobile?" + q, { raw: true });
-    const blob = await res.blob();
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `${it.book_title || it.bid}-${it.chapter_title || ""}-${it.voice}.tsp.zip`;
-    a.click(); URL.revokeObjectURL(a.href);
-  } catch (e) { alert("导出手机包失败：" + e.message); }
+function exportPregen() {
+  nativeDownload("/api/pregen/export", "樱桃听书-预生成音频库.zip");
 }
-async function exportPregenOne(it) {
-  try {
-    const q = `bid=${it.bid}&chapter=${it.chapter}&voice=${encodeURIComponent(it.voice)}&speed=${it.speed}`;
-    const res = await api("/api/pregen/export_one?" + q, { raw: true });
-    const blob = await res.blob();
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `预生成-${it.book_title || it.bid}-${it.chapter_title || ("第" + (it.chapter + 1) + "节")}.zip`;
-    a.click(); URL.revokeObjectURL(a.href);
-  } catch (e) { alert("导出失败：" + e.message); }
+function exportMobilePack(it) {
+  const q = `bid=${it.bid}&chapter=${it.chapter}&voice=${encodeURIComponent(it.voice)}&speed=${it.speed}`;
+  nativeDownload("/api/pregen/export_mobile?" + q, `${it.book_title || it.bid}-${it.chapter_title || ""}-${it.voice}.tsp.zip`);
+}
+function exportPregenOne(it) {
+  const q = `bid=${it.bid}&chapter=${it.chapter}&voice=${encodeURIComponent(it.voice)}&speed=${it.speed}`;
+  nativeDownload("/api/pregen/export_one?" + q, `预生成-${it.book_title || it.bid}-${it.chapter_title || ("第" + (it.chapter + 1) + "节")}.zip`);
 }
 async function importPregen(file) {
   const f = new FormData(); f.append("file", file);

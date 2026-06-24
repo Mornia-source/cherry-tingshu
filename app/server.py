@@ -515,16 +515,16 @@ def api_pregen_delete(bid: str = Form(...), chapter: int = Form(...), voice: str
 
 
 @app.get("/api/pregen/export")
-def api_pregen_export(authorization: str = Header(None)):
-    require_admin(authorization)
+def api_pregen_export(authorization: str = Header(None), tok: str = None):
+    require_admin(authorization or tok)  # 支持 query 传 token，便于浏览器原生下载
     p = pregen.export_zip()
     return FileResponse(p, filename="樱桃听书-预生成音频库.zip", media_type="application/zip")
 
 
 @app.get("/api/pregen/export_one")
 def api_pregen_export_one(bid: str, chapter: int, voice: str, speed: float,
-                          authorization: str = Header(None)):
-    require_admin(authorization)
+                          authorization: str = Header(None), tok: str = None):
+    require_admin(authorization or tok)
     p = pregen.export_chapter_zip(bid, chapter, voice, speed)
     if not p:
         raise HTTPException(404, "该章缓存不存在")
@@ -534,8 +534,8 @@ def api_pregen_export_one(bid: str, chapter: int, voice: str, speed: float,
 
 @app.get("/api/pregen/export_mobile")
 def api_pregen_export_mobile(bid: str, chapter: int, voice: str, speed: float,
-                             authorization: str = Header(None)):
-    require_user(authorization)
+                             authorization: str = Header(None), tok: str = None):
+    require_user(authorization or tok)
     p, fname = pregen.export_mobile_pack(bid, chapter, voice, speed)
     if not p:
         raise HTTPException(404, "该章缓存不存在或书已不在")

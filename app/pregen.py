@@ -168,10 +168,14 @@ def export_mobile_pack(bid, chapter, voice, speed):
     manifest = {
         "format": "cherry-tingshu-pack-v1",
         "book": book_title,
+        "book_id": bid,                       # 电子书稳定标识（按文件名），用于手机端按书归类
+        "source": os.path.basename(path),     # 电子书源文件名
         "chapter": ch_title,
+        "chapter_index": chapter,             # 该章在书中的序号，用于排序
+        "total_chapters": len(data["chapters"]),
         "voice": voice,
         "speed": speed,
-        "sentences": sentences,
+        "sentences": sentences,               # 只含该章逐句文本
         "audio": audio,
     }
     safe = f"{book_title}-{ch_title}-{voice}".replace("/", "_").replace("\\", "_")
