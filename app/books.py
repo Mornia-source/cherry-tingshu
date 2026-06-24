@@ -12,6 +12,14 @@ SUPPORTED = (".txt", ".epub", ".pdf")
 
 
 def book_id(path):
+    # 按“文件名”计算（不含路径），这样搬目录/换机器后 bid 不变，
+    # 预生成音频、封面、阅读进度都能按书名稳定对应。
+    name = os.path.basename(path)
+    return hashlib.md5(name.encode("utf-8")).hexdigest()[:16]
+
+
+def _legacy_book_id_fullpath(path):
+    """旧版按完整路径算的 bid，仅用于一次性迁移。"""
     return hashlib.md5(path.encode("utf-8")).hexdigest()[:16]
 
 

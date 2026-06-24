@@ -140,6 +140,50 @@ def export_zip():
     return out
 
 
+def export_mobile_pack(bid, chapter, voice, speed):
+    """导出『手机听书包』：自带逐句文本 + 对应音频 + manifest.json，
+    供手机 App 离线阅读+收听（手机端不含任何引擎，只读这个包）。
+    返回 (zip路径, 文件名) 或 (None, None)。"""
+    import zipfile
+    d = cache_dir(bid, chapter, voice, speed)
+    if not os.path.isdir(d):
+        return None, None
+    path = books.find_path(bid)
+    if not path:
+        return None, None
+    data = books.parse_book(path)
+    if chapter < 0 or chapter >= len(data["chapters"]):
+        return None, None
+    ch = data["chapters"][chapter]
+    sentences = ch["sentences"]
+    book_title = os.path.splitext(os.path.basename(path))[0]
+    ch_title = ch.get("title") or f"第{chapter + 1}节"
+
+    # 只收录已生成的句子音频，建立 句子下标 -> 包内音频路径
+    audio = []
+    for i in range(len(sentences)):
+        wav = os.path.join(d, f"{i}.wav")
+        audio.append(f"audio/{i}.wav" if os.path.exists(wav) else None)
+
+    manifest = {
+        "format": "cherry-tingshu-pack-v1",
+        "book": book_title,
+        "chapter": ch_title,
+        "voice": voice,
+        "speed": speed,
+        "sentences": sentences,
+        "audio": audio,
+    }
+    safe = f"{book_title}-{ch_title}-{voice}".replace("/", "_").replace("\\", "_")
+    out = os.path.join(ROOT, "data", f"mobilepack_{bid}_{chapter}.zip")
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("manifest.json", json.dumps(manifest, ensure_ascii=False))
+        for i, rel in enumerate(audio):
+            if rel:
+                z.write(os.path.join(d, f"{i}.wav"), rel)
+    return out, safe + ".tsp.zip"
+
+
 def export_chapter_zip(bid, chapter, voice, speed):
     """单独导出某一章某声线的预生成音频，返回 zip 路径；不存在返回 None。"""
     import zipfile

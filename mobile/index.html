@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#8770e2">
+  <title>樱桃听书</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 樱桃听书 LOGO（颜色由 --logo-c1/c3/c5 控制，随主题变色） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cherry-logo" viewBox="0 0 1254 1254">
+    <polygon style="fill:#fff" points="363.51 550.59 346.84 581.7 331.76 599.16 325.02 604.32 354.78 668.6 386.52 714.23 412.31 736.45 442.86 734.46 493.3 720.46 532.93 694.79 540.87 557.9 485.71 467.56 408.08 422.99 346.18 416.55 371.57 495.21 363.51 550.59"/>
+    <polygon style="fill:#fff" points="120.58 746.73 137.51 744.95 224.24 736.45 432.94 797.68 533.72 857.43 627 961.69 738.59 841.73 916.35 770.31 1083.79 727.72 1116.49 744.95 1133.42 746.73 1159.18 811.18 1149.66 935.31 810.81 1031.78 682.12 1082.57 639.88 1103.2 565.6 1084.95 289.04 961.55 120.58 935.31 89.86 845.07 120.58 746.73"/>
+    <path style="fill:var(--logo-c1,#8770e2)" d="M895.85,357.43c5.65,1.23,15.55,2.47,26.06,1.25,12.76-1.49,25.66-11.11,58.99-9.26,0,0-10.85-23.01-56.87-41.53,43.91-42.32,44.7-126.31,38.62-148-14.02,27.51-55.02,50.26-64.81,55.55s-41.13,15.47-51.53,43.24v.02c21.74,28.66,38.55,61.84,49.53,98.72,0,0,0,0,.01,0Z"/>
+    <path style="fill:var(--logo-c3,#353460)" d="M973.72,619.98c-78.87-80.38-55.19-164.24-68.04-220.85-.46-2.05-.92-4.1-1.3-6.16-28.05-151.16-147.46-251.1-306.15-251.1s-238.99,78.56-271.26,117.18c-32.27,38.62-77.77,123.27-99.99,147.6-22.22,24.34-35.64,29.16-35.64,29.16,20.3,3.55,49.13-3.16,84.58-34.5-16.53,99.99,14.68,134.64,43.51,146.81,0,0-15.08-23.28-13.75-58.46,19.31,52.11,64.28,69.04,88.08,71.95-21.69-24.6-20.5-100.65-6.22-131.07,18.25,54.76,62.69,87.29,85.7,92.32,0,0-19.05-15.08-24.6-33.86,0,0,28.83,30.95,51.05,40.21,7.14,77.24,2.84,110.24-12.23,135.76,0,0,7.47.07,27.91-24.34,1.98,38.29-10.78,66.73-10.78,66.73l-39.84,22.81s-1.42,11.75-23.77,34.11c26.97,11.97,52.49,27.2,75.97,44.48,17.1-11.52,35.37-34.81,43.95-48.44,13.76-21.82,21.69-33.06,34.12-71.29,0,0-2.38,54.09-26.45,89.54-14.82,21.82-28.72,34.61-37.23,41.22,39.63,31.71,72.6,68.97,95.66,105.31,108.78-171.94,317.49-214.79,344.47-219.29-33.59-21.69-59.52-74.07-62.43-106.6,15.61,23.81,38.36,32.01,53.7,49.2,15.34,17.19,27.51,34.52,29.1,54.62,8.2-2.38,16.4-1.85,16.4-1.85,0,0,7.61-38.27-34.52-81.21Z"/>
+    <path style="fill:var(--logo-c1,#8770e2)" d="M590.26,129.94s68.05,3.77,103.36,13.29c15.47,34.72,25.92,75.65,27.11,221.93h-73.4s2.91-164.53-57.07-235.22Z"/>
+    <circle style="fill:#fff" cx="682.12" cy="544.75" r="97.19"/>
+    <path style="fill:var(--logo-c1,#8770e2)" d="M682.12,412.64c-72.96,0-132.11,59.15-132.11,132.11s59.15,132.11,132.11,132.11,132.11-59.15,132.11-132.11-59.15-132.11-132.11-132.11ZM682.12,641.94c-53.68,0-97.19-43.51-97.19-97.19s43.51-97.19,97.19-97.19,97.19,43.51,97.19,97.19-43.51,97.19-97.19,97.19Z"/>
+    <polygon style="fill:var(--logo-c1,#8770e2)" points="901.9 801.49 989.79 776.49 989.79 913.64 945.85 884.55 901.9 913.64 901.9 801.49"/>
+    <path style="fill:var(--logo-c5,#ece6f7)" d="M1105.19,709.04c-356.84,13.23-478.19,239.92-478.19,239.92,0,0-121.35-226.69-478.19-239.92-8.73,0-11.31,12.7-11.31,23.41v12.5s412.72,30.75,489.49,260.88c76.78-230.13,489.49-260.88,489.49-260.88v-12.5c0-10.71-2.58-23.41-11.31-23.41Z"/>
+    <path style="fill:var(--logo-c1,#8770e2)" d="M1177.07,971.04v-192.57c0-36.24-25.13-31.74-25.13-31.74h-18.52s-.6,81.93-.6,121.08,2.38,47.02-35.18,49.66c-282.51,21.69-396.19,120.98-419.33,142.91-20.24,19.18-51.32,16.73-51.32,16.73,0,0-31.08,2.45-51.32-16.73-23.14-21.93-136.82-121.22-419.33-142.91-37.56-2.65-35.18-10.51-35.18-49.66s-.6-121.08-.6-121.08h-18.52s-25.13-4.5-25.13,31.74v192.57s-5.29,42.46,55.02,45.63c47.87,2.52,241.58,30.85,343.68,57.6,29.23,7.66,54.57,13.59,75.85,36.5,6.63,7.14,18.98,12.04,28.17,12.7,18.38,1.32,47.35,0,47.35,0,0,0,28.96,1.32,47.35,0,9.19-.66,21.54-5.56,28.17-12.7,21.28-22.91,46.62-28.84,75.85-36.5,102.09-26.75,295.81-55.08,343.68-57.6,60.31-3.17,55.02-45.63,55.02-45.63Z"/>
+  </symbol>
+</svg>
+
+<!-- 顶栏 -->
+<header class="topbar">
+  <div class="brand"><svg class="app-logo"><use href="#cherry-logo"></use></svg> 樱桃听书</div>
+  <button class="icon-btn" id="btn-theme" title="明暗"><i class="fas fa-moon"></i></button>
+</header>
+
+<!-- 书架 -->
+<main id="view-library" class="view">
+  <div class="lib-actions">
+    <label class="btn primary block"><i class="fas fa-file-import"></i> 导入听书包(.zip)
+      <input type="file" id="import-input" accept=".zip,.tsp" hidden></label>
+    <p class="hint">从电脑端「设置 - 本地预训练音频管理」点「手机包」导出，再传到手机导入。</p>
+  </div>
+  <div id="book-list" class="book-list"></div>
+</main>
+
+<!-- 阅读器 -->
+<main id="view-reader" class="view hidden">
+  <div class="reader-head">
+    <button class="icon-btn" id="btn-back"><i class="fas fa-chevron-left"></i></button>
+    <div class="reader-title" id="reader-title"></div>
+    <button class="icon-btn" id="btn-del-book" title="删除此书"><i class="fas fa-trash"></i></button>
+  </div>
+  <div id="sentences" class="sentences"></div>
+  <div class="player">
+    <button class="icon-btn" id="btn-prev"><i class="fas fa-backward-step"></i></button>
+    <button class="play-btn" id="btn-play"><i class="fas fa-play"></i></button>
+    <button class="icon-btn" id="btn-next"><i class="fas fa-forward-step"></i></button>
+    <span class="progress" id="progress"></span>
+  </div>
+</main>
+
+<!-- 设置 -->
+<main id="view-settings" class="view hidden">
+  <div class="card">
+    <h3>主题色</h3>
+    <div class="theme-row" id="theme-presets"></div>
+  </div>
+  <div class="card">
+    <h3>字号</h3>
+    <input type="range" id="font-range" min="16" max="28" step="1">
+    <span id="font-val" class="hint"></span>
+  </div>
+  <div class="card">
+    <h3>关于</h3>
+    <p class="hint">樱桃听书 手机版 · 仅阅读 + 播放预生成音频，不含合成与训练。</p>
+  </div>
+</main>
+
+<!-- 底部导航 -->
+<nav class="tabbar">
+  <button class="tab active" data-view="library"><i class="fas fa-book"></i><span>书架</span></button>
+  <button class="tab" data-view="settings"><i class="fas fa-gear"></i><span>设置</span></button>
+</nav>
+
+<audio id="audio" preload="auto"></audio>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

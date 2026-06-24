@@ -1,0 +1,13 @@
+{
+  "name": "樱桃听书",
+  "short_name": "樱桃听书",
+  "description": "导入预生成听书包，离线阅读+收听。",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f4fb",
+  "theme_color": "#8770e2",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

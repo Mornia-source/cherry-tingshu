@@ -297,9 +297,11 @@ function renderPregenAdmin() {
     const row = document.createElement("div"); row.className = "model-row pg-row";
     row.innerHTML = `<span><i class="fas fa-compact-disc"></i> ${it.chapter_title} · ${it.voice} · ${it.speed}× <span class="hint">(${it.done}/${it.total})</span></span>
       <span class="row-inline">
+        <button class="btn pg-export-mobile" title="导出可在手机App导入的听书包(含文本+音频)"><i class="fas fa-mobile-screen"></i> 手机包</button>
         <button class="btn pg-export-one"><i class="fas fa-file-export"></i> 导出</button>
         <button class="btn pg-del" style="color:var(--danger)"><i class="fas fa-trash"></i> 删除</button>
       </span>`;
+    row.querySelector(".pg-export-mobile").onclick = () => exportMobilePack(it);
     row.querySelector(".pg-export-one").onclick = () => exportPregenOne(it);
     row.querySelector(".pg-del").onclick = async () => {
       if (!confirm(`删除《${it.book_title}》${it.chapter_title} 的预生成音频？`)) return;
@@ -328,6 +330,17 @@ async function exportPregen() {
     a.download = "樱桃听书-预生成音频库.zip";
     a.click(); URL.revokeObjectURL(a.href);
   } catch (e) { alert("导出失败：" + e.message); }
+}
+async function exportMobilePack(it) {
+  try {
+    const q = `bid=${it.bid}&chapter=${it.chapter}&voice=${encodeURIComponent(it.voice)}&speed=${it.speed}`;
+    const res = await api("/api/pregen/export_mobile?" + q, { raw: true });
+    const blob = await res.blob();
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `${it.book_title || it.bid}-${it.chapter_title || ""}-${it.voice}.tsp.zip`;
+    a.click(); URL.revokeObjectURL(a.href);
+  } catch (e) { alert("导出手机包失败：" + e.message); }
 }
 async function exportPregenOne(it) {
   try {

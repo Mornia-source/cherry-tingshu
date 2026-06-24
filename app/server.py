@@ -17,6 +17,59 @@ WEB_DIR = os.path.join(ROOT, "web")
 app = FastAPI(title="本地听书")
 auth.init_db()
 
+
+def _migrate_legacy_bids():
+    """book_id 从“完整路径哈希”改为“文件名哈希”后的一次性迁移：
+    把旧 bid 命名的预生成目录、封面、阅读进度改成新 bid。可重复安全执行。"""
+    import shutil
+    import sqlite3
+    try:
+        files = [f for f in os.listdir(books.EBOOK_DIR)
+                 if os.path.isfile(os.path.join(books.EBOOK_DIR, f))]
+    except Exception:
+        return
+    # 旧版可能用过的完整路径前缀（搬家前的位置等）
+    old_roots = [books.EBOOK_DIR, r"D:\eBookSVC\ebook"]
+    moved = 0
+    for name in files:
+        new_bid = books.book_id(os.path.join(books.EBOOK_DIR, name))
+        legacy_bids = {books._legacy_book_id_fullpath(os.path.join(r, name)) for r in old_roots}
+        legacy_bids.discard(new_bid)
+        for old_bid in legacy_bids:
+            # 预生成目录
+            src = os.path.join(pregen.PREGEN_DIR, old_bid)
+            dst = os.path.join(pregen.PREGEN_DIR, new_bid)
+            if os.path.isdir(src):
+                if not os.path.isdir(dst):
+                    os.makedirs(os.path.dirname(dst), exist_ok=True)
+                    shutil.move(src, dst); moved += 1
+                else:
+                    for sub in os.listdir(src):
+                        s2, d2 = os.path.join(src, sub), os.path.join(dst, sub)
+                        if not os.path.exists(d2):
+                            shutil.move(s2, d2)
+                    shutil.rmtree(src, ignore_errors=True); moved += 1
+            # 封面
+            oc = os.path.join(books.COVER_DIR, old_bid + ".png")
+            nc = os.path.join(books.COVER_DIR, new_bid + ".png")
+            if os.path.exists(oc) and not os.path.exists(nc):
+                try:
+                    shutil.move(oc, nc)
+                except Exception:
+                    pass
+            # 阅读进度
+            try:
+                c = sqlite3.connect(auth.DB_PATH)
+                c.execute("UPDATE OR IGNORE progress SET book_id=? WHERE book_id=?", (new_bid, old_bid))
+                c.commit(); c.close()
+            except Exception:
+                pass
+    if moved:
+        print(f"[迁移] 已将 {moved} 个预生成目录归位到按书名的新 bid")
+
+
+_migrate_legacy_bids()
+
 # 简单的解析结果缓存，避免每次翻页重解析
 _book_cache = {}
 
@@ -477,6 +530,16 @@ def api_pregen_export_one(bid: str, chapter: int, voice: str, speed: float,
         raise HTTPException(404, "该章缓存不存在")
     return FileResponse(p, filename=f"预生成-{bid}-第{chapter + 1}章.zip",
                         media_type="application/zip")
+
+
+@app.get("/api/pregen/export_mobile")
+def api_pregen_export_mobile(bid: str, chapter: int, voice: str, speed: float,
+                             authorization: str = Header(None)):
+    require_user(authorization)
+    p, fname = pregen.export_mobile_pack(bid, chapter, voice, speed)
+    if not p:
+        raise HTTPException(404, "该章缓存不存在或书已不在")
+    return FileResponse(p, filename=fname, media_type="application/zip")
 
 
 @app.post("/api/pregen/import")
