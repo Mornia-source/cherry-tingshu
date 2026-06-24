@@ -176,6 +176,7 @@ def export_mobile_pack(bid, chapter, voice, speed):
         "voice": voice,
         "speed": speed,
         "sentences": sentences,               # 只含该章逐句文本
+        "para_starts": data["chapters"][chapter].get("para_starts", []),  # 段落首句下标，用于排版分段
         "audio": audio,
     }
     safe = f"{book_title}-{ch_title}-{voice}".replace("/", "_").replace("\\", "_")

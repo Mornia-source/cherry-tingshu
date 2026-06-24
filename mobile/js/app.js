@@ -48,7 +48,8 @@ async function importPack(file) {
   }
   await DB.put("books", {
     id, book: m.book || "未命名", chapter: m.chapter || "", voice: m.voice || "",
-    speed: m.speed || 1, sentences: m.sentences || [], audioCount: audio.length,
+    speed: m.speed || 1, sentences: m.sentences || [], para_starts: m.para_starts || [],
+    audioCount: audio.length,
     bookId: m.book_id || ("title:" + (m.book || "未命名")),  // 按电子书归类的稳定标识
     chapterIndex: (m.chapter_index != null ? m.chapter_index : 0),
     source: m.source || "", totalChapters: m.total_chapters || 0,
@@ -104,25 +105,60 @@ function renderChapters(box, all) {
   }
 }
 
-/* ---------------- 阅读器 ---------------- */
-const Reader = { book: null, idx: 0, playing: false };
+/* ---------------- 阅读器（左右翻页 + 排版） ---------------- */
+const Reader = { book: null, idx: 0, playing: false, page: 0, pages: 1, colW: 0 };
 async function openBook(id) {
   const b = await DB.get("books", id);
   if (!b) return;
-  Reader.book = b; Reader.idx = 0; Reader.playing = false;
+  Reader.book = b; Reader.idx = 0; Reader.playing = false; Reader.page = 0;
   $("#reader-title").textContent = `${b.book} · ${b.chapter}`;
-  const box = $("#sentences"); box.innerHTML = "";
-  b.sentences.forEach((s, i) => {
-    const el = document.createElement("span");
-    el.className = "sentence" + (b.audioCount && !audioMissing(b, i) ? "" : " noaudio");
-    el.id = "s" + i; el.textContent = s + " ";
-    el.onclick = () => { Reader.idx = i; playCurrent(); };
-    box.appendChild(el);
-  });
+  renderPages(b);
   showView("reader");
-  highlight();
+  // 等显示与字体就绪后再分页
+  requestAnimationFrame(() => requestAnimationFrame(() => { layoutPages(); highlight(); }));
 }
-function audioMissing() { return false; } // 占位：缺音频的句子在播放时跳过
+// 按段落渲染：para_starts 为每段首句下标
+function renderPages(b) {
+  const pagesEl = $("#pages"); pagesEl.innerHTML = "";
+  const starts = new Set((b.para_starts && b.para_starts.length) ? b.para_starts : [0]);
+  let para = null;
+  b.sentences.forEach((s, i) => {
+    if (starts.has(i) || !para) {
+      para = document.createElement("p"); para.className = "para";
+      pagesEl.appendChild(para);
+    }
+    const el = document.createElement("span");
+    el.className = "sentence"; el.id = "s" + i; el.textContent = s;
+    el.onclick = () => { Reader.idx = i; playCurrent(); };
+    para.appendChild(el);
+    para.appendChild(document.createTextNode(" "));
+  });
+}
+function layoutPages() {
+  const vp = $("#page-viewport"), pagesEl = $("#pages");
+  if (!vp.clientWidth) return;
+  const cs = getComputedStyle(vp);
+  const colW = vp.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  Reader.colW = colW;
+  pagesEl.style.transform = "none";
+  pagesEl.style.columnWidth = colW + "px";
+  Reader.pages = Math.max(1, Math.round(pagesEl.scrollWidth / colW));
+  if (Reader.page >= Reader.pages) Reader.page = Reader.pages - 1;
+  goPage(Reader.page);
+}
+function goPage(p) {
+  p = Math.max(0, Math.min(p, Reader.pages - 1));
+  Reader.page = p;
+  $("#pages").style.transform = `translateX(${-p * Reader.colW}px)`;
+  $("#page-num").textContent = `${p + 1} / ${Reader.pages}`;
+}
+function nextPage() { goPage(Reader.page + 1); }
+function prevPage() { goPage(Reader.page - 1); }
+function pageOfSentence(i) {
+  const el = $("#s" + i);
+  if (!el || !Reader.colW) return Reader.page;
+  return Math.floor((el.offsetLeft + 2) / Reader.colW);
+}
 async function getAudioURL(i) {
   const rec = await DB.get("audio", Reader.book.id + ":" + i);
   if (!rec) return null;
@@ -131,7 +167,11 @@ async function getAudioURL(i) {
 function highlight() {
   $$(".sentence.active").forEach(e => e.classList.remove("active"));
   const el = $("#s" + Reader.idx);
-  if (el) { el.classList.add("active"); el.scrollIntoView({ block: "center", behavior: "smooth" }); }
+  if (el) {
+    el.classList.add("active");
+    const pg = pageOfSentence(Reader.idx);
+    if (pg !== Reader.page) goPage(pg);   // 当前朗读句不在本页则自动翻过去
+  }
   $("#progress").textContent = `${Reader.idx + 1}/${Reader.book.sentences.length}`;
 }
 async function playCurrent() {
@@ -199,10 +239,33 @@ function renderThemePresets() {
     box.appendChild(s);
   });
 }
+function relayoutIfReading() {
+  if (Reader.book && !$("#view-reader").classList.contains("hidden")) {
+    layoutPages();
+    if (Reader.colW) goPage(pageOfSentence(Reader.idx));
+  }
+}
 function setFont(px) {
   document.documentElement.style.setProperty("--reader-font", px + "px");
   $("#font-val").textContent = px + " px";
   localStorage.setItem("m-font", px);
+  relayoutIfReading();
+}
+function setLineHeight(v) {
+  document.documentElement.style.setProperty("--reader-lh", (v / 100).toFixed(2));
+  $("#lh-val").textContent = (v / 100).toFixed(1) + " 倍";
+  localStorage.setItem("m-lh", v);
+  relayoutIfReading();
+}
+const FONT_FAMILIES = {
+  serif: '"Noto Serif SC", "Songti SC", STSong, serif',
+  sans: '-apple-system, "PingFang SC", "Microsoft YaHei", sans-serif',
+};
+function setFontFamily(ff) {
+  document.documentElement.style.setProperty("--reader-ff", FONT_FAMILIES[ff] || FONT_FAMILIES.serif);
+  localStorage.setItem("m-ff", ff);
+  $$("#font-family-seg .seg-btn").forEach(b => b.classList.toggle("sel", b.dataset.ff === ff));
+  relayoutIfReading();
 }
 function toggleDark() {
   const root = document.documentElement;
@@ -220,6 +283,7 @@ function showView(v) {
   $$(".tab").forEach(t => t.classList.toggle("active", t.dataset.view === v));
   // 阅读器有自己的底部播放条，切走时停止播放
   if (v !== "reader") { const a = $("#audio"); a.pause(); Reader.playing = false; }
+  else if (Reader.book) requestAnimationFrame(() => requestAnimationFrame(relayoutIfReading));
 }
 
 /* ---------------- 初始化 ---------------- */
@@ -230,6 +294,8 @@ async function init() {
   if (localStorage.getItem("m-dark") === "1") { document.documentElement.setAttribute("data-theme", "dark"); $("#btn-theme").innerHTML = '<i class="fas fa-sun"></i>'; }
   applyTheme(THEMES.find(t => t.name === localStorage.getItem("m-theme")) || THEMES[1]);  // 默认粉色(樱)
   const font = +(localStorage.getItem("m-font") || 19); $("#font-range").value = font; setFont(font);
+  const lh = +(localStorage.getItem("m-lh") || 200); $("#lh-range").value = lh; setLineHeight(lh);
+  setFontFamily(localStorage.getItem("m-ff") || "serif");
   await renderLibrary();
 
   // 事件
@@ -242,7 +308,22 @@ async function init() {
   $("#btn-prev").onclick = prevSentence;
   $("#audio").onended = () => nextSentence(true);
   $("#font-range").oninput = e => setFont(+e.target.value);
+  $("#lh-range").oninput = e => setLineHeight(+e.target.value);
+  $$("#font-family-seg .seg-btn").forEach(b => b.onclick = () => setFontFamily(b.dataset.ff));
   $$(".tab").forEach(t => t.onclick = () => showView(t.dataset.view));
+
+  // 左右滑动翻页
+  const vp = $("#page-viewport");
+  let sx = 0, sy = 0, st = 0;
+  vp.addEventListener("touchstart", e => { const t = e.changedTouches[0]; sx = t.clientX; sy = t.clientY; st = Date.now(); }, { passive: true });
+  vp.addEventListener("touchend", e => {
+    const t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.5 && Date.now() - st < 600) {
+      if (dx < 0) nextPage(); else prevPage();
+    }
+  }, { passive: true });
+  // 屏幕旋转 / 尺寸变化时重新分页
+  window.addEventListener("resize", () => relayoutIfReading());
 
   // 注册 service worker（离线）
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});

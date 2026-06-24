@@ -49,6 +49,9 @@ echo [4/6] Syncing web assets into the Android project...
 call npx cap copy
 if errorlevel 1 ( echo [ERROR] cap copy failed & pause & exit /b 1 )
 
+echo [4.2/6] Applying custom app name and launcher icon (cap-res)...
+if exist cap-res xcopy /e /i /y cap-res "android\app\src\main\res" >nul
+
 echo [4.5/6] Setting up Android SDK (command-line, no Android Studio needed)...
 set "SDKDIR=%LOCALAPPDATA%\Android\Sdk"
 if defined ANDROID_HOME if exist "%ANDROID_HOME%\cmdline-tools" set "SDKDIR=%ANDROID_HOME%"

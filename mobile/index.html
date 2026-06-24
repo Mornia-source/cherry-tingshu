@@ -44,14 +44,17 @@
   <div id="book-list" class="book-list"></div>
 </main>
 
-<!-- 阅读器 -->
-<main id="view-reader" class="view hidden">
+<!-- 阅读器（左右翻页） -->
+<main id="view-reader" class="view reader-view hidden">
   <div class="reader-head">
     <button class="icon-btn" id="btn-back"><i class="fas fa-chevron-left"></i></button>
     <div class="reader-title" id="reader-title"></div>
     <button class="icon-btn" id="btn-del-book" title="删除此书"><i class="fas fa-trash"></i></button>
   </div>
-  <div id="sentences" class="sentences"></div>
+  <div id="page-viewport">
+    <div id="pages"></div>
+    <div class="page-num" id="page-num"></div>
+  </div>
   <div class="player">
     <button class="icon-btn" id="btn-prev"><i class="fas fa-backward-step"></i></button>
     <button class="play-btn" id="btn-play"><i class="fas fa-play"></i></button>
@@ -68,8 +71,20 @@
   </div>
   <div class="card">
     <h3>字号</h3>
-    <input type="range" id="font-range" min="16" max="28" step="1">
+    <input type="range" id="font-range" min="16" max="30" step="1">
     <span id="font-val" class="hint"></span>
+  </div>
+  <div class="card">
+    <h3>行距</h3>
+    <input type="range" id="lh-range" min="150" max="250" step="10">
+    <span id="lh-val" class="hint"></span>
+  </div>
+  <div class="card">
+    <h3>字体</h3>
+    <div class="seg" id="font-family-seg">
+      <button data-ff="serif" class="seg-btn">宋体</button>
+      <button data-ff="sans" class="seg-btn">黑体</button>
+    </div>
   </div>
   <div class="card">
     <h3>关于</h3>
