@@ -29,6 +29,16 @@ __pycache__/
 .venv/
 venv/
 
+# 手机端 Capacitor 打包产物（由 打包APK.bat 生成，不入库）
+mobile/node_modules/
+mobile/android/
+mobile/www/
+mobile/package.json
+mobile/package-lock.json
+mobile/capacitor.config.json
+mobile/capacitor.config.ts
+mobile/*.apk
+
 # 编辑器/系统
 .vscode/
 .idea/

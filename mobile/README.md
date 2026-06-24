@@ -17,27 +17,21 @@ xxx.tsp.zip
 
 ## 本地预览（开发）
 
-手机版是纯静态文件。任意静态服务器即可：
+直接双击 **`预览手机版.bat`**：会起一个本地静态服务器(端口 8090)，并打印本机和局域网访问地址；手机与电脑连同一个 WiFi，用手机浏览器打开打印出的 `http://<电脑IP>:8090` 即可。
 
-```bash
-cd mobile
-python -m http.server 8090
-# 手机与电脑同一局域网，手机浏览器访问 http://<电脑IP>:8090
-```
+> Service Worker 需要 `https` 或 `localhost`；局域网 IP 下离线/安装受限，但阅读与播放不受影响。
 
-注意：Service Worker 需要 `https` 或 `localhost`；局域网 IP 下 PWA 安装/离线可能受限，正式分发请用 https 或下一步用 Capacitor 打包成 APK。
+## 打包成 APK
 
-## 打包成 APK（后续）
+双击 **`打包APK.bat`**：全自动完成 Capacitor 初始化、添加 Android 平台、**自动下载 Android SDK 与 JDK 21、把 Gradle 指向国内镜像**，最后用 Gradle 构建出 `CherryTingShu.apk`（输出在本目录）。
 
-技术栈为 PWA + Capacitor。后续步骤（占位，未来补充）：
+前置要求：**只需 Node.js**。Android SDK 与 JDK 21 由脚本自动下载安装（无需 Android Studio）。
 
-```bash
-npm i -D @capacitor/cli @capacitor/core @capacitor/android
-npx cap init "樱桃听书" "com.cherry.tingshu" --web-dir=.
-npx cap add android
-npx cap copy
-npx cap open android   # 在 Android Studio 里构建 APK
-```
+- 首次运行会联网下载几百 MB（SDK + JDK + Gradle + 依赖），耗时较久；之后再打包很快。
+- 产物 `CherryTingShu.apk` 是 debug 包，手机安装时需允许“安装未知来源应用”。
+- 已实测可成功构建（约 3.9MB）。
+
+> 注意：当前网页用到 JSZip / FontAwesome 的 CDN。要做到 APK 完全脱网可用，需先把这两个库**本地化**（可让助手代办）。
 
 ## 现状
 
