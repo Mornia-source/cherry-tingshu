@@ -122,12 +122,18 @@ const Reader = { book: null, idx: 0, playing: false, page: 0, pages: 1, colW: 0 
 async function openBook(id) {
   const b = await DB.get("books", id);
   if (!b) return;
-  Reader.book = b; Reader.idx = 0; Reader.playing = false; Reader.page = 0;
+  const prog = loadProgress(id);
+  Reader.book = b; Reader.idx = prog.idx || 0; Reader.playing = false; Reader.page = prog.page || 0;
   $("#reader-title").textContent = `${b.book} · ${b.chapter}`;
   renderPages(b);
   showView("reader");
-  // 等显示与字体就绪后再分页
-  requestAnimationFrame(() => requestAnimationFrame(() => { layoutPages(); highlight(); }));
+  // 等显示与字体就绪后再分页，并跳到上次阅读位置
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    layoutPages();
+    const p = (prog.page != null && prog.page < Reader.pages) ? prog.page : pageOfSentence(Reader.idx);
+    goPage(p);
+    setPlayIcon();
+  }));
 }
 // 按段落渲染：para_starts 为每段首句下标
 function renderPages(b) {
@@ -156,6 +162,7 @@ function layoutPages() {
   pagesEl.style.columnWidth = colW + "px";
   Reader.pages = Math.max(1, Math.round(pagesEl.scrollWidth / colW));
   if (Reader.page >= Reader.pages) Reader.page = Reader.pages - 1;
+  const sr = $("#scrub-range"); if (sr) sr.max = Reader.pages - 1;
   goPage(Reader.page);
 }
 function goPage(p) {
@@ -163,13 +170,34 @@ function goPage(p) {
   Reader.page = p;
   $("#pages").style.transform = `translateX(${-p * Reader.colW}px)`;
   $("#page-num").textContent = `${p + 1} / ${Reader.pages}`;
+  const sr = $("#scrub-range"); if (sr) sr.value = p;
+  const sl = $("#scrub-label"); if (sl) sl.textContent = `${p + 1}/${Reader.pages}`;
 }
-function nextPage() { goPage(Reader.page + 1); }
-function prevPage() { goPage(Reader.page - 1); }
+// 手动翻页：同步“当前句”为该页首句，并保存进度
+function turnTo(p) {
+  goPage(p);
+  Reader.idx = firstSentenceOnPage(Reader.page);
+  saveProgress();
+}
+function nextPage() { turnTo(Reader.page + 1); }
+function prevPage() { turnTo(Reader.page - 1); }
 function pageOfSentence(i) {
   const el = $("#s" + i);
   if (!el || !Reader.colW) return Reader.page;
   return Math.floor((el.offsetLeft + 2) / Reader.colW);
+}
+function firstSentenceOnPage(p) {
+  const n = Reader.book ? Reader.book.sentences.length : 0;
+  for (let i = 0; i < n; i++) if (pageOfSentence(i) === p) return i;
+  return Reader.idx;
+}
+// 保存阅读进度到 localStorage（同步、抗异常退出）
+function saveProgress() {
+  if (!Reader.book) return;
+  try { localStorage.setItem("prog_" + Reader.book.id, JSON.stringify({ idx: Reader.idx, page: Reader.page })); } catch (e) {}
+}
+function loadProgress(id) {
+  try { return JSON.parse(localStorage.getItem("prog_" + id) || "{}"); } catch (e) { return {}; }
 }
 async function getAudioURL(i) {
   const rec = await DB.get("audio", Reader.book.id + ":" + i);
@@ -185,6 +213,7 @@ function highlight() {
     if (pg !== Reader.page) goPage(pg);   // 当前朗读句不在本页则自动翻过去
   }
   $("#progress").textContent = `${Reader.idx + 1}/${Reader.book.sentences.length}`;
+  saveProgress();
 }
 async function playCurrent() {
   const url = await getAudioURL(Reader.idx);
@@ -293,6 +322,15 @@ function toggleDark() {
   applyTheme(cur);
 }
 
+/* ---------------- 进度拖拽条（展开/收起） ---------------- */
+let _scrubTimer = null;
+function resetScrubTimer() { clearTimeout(_scrubTimer); _scrubTimer = setTimeout(() => $("#scrubber").classList.remove("open"), 3000); }
+function toggleScrub() {
+  const s = $("#scrubber");
+  if (s.classList.contains("open")) s.classList.remove("open");
+  else { s.classList.add("open"); resetScrubTimer(); }
+}
+
 /* ---------------- 阅读样式面板 ---------------- */
 function openStylePanel() { $("#style-panel").classList.add("open"); $("#style-mask").classList.remove("hidden"); }
 function closeStylePanel() { $("#style-panel").classList.remove("open"); $("#style-mask").classList.add("hidden"); }
@@ -300,6 +338,7 @@ function closeStylePanel() { $("#style-panel").classList.remove("open"); $("#sty
 /* ---------------- 返回上一级 ---------------- */
 function goBackLevel() {
   if ($("#style-panel").classList.contains("open")) { closeStylePanel(); return true; }
+  if ($("#scrubber").classList.contains("open")) { $("#scrubber").classList.remove("open"); return true; }
   const readerVisible = !$("#view-reader").classList.contains("hidden");
   const settingsVisible = !$("#view-settings").classList.contains("hidden");
   if (readerVisible) { showView("library"); renderLibrary(); return true; }   // 阅读 -> 章节列表
@@ -312,8 +351,9 @@ function goBackLevel() {
 function showView(v) {
   ["library", "reader", "settings"].forEach(name => $("#view-" + name).classList.toggle("hidden", name !== v));
   $$(".tab").forEach(t => t.classList.toggle("active", t.dataset.view === v));
-  // 切走阅读器时暂停（onpause 会同步状态/图标）
-  if (v !== "reader") { $("#audio").pause(); }
+  document.body.classList.toggle("reading", v === "reader");  // 阅读时隐藏底部导航
+  // 切走阅读器时暂停（onpause 会同步状态/图标）并存进度
+  if (v !== "reader") { $("#audio").pause(); saveProgress(); }
   else if (Reader.book) {
     requestAnimationFrame(() => requestAnimationFrame(() => {
       relayoutIfReading();   // 重排并定位到当前句所在页
@@ -366,6 +406,16 @@ async function init() {
   $("#btn-style").onclick = openStylePanel;
   $("#btn-style-close").onclick = closeStylePanel;
   $("#style-mask").onclick = closeStylePanel;
+
+  // 进度拖拽条：点页码展开/收起，拖动预览，松手跳转
+  $("#page-num").onclick = toggleScrub;
+  const sr = $("#scrub-range");
+  sr.oninput = e => { goPage(+e.target.value); resetScrubTimer(); };
+  sr.onchange = e => { turnTo(+e.target.value); resetScrubTimer(); };
+
+  // 退出/切后台时保存进度
+  window.addEventListener("pagehide", saveProgress);
+  document.addEventListener("visibilitychange", () => { if (document.hidden) saveProgress(); });
 
   // 屏幕旋转 / 尺寸变化时重新分页
   window.addEventListener("resize", () => relayoutIfReading());
