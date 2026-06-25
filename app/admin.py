@@ -94,10 +94,12 @@ def start_engine(name):
             return {"ok": False, "error": "未找到 GPT-SoVITS，请先在『设置-语音引擎』里填写其根目录"}
         runtime_py = os.path.join(gsv, "runtime", "python.exe")
         py = runtime_py if os.path.exists(runtime_py) else "python"
-        cmd = (f'cd /d "{gsv}" && "{py}" -I api_v2.py -a 127.0.0.1 -p 9880 '
-               f'-c GPT_SoVITS/configs/tts_infer.yaml')
+        # 用 cwd 进入 GPT-SoVITS 目录，命令作为单个字符串传给 cmd（避免列表重新转义破坏命令行）。
+        # 外层再套一对引号是 cmd /k 运行带引号路径命令的标准写法。
+        inner = f'"{py}" -I api_v2.py -a 127.0.0.1 -p 9880 -c GPT_SoVITS/configs/tts_infer.yaml'
+        full = f'cmd /k "{inner}"'
         try:
-            subprocess.Popen(["cmd", "/k", cmd], creationflags=NEW_CONSOLE)
+            subprocess.Popen(full, cwd=gsv, creationflags=NEW_CONSOLE)
         except Exception as e:
             return {"ok": False, "error": str(e)}
         _starting[name] = time.time()
