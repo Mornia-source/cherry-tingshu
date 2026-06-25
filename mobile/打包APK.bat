@@ -88,31 +88,54 @@ if errorlevel 1 ( echo [ERROR] SDK package install failed. & pause & exit /b 1 )
 echo   SDK ready: %SDKDIR%
 > android\local.properties echo sdk.dir=%SDKDIR:\=/%
 
-echo [4.7/6] Ensuring JDK 21 (Capacitor 7 requires it)...
+echo [4.7/6] Detecting a local JDK 21 (Capacitor 7 needs it)...
 set "JDK21BASE=%LOCALAPPDATA%\cherry-jdk21"
 set "JDK21="
-if exist "%JDK21BASE%" for /d %%d in ("%JDK21BASE%\jdk-21*") do set "JDK21=%%d"
-if not defined JDK21 (
-  echo   Downloading Temurin JDK 21...
-  if not exist "%JDK21BASE%" mkdir "%JDK21BASE%"
-  curl -L -o "%TEMP%\jdk21.zip" "https://api.adoptium.net/v3/binary/latest/21/ga/windows/x64/jdk/hotspot/normal/eclipse?project=jdk"
-  if errorlevel 1 ( echo [ERROR] JDK 21 download failed. & pause & exit /b 1 )
-  tar -xf "%TEMP%\jdk21.zip" -C "%JDK21BASE%"
-  for /d %%d in ("%JDK21BASE%\jdk-21*") do set "JDK21=%%d"
-)
-set "JAVA_HOME=%JDK21%"
-echo   JAVA_HOME=%JAVA_HOME%
+call :find_jdk21 "%JDK21BASE%"
+call :find_jdk21 "%JAVA_HOME%\.."
+call :find_jdk21 "%ProgramFiles%\Eclipse Adoptium"
+call :find_jdk21 "%ProgramFiles%\Java"
+call :find_jdk21 "%ProgramFiles%\Microsoft"
+call :find_jdk21 "%ProgramFiles%\Zulu"
+call :find_jdk21 "%ProgramFiles%\BellSoft"
+call :find_jdk21 "%ProgramFiles%\Amazon Corretto"
+call :find_jdk21 "%ProgramFiles%\Semeru"
+if defined JDK21 goto :jdk_found
 
-echo   Pointing Gradle wrapper to a faster mirror...
+echo.
+echo [ACTION NEEDED] No JDK 21 was found on this PC.
+echo Install a Java 21 (JDK) ONCE, then re-run this script:
+echo   1) On the page that just opened, download the Windows x64 JDK 21 ZIP
+echo      (file name like: OpenJDK21U-jdk_x64_windows_hotspot_21.0.x_y.zip)
+echo   2) Unzip it INTO this folder (a jdk-21... subfolder should appear):
+echo        %JDK21BASE%
+echo      Final path should look like:
+echo        %JDK21BASE%\jdk-21.0.x+y\bin\java.exe
+echo   3) Re-run this script - it will auto-detect the JDK and continue.
+echo.
+if not exist "%JDK21BASE%" mkdir "%JDK21BASE%"
+start "" "https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/jdk/x64/windows/"
+start "" "%JDK21BASE%"
+pause
+exit /b 1
+
+:jdk_found
+set "JAVA_HOME=%JDK21%"
+echo   Using JDK 21: %JAVA_HOME%
+if not exist "%JAVA_HOME%\bin\java.exe" ( echo [ERROR] java.exe missing at %JAVA_HOME% & pause & exit /b 1 )
+
+echo   Pinning Gradle to JDK 21 and using a faster Gradle mirror...
 powershell -NoProfile -Command "(Get-Content 'android\gradle\wrapper\gradle-wrapper.properties') -replace 'services.gradle.org/distributions','mirrors.cloud.tencent.com/gradle' -replace 'networkTimeout=10000','networkTimeout=60000' | Set-Content 'android\gradle\wrapper\gradle-wrapper.properties'"
+powershell -NoProfile -Command "$p='android/gradle.properties'; $j=$env:JAVA_HOME -replace '\\','/'; $c=@(); if(Test-Path $p){ $c=Get-Content $p | Where-Object { $_ -notmatch '^org\.gradle\.java\.home' } }; ($c + ('org.gradle.java.home=' + $j)) | Set-Content $p"
 
 echo [5/6] Building Debug APK with Gradle...
 cd android
+call gradlew.bat --stop >nul 2>nul
 call gradlew.bat assembleDebug
 if errorlevel 1 (
   echo.
   echo [ERROR] Gradle build failed.
-  echo   Make sure JAVA_HOME points to a JDK 17 (current: %JAVA_HOME%).
+  echo   Using JDK 21 at: %JAVA_HOME%
   echo   See the Gradle output above for the exact cause, then re-run this script.
   cd ..
   pause & exit /b 1
@@ -126,7 +149,16 @@ echo.
 echo ============================================
 echo  Done! Installer: %~dp0CherryTingShu.apk
 echo ============================================
-echo Note: the web app uses JSZip / FontAwesome via CDN. For a fully
-echo       offline APK, localize these two libraries first (ask the assistant).
+echo This APK is fully offline (JSZip and FontAwesome are bundled locally).
 echo.
 pause
+exit /b 0
+
+rem ---- subroutine: find a JDK 21 under a parent dir, set JDK21 if found ----
+:find_jdk21
+if defined JDK21 goto :eof
+if "%~1"=="" goto :eof
+if not exist "%~1" goto :eof
+for /d %%d in ("%~1\jdk-21*") do if exist "%%d\bin\java.exe" set "JDK21=%%d"
+if not defined JDK21 for /d %%d in ("%~1\*jdk*21*") do if exist "%%d\bin\java.exe" set "JDK21=%%d"
+goto :eof
