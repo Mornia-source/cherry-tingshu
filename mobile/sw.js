@@ -1,8 +1,10 @@
 // 樱桃听书 手机版 · 简单离线缓存（应用外壳）
-const CACHE = "cherry-tingshu-m-v1";
+const CACHE = "cherry-tingshu-m-v2";
 const ASSETS = [
   "./index.html", "./css/style.css", "./js/app.js",
   "./logo.svg", "./favicon.svg", "./manifest.webmanifest",
+  "./vendor/jszip.min.js", "./vendor/fa/css/all.min.css",
+  "./vendor/fa/webfonts/fa-solid-900.woff2", "./vendor/fa/webfonts/fa-regular-400.woff2",
 ];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));

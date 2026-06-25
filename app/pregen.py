@@ -179,10 +179,16 @@ def export_mobile_pack(bid, chapter, voice, speed):
         "para_starts": data["chapters"][chapter].get("para_starts", []),  # 段落首句下标，用于排版分段
         "audio": audio,
     }
+    # 封面（若有）
+    cover = os.path.join(books.COVER_DIR, bid + ".png")
+    manifest["has_cover"] = os.path.exists(cover)
+
     safe = f"{book_title}-{ch_title}-{voice}".replace("/", "_").replace("\\", "_")
     out = os.path.join(ROOT, "data", f"mobilepack_{bid}_{chapter}.zip")
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("manifest.json", json.dumps(manifest, ensure_ascii=False))
+        if manifest["has_cover"]:
+            z.write(cover, "cover.png")
         for i, rel in enumerate(audio):
             if rel:
                 z.write(os.path.join(d, f"{i}.wav"), rel)

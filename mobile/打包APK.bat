@@ -26,13 +26,17 @@ copy /y logo.svg www\ >nul
 copy /y favicon.svg www\ >nul
 xcopy /e /i /y css www\css >nul
 xcopy /e /i /y js www\js >nul
+xcopy /e /i /y vendor www\vendor >nul
 if exist icons xcopy /e /i /y icons www\icons >nul
 
 echo [2/6] Initializing Capacitor (first run downloads deps)...
 if not exist package.json call npm init -y >nul
 if not exist node_modules\@capacitor\cli (
-  call npm install @capacitor/core @capacitor/cli @capacitor/android
+  call npm install @capacitor/core @capacitor/cli @capacitor/android @capacitor/app
   if errorlevel 1 ( echo [ERROR] Failed to install Capacitor deps & pause & exit /b 1 )
+)
+if not exist node_modules\@capacitor\app (
+  call npm install @capacitor/app
 )
 if not exist capacitor.config.json if not exist capacitor.config.ts (
   call npx cap init "Cherry TingShu" "com.cherry.tingshu" --web-dir=www

@@ -36,6 +36,10 @@ async function importPack(file) {
   if (m.format !== "cherry-tingshu-pack-v1") { alert("听书包格式不匹配"); return; }
 
   const id = "bk_" + Date.now() + "_" + Math.random().toString(36).slice(2, 7);
+  let coverBlob = null;
+  if (m.has_cover && zip.file("cover.png")) {
+    try { coverBlob = await zip.file("cover.png").async("blob"); } catch (e) {}
+  }
   const audio = m.audio || [];
   let stored = 0;
   for (let i = 0; i < audio.length; i++) {
@@ -53,6 +57,7 @@ async function importPack(file) {
     bookId: m.book_id || ("title:" + (m.book || "未命名")),  // 按电子书归类的稳定标识
     chapterIndex: (m.chapter_index != null ? m.chapter_index : 0),
     source: m.source || "", totalChapters: m.total_chapters || 0,
+    cover: coverBlob,
     importedAt: Date.now(),
   });
   alert(`导入成功：${m.book} · ${m.chapter}（${stored} 句音频）`);
@@ -65,14 +70,15 @@ async function renderLibrary() {
   const box = $("#book-list");
   const all = await DB.all("books");
   if (!all.length) {
-    Lib.mode = "books";
+    Lib.mode = "books"; box.className = "book-list";
     box.innerHTML = `<div class="empty"><svg class="app-logo"><use href="#cherry-logo"></use></svg>
       <p>书架还是空的<br>导入一个听书包开始收听吧</p></div>`;
     return;
   }
   if (Lib.mode === "chapters") return renderChapters(box, all);
 
-  // 一级：按 bookId 归类成“书”
+  // 一级：按 bookId 归类成“书”，双列网格带封面
+  box.className = "book-list";
   const groups = {};
   for (const r of all) (groups[r.bookId] = groups[r.bookId] || []).push(r);
   const books = Object.values(groups).sort((a, b) =>
@@ -80,9 +86,14 @@ async function renderLibrary() {
   box.innerHTML = "";
   for (const chs of books) {
     const b = chs[0];
+    const coverRec = chs.find(x => x.cover);
     const card = document.createElement("div"); card.className = "book-card";
-    card.innerHTML = `<h4>${b.book}</h4>
-      <div class="meta">已导入 ${chs.length} 章 · ${b.voice}${b.totalChapters ? " · 全书 " + b.totalChapters + " 章" : ""}</div>`;
+    const coverHtml = coverRec
+      ? `<div class="book-cover"><img alt=""></div>`
+      : `<div class="book-cover"><span class="ph">${b.book}</span></div>`;
+    card.innerHTML = `${coverHtml}<h4>${b.book}</h4>
+      <div class="meta">已导入 ${chs.length} 章${b.totalChapters ? " / " + b.totalChapters : ""}</div>`;
+    if (coverRec) { const img = card.querySelector("img"); img.src = URL.createObjectURL(coverRec.cover); }
     card.onclick = () => { Lib.mode = "chapters"; Lib.bookId = b.bookId; renderLibrary(); };
     box.appendChild(card);
   }
@@ -91,6 +102,7 @@ function renderChapters(box, all) {
   const chs = all.filter(r => r.bookId === Lib.bookId)
     .sort((a, b) => a.chapterIndex - b.chapterIndex);
   if (!chs.length) { Lib.mode = "books"; return renderLibrary(); }
+  box.className = "book-list chapters";
   const title = chs[0].book;
   box.innerHTML = `<div class="sub-head">
       <button class="icon-btn" id="lib-back"><i class="fas fa-chevron-left"></i></button>
@@ -183,20 +195,24 @@ async function playCurrent() {
   }
   audio.src = url;
   audio.playbackRate = Reader.book.speed || 1;
-  try { await audio.play(); Reader.playing = true; setPlayIcon(); } catch (e) {}
+  try { await audio.play(); } catch (e) {}
 }
-function setPlayIcon() { $("#btn-play").innerHTML = `<i class="fas fa-${Reader.playing ? "pause" : "play"}"></i>`; }
+// 按钮图标始终反映 <audio> 真实状态（唯一状态源），避免切页后错乱
+function setPlayIcon() {
+  const playing = Reader.playing;
+  $("#btn-play").innerHTML = `<i class="fas fa-${playing ? "pause" : "play"}"></i>`;
+}
 function togglePlay() {
   const audio = $("#audio");
-  if (Reader.playing) { audio.pause(); Reader.playing = false; setPlayIcon(); }
-  else if (audio.src) { audio.play(); Reader.playing = true; setPlayIcon(); }
+  if (!audio.paused) audio.pause();
+  else if (audio.src) audio.play();
   else playCurrent();
 }
 async function nextSentence(auto) {
   let i = Reader.idx + 1;
   const n = Reader.book.sentences.length;
   while (auto && i < n && !(await DB.get("audio", Reader.book.id + ":" + i))) i++;
-  if (i >= n) { Reader.playing = false; setPlayIcon(); $("#audio").removeAttribute("src"); return; }
+  if (i >= n) { const a = $("#audio"); a.pause(); a.removeAttribute("src"); return; }
   Reader.idx = i; playCurrent();
 }
 async function prevSentence() {
@@ -277,13 +293,34 @@ function toggleDark() {
   applyTheme(cur);
 }
 
+/* ---------------- 阅读样式面板 ---------------- */
+function openStylePanel() { $("#style-panel").classList.add("open"); $("#style-mask").classList.remove("hidden"); }
+function closeStylePanel() { $("#style-panel").classList.remove("open"); $("#style-mask").classList.add("hidden"); }
+
+/* ---------------- 返回上一级 ---------------- */
+function goBackLevel() {
+  if ($("#style-panel").classList.contains("open")) { closeStylePanel(); return true; }
+  const readerVisible = !$("#view-reader").classList.contains("hidden");
+  const settingsVisible = !$("#view-settings").classList.contains("hidden");
+  if (readerVisible) { showView("library"); renderLibrary(); return true; }   // 阅读 -> 章节列表
+  if (settingsVisible) { Lib.mode = "books"; showView("library"); renderLibrary(); return true; }
+  if (Lib.mode === "chapters") { Lib.mode = "books"; renderLibrary(); return true; }  // 章节 -> 书架
+  return false;  // 已在书架根层 -> 允许退出
+}
+
 /* ---------------- 视图切换 ---------------- */
 function showView(v) {
   ["library", "reader", "settings"].forEach(name => $("#view-" + name).classList.toggle("hidden", name !== v));
   $$(".tab").forEach(t => t.classList.toggle("active", t.dataset.view === v));
-  // 阅读器有自己的底部播放条，切走时停止播放
-  if (v !== "reader") { const a = $("#audio"); a.pause(); Reader.playing = false; }
-  else if (Reader.book) requestAnimationFrame(() => requestAnimationFrame(relayoutIfReading));
+  // 切走阅读器时暂停（onpause 会同步状态/图标）
+  if (v !== "reader") { $("#audio").pause(); }
+  else if (Reader.book) {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      relayoutIfReading();   // 重排并定位到当前句所在页
+      setPlayIcon();         // 同步播放/暂停按钮
+      highlight();           // 高亮当前句并翻到其页
+    }));
+  }
 }
 
 /* ---------------- 初始化 ---------------- */
@@ -306,7 +343,10 @@ async function init() {
   $("#btn-play").onclick = togglePlay;
   $("#btn-next").onclick = () => nextSentence(false);
   $("#btn-prev").onclick = prevSentence;
-  $("#audio").onended = () => nextSentence(true);
+  const audio = $("#audio");
+  audio.onended = () => nextSentence(true);
+  audio.onplay = () => { Reader.playing = true; setPlayIcon(); };
+  audio.onpause = () => { Reader.playing = false; setPlayIcon(); };
   $("#font-range").oninput = e => setFont(+e.target.value);
   $("#lh-range").oninput = e => setLineHeight(+e.target.value);
   $$("#font-family-seg .seg-btn").forEach(b => b.onclick = () => setFontFamily(b.dataset.ff));
@@ -322,8 +362,19 @@ async function init() {
       if (dx < 0) nextPage(); else prevPage();
     }
   }, { passive: true });
+  // 阅读样式面板
+  $("#btn-style").onclick = openStylePanel;
+  $("#btn-style-close").onclick = closeStylePanel;
+  $("#style-mask").onclick = closeStylePanel;
+
   // 屏幕旋转 / 尺寸变化时重新分页
   window.addEventListener("resize", () => relayoutIfReading());
+
+  // Android 硬件返回键：返回上一级，根层才退出
+  const CapApp = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.App;
+  if (CapApp) {
+    CapApp.addListener("backButton", () => { if (!goBackLevel()) CapApp.exitApp(); });
+  }
 
   // 注册 service worker（离线）
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});

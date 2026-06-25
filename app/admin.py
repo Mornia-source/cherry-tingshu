@@ -80,19 +80,37 @@ def _pids_on_port(port):
 
 
 def start_engine(name):
-    if name not in ENGINE_BAT:
+    if name not in ENGINE_PORT:
         return {"ok": False, "error": "未知引擎"}
     if _pids_on_port(ENGINE_PORT[name]):
         return {"ok": True, "msg": "已在运行"}
+    NEW_CONSOLE = getattr(subprocess, "CREATE_NEW_CONSOLE", 0)
+
+    if name == "gpt-sovits":
+        # 直接用 GPT-SoVITS 自带 runtime python 启动，不依赖系统 python；
+        # cmd /k 保持窗口（报错可见，不再一闪而过）。
+        gsv = _find_gsv()
+        if not (gsv and os.path.exists(os.path.join(gsv, "api_v2.py"))):
+            return {"ok": False, "error": "未找到 GPT-SoVITS，请先在『设置-语音引擎』里填写其根目录"}
+        runtime_py = os.path.join(gsv, "runtime", "python.exe")
+        py = runtime_py if os.path.exists(runtime_py) else "python"
+        cmd = (f'cd /d "{gsv}" && "{py}" -I api_v2.py -a 127.0.0.1 -p 9880 '
+               f'-c GPT_SoVITS/configs/tts_infer.yaml')
+        try:
+            subprocess.Popen(["cmd", "/k", cmd], creationflags=NEW_CONSOLE)
+        except Exception as e:
+            return {"ok": False, "error": str(e)}
+        _starting[name] = time.time()
+        return {"ok": True, "msg": "启动中，模型加载需 1-2 分钟"}
+
+    # IndexTTS：用其 .bat（内部走 uv 环境）
     bat = os.path.join(ROOT, ENGINE_BAT[name])
     if not os.path.exists(bat):
         return {"ok": False, "error": f"找不到启动脚本 {ENGINE_BAT[name]}"}
-    # 等价于“双击 .bat”，开独立新窗口，不依赖父进程的控制台，最稳。
     try:
         os.startfile(bat)
     except Exception:
         try:
-            # 回退：用 shell 的 start 命令detach开新窗口
             subprocess.Popen(["cmd", "/c", "start", "", bat], cwd=ROOT,
                              creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
         except Exception as e:
