@@ -340,17 +340,36 @@ def api_admin_engine_stop(engine: str = Form(...), authorization: str = Header(N
 def api_add_voice(name: str = Form(...), ref_audio: str = Form(...),
                   prompt_text: str = Form(...), engine: str = Form("gpt-sovits"),
                   gpt: str = Form(""), sovits: str = Form(""),
+                  prompt_lang: str = Form("zh"), old_name: str = Form(""),
                   authorization: str = Header(None)):
-    require_user(authorization)
+    """新增或编辑一个角色模型（自适应：任意文件名、可选语言）。old_name 非空表示编辑。"""
+    require_admin(authorization)
+    name = name.strip()
+    if not name:
+        raise HTTPException(400, "请填写名称")
     cfg = tts.load_config()
     v = {"engine": engine, "ref_audio": ref_audio,
-         "prompt_text": prompt_text, "prompt_lang": "zh"}
+         "prompt_text": prompt_text, "prompt_lang": (prompt_lang or "zh")}
     if engine == "gpt-sovits":
         if not gpt or not sovits:
             raise HTTPException(400, "GPT-SoVITS 声线需要 .ckpt 与 .pth 权重文件")
         v["gpt"], v["sovits"] = gpt, sovits
-    cfg["voices"][name] = v
+    # 编辑时若改了名字，先删旧键并保持顺序
+    if old_name and old_name != name and old_name in cfg["voices"]:
+        cfg["voices"] = {(name if k == old_name else k): (v if k == old_name else val)
+                         for k, val in cfg["voices"].items()}
+    else:
+        if old_name and old_name != name:
+            cfg["voices"].pop(old_name, None)
+        cfg["voices"][name] = v
     tts.save_config(cfg)
+    return {"ok": True}
+
+
+@app.post("/api/admin/delete_voice")
+def api_delete_voice(name: str = Form(...), authorization: str = Header(None)):
+    require_admin(authorization)
+    tts.delete_voice(name)
     return {"ok": True}
 
 

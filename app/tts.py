@@ -135,7 +135,7 @@ def list_voices():
     out = []
     for k, v in cfg.get("voices", {}).items():
         item = {"name": k, "engine": engine_of(v)}
-        for kk in ("gpt", "sovits", "ref_audio", "prompt_text"):
+        for kk in ("gpt", "sovits", "ref_audio", "prompt_text", "prompt_lang"):
             if kk in v:
                 item[kk] = v[kk]
         out.append(item)
@@ -205,6 +205,17 @@ def rename_voice(old, new):
         _state["loaded_voice"] = new
 
 
+def delete_voice(name):
+    """删除已配置的角色声线。"""
+    cfg = load_config()
+    if name in cfg.get("voices", {}):
+        del cfg["voices"][name]
+        save_config(cfg)
+        if _state.get("loaded_voice") == name:
+            _state["loaded_voice"] = None
+    return True
+
+
 def synth_sentence(text, voice_name, speed=1.0):
     """合成一句，返回 wav 字节。会按需切换模型。全程串行，避免并发。"""
     with _synth_lock:
@@ -272,18 +283,22 @@ def discover_models():
         d = os.path.join(MODEL_DIR, name)
         if not os.path.isdir(d):
             continue
-        ckpt = pth = ref = None
+        ckpt = pth = None
         for f in os.listdir(d):
             fp = os.path.join(d, f)
             if f.endswith(".ckpt"):
                 ckpt = fp
             elif f.endswith(".pth"):
                 pth = fp
-        refdir = os.path.join(d, "参考音频")
-        if os.path.isdir(refdir):
-            wavs = [w for w in os.listdir(refdir) if w.lower().endswith(".wav")]
-            if wavs:
-                ref = os.path.join(refdir, wavs[0])
+        # 收集所有候选参考音频：根目录、参考音频/、slicer_opt/（兼容各种模型来源）
+        refs = []
+        for sub in ("", "参考音频", "slicer_opt"):
+            rd = os.path.join(d, sub) if sub else d
+            if os.path.isdir(rd):
+                for w in sorted(os.listdir(rd)):
+                    if w.lower().endswith((".wav", ".mp3", ".flac")):
+                        refs.append(os.path.join(rd, w))
+        ref = refs[0] if refs else None
         found.append({"name": name, "gpt": ckpt, "sovits": pth, "ref_audio": ref,
-                      "complete": bool(ckpt and pth and ref)})
+                      "refs": refs, "complete": bool(ckpt and pth and ref)})
     return found

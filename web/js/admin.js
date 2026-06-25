@@ -54,7 +54,7 @@ function renderEngines(engines) {
       const form = { engine: key, api: api2 };
       if (rootEl) form.root = rootEl.value.trim();
       try { await api("/api/admin/engine", { method: "POST", form: toForm(form) }); await loadSettings(); await loadVoices(); }
-      catch (err) { alert("保存失败：" + err.message); }
+      catch (err) { Dlg.alert("保存失败：" + err.message); }
     };
     row.querySelector(".engine-switch").onclick = () => {
       if (starting) return;
@@ -74,12 +74,13 @@ async function startEngine(key, engines) {
   // 8GB 显存：若另一引擎在线，提示争抢风险
   const other = key === "gpt-sovits" ? "indextts" : "gpt-sovits";
   if (engines[other] && engines[other].alive) {
-    if (!confirm(`另一个引擎（${ENGINE_LABEL[other]}）正在运行。\n显存有限时两个引擎同时跑会互相争抢、拖慢甚至失败。\n仍要启动 ${ENGINE_LABEL[key]} 吗？`)) return;
+    const ok = await Dlg.confirm(`另一个引擎（${ENGINE_LABEL[other]}）正在运行。\n显存有限时两个引擎同时跑会互相争抢、拖慢甚至失败。\n仍要启动 ${ENGINE_LABEL[key]} 吗？`, { title: "显存提醒" });
+    if (!ok) return;
   }
   try {
     const r = await api("/api/admin/engine/start", { method: "POST", form: toForm({ engine: key }) });
-    if (r.ok === false) { alert(r.error || "启动失败"); return; }
-  } catch (e) { alert("启动失败：" + e.message); return; }
+    if (r.ok === false) { Dlg.alert(r.error || "启动失败"); return; }
+  } catch (e) { Dlg.alert("启动失败：" + e.message); return; }
   // 后端已记录“启动中”，立即刷新一次让状态立刻显示（刷新页面也不会丢）
   const data = await api("/api/admin/engines").catch(() => null);
   if (data) renderEngines(data.engines || {});
@@ -87,7 +88,7 @@ async function startEngine(key, engines) {
 }
 async function stopEngine(key) {
   try { await api("/api/admin/engine/stop", { method: "POST", form: toForm({ engine: key }) }); }
-  catch (e) { alert("停止失败：" + e.message); return; }
+  catch (e) { Dlg.alert("停止失败：" + e.message); return; }
   setTimeout(loadSettings, 800);
 }
 function pollEngines(key, expectOnline) {
@@ -138,8 +139,12 @@ function renderConfiguredVoices(voices) {
   for (const v of pageItems) {
     const row = document.createElement("div"); row.className = "model-row";
     row.innerHTML = `<span><i class="fas fa-user-tag"></i> ${v.name} <span class="hint">${ENGINE_LABEL[v.engine] || v.engine}</span></span>
-      <button class="btn voice-rename"><i class="fas fa-pen"></i> 重命名</button>`;
-    row.querySelector(".voice-rename").onclick = () => renameVoice(v.name);
+      <span class="row-inline">
+        <button class="btn voice-edit"><i class="fas fa-pen"></i> 编辑</button>
+        <button class="btn voice-del" style="color:var(--danger)"><i class="fas fa-trash"></i> 删除</button>
+      </span>`;
+    row.querySelector(".voice-edit").onclick = () => editVoice(v, true);
+    row.querySelector(".voice-del").onclick = () => deleteVoice(v.name);
     box.appendChild(row);
   }
   if (!pager) return;
@@ -151,45 +156,68 @@ function renderConfiguredVoices(voices) {
   if (voiceAdminPage > 1) $("#vp-prev").onclick = () => { voiceAdminPage--; renderConfiguredVoices(); };
   if (voiceAdminPage < pages) $("#vp-next").onclick = () => { voiceAdminPage++; renderConfiguredVoices(); };
 }
-async function renameVoice(old) {
-  const nv = prompt(`将声线「${old}」重命名为：`, old); if (nv === null) return;
-  const name = nv.trim(); if (!name || name === old) return;
+const LANG_OPTS = [
+  { value: "zh", label: "中文" }, { value: "ja", label: "日语" },
+  { value: "en", label: "英语" }, { value: "auto", label: "自动 / 多语种" },
+];
+// 统一的添加/编辑角色模型对话框（自适应任意文件名、引擎、语言）
+async function editVoice(prefill, isEdit) {
+  const e = prefill || { engine: "gpt-sovits", prompt_lang: "zh" };
+  const vals = await Dlg.form({
+    title: isEdit ? "编辑角色模型" : "添加角色模型",
+    okText: isEdit ? "保存" : "添加",
+    fields: [
+      { key: "name", label: "名称", value: e.name || "", placeholder: "如：洛琪希" },
+      { key: "engine", label: "引擎", type: "select", value: e.engine || "gpt-sovits",
+        options: [{ value: "gpt-sovits", label: "GPT-SoVITS（需 .ckpt/.pth 权重）" }, { value: "indextts", label: "IndexTTS（免训练，只需参考音频）" }] },
+      { key: "gpt", label: "GPT 权重 (.ckpt)", value: e.gpt || "", placeholder: "model/洛琪希/Roxy_Pro.ckpt", show: v => v.engine === "gpt-sovits" },
+      { key: "sovits", label: "SoVITS 权重 (.pth)", value: e.sovits || "", placeholder: "model/洛琪希/Roxy_Pro.pth", show: v => v.engine === "gpt-sovits" },
+      { key: "ref_audio", label: "参考音频路径", value: e.ref_audio || "", placeholder: "一段清晰人声音频的完整路径（建议 3-10 秒）" },
+      { key: "prompt_text", label: "参考音频对应的文字", type: "textarea", value: e.prompt_text || "", placeholder: "必须与参考音频里说的内容完全一致" },
+      { key: "prompt_lang", label: "参考音频语言", type: "select", value: e.prompt_lang || "zh", options: LANG_OPTS,
+        hint: "参考音频是什么语言就选什么（如日语模型选日语）；朗读的书仍按中文处理。" },
+    ],
+  });
+  if (!vals) return;
+  if (!vals.name) return Dlg.alert("请填写名称");
+  if (vals.engine === "gpt-sovits" && (!vals.gpt || !vals.sovits)) return Dlg.alert("GPT-SoVITS 需要 .ckpt 和 .pth 两个权重文件路径");
+  if (!vals.ref_audio || !vals.prompt_text) return Dlg.alert("请填写参考音频路径和它对应的文字");
   try {
-    await api("/api/admin/rename_voice", { method: "POST", form: toForm({ old, new: name }) });
+    const form = { name: vals.name, engine: vals.engine, ref_audio: vals.ref_audio,
+      prompt_text: vals.prompt_text, prompt_lang: vals.prompt_lang, gpt: vals.gpt, sovits: vals.sovits };
+    if (isEdit) form.old_name = e.name;
+    await api("/api/admin/add_voice", { method: "POST", form: toForm(form) });
     await loadSettings(); await loadVoices();
-  } catch (e) { alert("重命名失败：" + e.message); }
+  } catch (err) { Dlg.alert("保存失败：" + err.message); }
+}
+async function deleteVoice(name) {
+  const ok = await Dlg.confirm(`确定删除角色模型「${name}」吗？\n仅从配置中移除，不会删除磁盘上的模型文件。`,
+    { title: "删除角色模型", danger: true, okText: "删除" });
+  if (!ok) return;
+  try { await api("/api/admin/delete_voice", { method: "POST", form: toForm({ name }) }); await loadSettings(); await loadVoices(); }
+  catch (e) { Dlg.alert("删除失败：" + e.message); }
 }
 async function useModel() {
   const voice = $("#model-select").value; if (!voice) return;
-  try { await api("/api/admin/select", { method: "POST", form: toForm({ voice }) }); await loadSettings(); await loadVoices(); alert("已切换当前朗读模型：" + voice); }
-  catch (e) { alert("切换失败：" + e.message + "（语音引擎是否已启动？）"); }
-}
-async function addIndexVoice() {
-  const name = prompt("声线名称（如：银狼-IndexTTS）："); if (!name) return;
-  const ref = prompt("参考音频文件的完整路径（.wav）：\n例如 D:\\eBookSVC\\model\\银狼\\参考音频\\xxx.wav"); if (!ref) return;
-  const pt = prompt("参考音频里实际说的那句话（必须与音频一致）："); if (pt === null) return;
-  try {
-    await api("/api/admin/add_voice", { method: "POST", form: toForm({ name, engine: "indextts", ref_audio: ref, prompt_text: pt }) });
-    await loadSettings(); await loadVoices();
-    alert("已添加 IndexTTS 声线：" + name + "\n（需先在「语音引擎」里配置并启动 IndexTTS 服务才能合成）");
-  } catch (e) { alert("添加失败：" + e.message); }
+  try { await api("/api/admin/select", { method: "POST", form: toForm({ voice }) }); await loadSettings(); await loadVoices(); Dlg.alert("已切换当前朗读模型：" + voice); }
+  catch (e) { Dlg.alert("切换失败：" + e.message + "（语音引擎是否已启动？）"); }
 }
 
 async function discoverModels() {
   const data = await api("/api/admin/models");
   const box = $("#admin-discovered"); const list = data.discovered || [];
-  if (!list.length) { box.innerHTML = '<p class="hint">model 目录下未发现成对模型。</p>'; return; }
+  if (!list.length) { box.innerHTML = '<p class="hint">model 目录下未发现含 .ckpt/.pth 的模型文件夹。</p>'; return; }
   box.innerHTML = "";
   for (const m of list) {
     const configured = data.configured.some(c => c.name === m.name);
+    const hasModel = !!(m.gpt && m.sovits);
     const row = document.createElement("div"); row.className = "model-row";
-    row.innerHTML = `<span><i class="fas fa-folder"></i> ${m.name} ${m.complete ? '<span class="tag-ok">完整</span>' : '<span class="tag-no">缺文件</span>'}</span>
-      <button class="btn ${configured ? "" : "primary"}" ${(!m.complete || configured) ? "disabled" : ""}><i class="fas fa-plus"></i> ${configured ? "已加入" : "加入"}</button>`;
-    if (m.complete && !configured) row.querySelector("button").onclick = async () => {
-      const pt = prompt("请输入参考音频对应的文字：", ""); if (pt === null) return;
-      await api("/api/admin/add_voice", { method: "POST", form: toForm({ name: m.name, gpt: m.gpt, sovits: m.sovits, ref_audio: m.ref_audio, prompt_text: pt }) });
-      await loadSettings(); await discoverModels(); await loadVoices();
-    };
+    row.innerHTML = `<span><i class="fas fa-folder"></i> ${m.name} ${hasModel ? '<span class="tag-ok">找到权重</span>' : '<span class="tag-no">缺.ckpt/.pth</span>'}${m.refs && m.refs.length ? ` <span class="hint">${m.refs.length}个参考音频</span>` : ""}</span>
+      <button class="btn ${configured ? "" : "primary"}"><i class="fas fa-plus"></i> ${configured ? "再加一个" : "加入"}</button>`;
+    row.querySelector("button").onclick = () => editVoice({
+      name: configured ? m.name + "-2" : m.name, engine: "gpt-sovits",
+      gpt: m.gpt || "", sovits: m.sovits || "", ref_audio: m.ref_audio || "", prompt_lang: "zh",
+    }, false);
     box.appendChild(row);
   }
 }
@@ -407,7 +435,7 @@ function pollTrain() {
 window.addEventListener("DOMContentLoaded", () => {
   $("#btn-model-use").onclick = useModel;
   $("#btn-discover").onclick = discoverModels;
-  $("#btn-add-indextts").onclick = addIndexVoice;
+  $("#btn-add-voice").onclick = () => editVoice(null, false);
   $all(".tside-btn").forEach(b => b.onclick = () => switchTrainView(b.dataset.tview));
   $all("[data-train]").forEach(b => b.onclick = () => runTrain(b.dataset.train));
   let st; $("#user-search").addEventListener("input", e => {

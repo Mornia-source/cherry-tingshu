@@ -250,3 +250,18 @@ input[type=text], .form-row input { font-family: inherit; }
 .pager { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 24px; }
 .pager .btn { min-width: 38px; justify-content: center; }
 .pager .cur { font-size: 14px; color: var(--text-dim); }
+
+/* 自定义弹窗 */
+.dlg-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.4); display: flex; align-items: center; justify-content: center; padding: 18px; }
+.dlg-overlay.hidden { display: none; }
+.dlg-card { width: 100%; max-width: 440px; max-height: 86vh; overflow: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,.25); padding: 20px; }
+.dlg-title { font-size: 17px; font-weight: 700; margin-bottom: 14px; color: var(--primary); }
+.dlg-msg { font-size: 14px; line-height: 1.7; color: var(--text); white-space: pre-wrap; }
+.dlg-body .input, .dlg-body .select { width: 100%; margin-top: 8px; }
+.dlg-foot { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
+.dlg-foot .btn.danger { background: var(--danger); border-color: var(--danger); color: #fff; }
+.dlg-form { display: flex; flex-direction: column; gap: 12px; }
+.dlg-field { display: flex; flex-direction: column; gap: 5px; }
+.dlg-field > label { font-size: 13px; color: var(--text-dim); }
+.dlg-field .input, .dlg-field .select { margin-top: 0; }
+.dlg-field textarea.input { resize: vertical; min-height: 38px; }
