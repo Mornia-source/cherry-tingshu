@@ -426,7 +426,10 @@ async function init() {
     CapApp.addListener("backButton", () => { if (!goBackLevel()) CapApp.exitApp(); });
   }
 
-  // 注册 service worker（离线）
-  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+  // 不再使用 Service Worker（APK 内是本地资源，无需缓存；旧 SW 会喂旧版页面）。
+  // 注销任何遗留的 SW，避免更新不生效。
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister())).catch(() => {});
+  }
 }
 init();
