@@ -71,11 +71,15 @@ function renderEngines(engines) {
 let engPollTimer = null;
 const engStarting = {};
 async function startEngine(key, engines) {
-  // 8GB 显存：若另一引擎在线，提示争抢风险
+  // 显存有限：一次只跑一个引擎。另一个在跑时，先停掉它再启动本引擎。
   const other = key === "gpt-sovits" ? "indextts" : "gpt-sovits";
   if (engines[other] && engines[other].alive) {
-    const ok = await Dlg.confirm(`另一个引擎（${ENGINE_LABEL[other]}）正在运行。\n显存有限时两个引擎同时跑会互相争抢、拖慢甚至失败。\n仍要启动 ${ENGINE_LABEL[key]} 吗？`, { title: "显存提醒" });
+    const ok = await Dlg.confirm(
+      `显存有限，两个引擎不能同时运行（会导致整机卡顿、合不出声）。\n将先停止「${ENGINE_LABEL[other]}」，再启动「${ENGINE_LABEL[key]}」。`,
+      { title: "显存不足", okText: `停止${ENGINE_LABEL[other]}并启动`, cancelText: "取消" });
     if (!ok) return;
+    await stopEngine(other);
+    await new Promise(r => setTimeout(r, 2500));  // 等显存释放
   }
   try {
     const r = await api("/api/admin/engine/start", { method: "POST", form: toForm({ engine: key }) });
